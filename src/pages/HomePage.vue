@@ -1,3 +1,10 @@
 <template>
-  <h1 class="text-3xl text-red-500 font-bold underline">HOME PAGE</h1>
+  <HomeTopSection></HomeTopSection>
+  <HomeRentalProgram></HomeRentalProgram>
+  <HomeServices></HomeServices>
 </template>
+<script setup>
+import HomeRentalProgram from "../components/HomeRentalProgram.vue";
+import HomeServices from "../components/HomeServices.vue";
+import HomeTopSection from "../components/HomeTopSection.vue";
+</script>
