@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white flex justify-between items-center h-[88px] px-[8%] shadow-lg z-50"
+    class="sticky bg-white flex justify-between items-center h-[88px] px-[8%] shadow-lg z-50"
   >
     <div class="flex items-center">
       <img :src="mainLogo" />

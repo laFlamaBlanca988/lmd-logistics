@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex flex-col gap-4 pt-60 pl-[8%]">
+  <div class="relative flex flex-col gap-4 pt-60 mb-40 pl-[8%]">
     <h4 class="text-6xl text-main-blue font-bold italic">OUR SERVICES</h4>
     <p class="text-2xl w-[50%]">
       We provide reliable and efficient solutions for all our customers

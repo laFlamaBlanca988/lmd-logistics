@@ -1,8 +1,12 @@
 <template>
   <div class="flex pl-[8%] h-auto mb-40">
     <div class="flex flex-col mt-20">
-      <div class="font-black text-main-red text-9xl italic">LOAD.MOVE.</div>
-      <div class="font-black text-main-red text-9xl italic">DELIVER.</div>
+      <div class="font-black text-main-red xl:text-7xl 2xl:text-9xl italic">
+        LOAD.MOVE.
+      </div>
+      <div class="font-black text-main-red xl:text-7xl 2xl:text-9xl italic">
+        DELIVER.
+      </div>
       <div
         class="flex items-center text-black font-semibold text-5xl leading-[72px]"
       >
