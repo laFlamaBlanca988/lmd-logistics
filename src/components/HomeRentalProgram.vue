@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-start gap-10">
+  <div class="flex justify-start gap-20 mb-14">
     <HomeTruckDriver_2></HomeTruckDriver_2>
     <div class="relative flex flex-col gap-4 w-[40%] pt-60">
       <h4 class="text-6xl text-main-blue font-bold italic">

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex pl-[8%] h-auto mb-40">
+  <div class="flex pl-[8%] h-auto pb-40">
     <div class="flex flex-col mt-20">
       <div class="font-black text-main-red xl:text-7xl 2xl:text-9xl italic">
         LOAD.MOVE.
@@ -10,10 +10,16 @@
       <div
         class="flex items-center text-black font-semibold text-5xl leading-[72px]"
       >
-        <h3>FAST</h3>
-        <Icon icon="material-symbols:star" class="w-[22px] h-[22px]"></Icon>
-        <h3>RELIABLE</h3>
-        <Icon icon="material-symbols:star" class="w-[22px] h-[22px]"></Icon>
+        <h3 class="mr-2">FAST</h3>
+        <Icon
+          icon="material-symbols:star"
+          class="w-[22px] h-[22px] mr-3"
+        ></Icon>
+        <h3 class="mr-3">RELIABLE</h3>
+        <Icon
+          icon="material-symbols:star"
+          class="w-[22px] h-[22px] mr-3"
+        ></Icon>
         <h3>REFINED</h3>
       </div>
       <p class="text-2xl leading-9">

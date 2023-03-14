@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col w-[375px] h-[303px]">
     <div
-      class="w-full h-3/6 bg-center bg-no-repeat bg-cover"
+      class="w-full h-[55%] bg-center bg-no-repeat bg-cover rounded-t-2xl"
       :style="{ 'background-image': `url(${backgroundImage})` }"
     ></div>
     <div
-      class="flex flex-col items-center justify-center gap-3 h-3/6 bg-white rounded-b-lg"
+      class="flex flex-col items-center justify-center gap-3 h-[45%] bg-white rounded-b-2xl"
     >
       <h3 class="text-main-red text-xl font-bold">{{ title }}</h3>
       <Icon

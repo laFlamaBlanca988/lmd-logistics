@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-between h-[42px] px-[8%] bg-main-blue text-xs text-white font-bold"
+    class="relative flex justify-between h-[42px] px-[8%] bg-main-blue text-xs text-white font-bold z-50"
   >
     <div class="flex items-center justify-start gap-8">
       <div class="flex items-center gap-2">
@@ -45,3 +45,8 @@
 <script setup>
 import { Icon } from "@iconify/vue";
 </script>
+<style scoped>
+.custom {
+  backface-visibility: hidden;
+}
+</style>

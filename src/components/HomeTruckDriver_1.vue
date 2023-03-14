@@ -1,20 +1,11 @@
 <template>
-  <div class="w-full -z-10">
-    <video
-      autoplay
-      muted
-      loop
-      class="w-full h-auto translate-x-[9%] -translate-y-[9%] 2xl:translate-x-[21%] 2xl:-my-[21%]"
-    >
+  <div class="relative flex justify-end w-full z-10">
+    <video autoplay muted loop class="w-[85%] h-auto">
       <source :src="driverVideo" type="video/mp4" />
     </video>
   </div>
 </template>
 <script setup>
-import driverVideo from "@/assets/videos/bg-video-main.mp4";
+import driverVideo from "@/assets/videos/bg-home-video.mp4";
 </script>
-<style scoped>
-.image {
-  transform: rotateY(0deg) rotate(0deg);
-}
-</style>
+<style scoped></style>

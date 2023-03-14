@@ -5,10 +5,9 @@
       <p class="mb-4 text-start text-sm text-main-red">{{ title }}</p>
       <p class="text-start">{{ description }}</p>
     </div>
-    <div
-      class="absolute right-0 -top-12 min-h-[400px] w-3/6 bg-cover bg-center z-50"
-      :style="{ 'background-image': `url(${imgUrl})` }"
-    ></div>
+    <div class="flex bg-center bg-cover">
+      <img class="h-[120%]" :src="imgUrl" />
+    </div>
   </div>
 </template>
 <script setup>

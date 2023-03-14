@@ -35,7 +35,7 @@
   </div>
 </template>
 <script setup>
-import backgroundImage from "@/assets/images/bg-why-us.png";
+import backgroundImage from "@/assets/images/bg-why-us.jpg";
 import HomeWhyUsCard from "./HomeWhyUsCard.vue";
 import image_1 from "@/assets/images/why-us-image-1.png";
 import image_2 from "@/assets/images/why-us-image-2.png";

@@ -5,10 +5,10 @@
   <HomeTestimonials></HomeTestimonials>
   <HomeWhyUs></HomeWhyUs>
   <HomeAboutUs></HomeAboutUs>
-  <ContactForm></ContactForm>
+  <HomeFooter></HomeFooter>
 </template>
 <script setup>
-import ContactForm from "../components/ContactForm.vue";
+import HomeFooter from "../components/HomeFooter.vue";
 import HomeAboutUs from "../components/HomeAboutUs.vue";
 import HomeRentalProgram from "../components/HomeRentalProgram.vue";
 import HomeServices from "../components/HomeServices.vue";

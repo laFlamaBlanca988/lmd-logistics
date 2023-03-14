@@ -1,9 +1,8 @@
 <template>
-  <div class="flex w-full h-auto min-h-[1000px]">
-    <div
-      class="w-3/6 bg-cover bg-center"
-      :style="{ 'background-image': `url(${aboutUsImage})` }"
-    ></div>
+  <div class="flex w-full gap-14 h-auto my-14">
+    <div class="flex items-center h-full w-auto pl-14">
+      <img class="w-auto h-full m-auto" :src="aboutUsImage" />
+    </div>
     <div class="flex flex-col w-3/6 gap-6">
       <div class="flex flex-col gap-6 mb-8">
         <h1
@@ -13,7 +12,7 @@
         </h1>
         <h4 class="text-6xl text-main-blue font-bold italic">ABOUT US</h4>
         <div>
-          <p class="text-3xl font-bold">OUT TEAM NEVER SLEEPS!</p>
+          <p class="text-3xl font-bold mb-2">OUT TEAM NEVER SLEEPS!</p>
           <p class="text-2xl w-[80%]">
             We are constantly working on resolving your logistical problems!
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

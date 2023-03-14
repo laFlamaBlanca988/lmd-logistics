@@ -1,42 +1,47 @@
 <template>
-  <div class="relative flex flex-col gap-4 pt-60 mb-40 pl-[8%]">
-    <h4 class="text-6xl text-main-blue font-bold italic">OUR SERVICES</h4>
-    <p class="text-2xl w-[50%]">
-      We provide reliable and efficient solutions for all our customers
-      logistics needs to help customers cut costs and increase efficiency.
-    </p>
+  <div class="relative flex min-h-[1000px] pl-[8%] pr-20">
+    <div class="flex flex-col gap-4 w-[50%] pt-40 z-50">
+      <h4 class="text-6xl text-main-blue font-bold italic">OUR SERVICES</h4>
+      <p class="text-2xl w-[50%]">
+        We provide reliable and efficient solutions for all our customers
+        logistics needs to help customers cut costs and increase efficiency.
+      </p>
 
-    <AppButton url="#" content="Find Out More" class="w-[240px]"></AppButton>
-    <h1
-      class="absolute top-[160px] italic font-black text-9xl text-main-blue opacity-10"
-    >
-      SERVICES
-    </h1>
-    <h4 class="mt-[100px] mb-10 text-6xl text-main-blue font-bold italic">
-      OUR FLEET
-    </h4>
-    <h1
-      class="absolute top-[475px] italic font-black text-9xl text-main-blue opacity-10"
-    >
-      FLEET
-    </h1>
-    <carousel :items-to-show="4" class="w-[50%]">
-      <slide
-        v-for="slide in caoruselData"
-        :key="slide"
-        class="w-[230px] h-[200px]"
+      <AppButton url="#" content="Find Out More" class="w-[240px]"></AppButton>
+      <h1
+        class="absolute top-[80px] italic font-black text-9xl text-main-blue opacity-10"
       >
-        <img :src="slide.url" class="rounded-xl" />
-      </slide>
+        SERVICES
+      </h1>
+      <h4 class="mt-[100px] mb-10 text-6xl text-main-blue font-bold italic">
+        OUR FLEET
+      </h4>
+      <h1
+        class="absolute top-[475px] italic font-black text-9xl text-main-blue opacity-10"
+      >
+        FLEET
+      </h1>
+      <carousel :items-to-show="4" class="w-[120%]">
+        <slide
+          v-for="slide in caoruselData"
+          :key="slide"
+          class="relative w-[230px] h-[200px] z-10"
+        >
+          <img :src="slide.url" class="rounded-xl" />
+        </slide>
 
-      <template #addons>
-        <pagination />
-      </template>
-    </carousel>
-    <img
-      class="absolute top-[100px] right-0 -z-10 w-[50%] h-auto"
-      :src="truckDriver_3"
-    />
+        <template #addons>
+          <pagination />
+        </template>
+      </carousel>
+    </div>
+    <!-- <div
+      class="absolute right-10 z-0 w-[50%] h-full bg-cover bg-no-repeat"
+      :style="{ 'background-image': `url(${truckDriver_3})` }"
+    ></div> -->
+    <div class="flex items-center h-full w-auto">
+      <img class="w-auto h-full m-auto" :src="truckDriver_3" />
+    </div>
   </div>
 </template>
 <script setup>
@@ -50,11 +55,12 @@ const caoruselData = [
   { url: fleetTruck_1 },
   { url: fleetTruck_1 },
   { url: fleetTruck_1 },
+  { url: fleetTruck_1 },
 ];
 </script>
 <style scoped>
-.carousel {
-  width: 50%;
+.carousel__track {
+  justify-content: space-between;
 }
 .carousel__slide {
   width: 230px;
