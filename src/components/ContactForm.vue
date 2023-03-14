@@ -1,5 +1,5 @@
 <template>
-  <form class="m-10 border rounded-2xl shadow-xl w-[55%] h-[135%] bg-white">
+  <form class="m-10 border rounded-2xl shadow-xl w-[50%] h-[130%] bg-white">
     <div class="flex flex-col p-6">
       <div class="flex flex-col">
         <p class="text-2xl text-main-blue">CONTACT US</p>
@@ -8,21 +8,21 @@
       <div class="flex flex-col my-4 gap-4">
         <div class="border-b-2 h-[50px]">
           <input
-            class="bg-white h-full w-full outline-none placeholder-black placeholder:text-2xl"
+            class="bg-white h-full w-full text-2xl outline-none placeholder-black placeholder:text-2xl"
             type="text"
             placeholder="Name"
           />
         </div>
         <div class="border-b-2 h-[50px]">
           <input
-            class="bg-white h-full w-full outline-none placeholder-black placeholder:text-2xl"
+            class="bg-white h-full w-full text-2xl outline-none placeholder-black placeholder:text-2xl"
             type="text"
             placeholder="Email"
           />
         </div>
         <div class="border-b-2 h-[50px]">
           <input
-            class="bg-white h-full w-full outline-none placeholder-black placeholder:text-2xl"
+            class="bg-white h-full w-full text-2xl outline-none placeholder-black placeholder:text-2xl"
             type="text"
             placeholder="Phone"
           />
@@ -31,8 +31,8 @@
         <p class="text-2xl">Message:</p>
 
         <textarea
-          class="bg-white border-2 rounded-xl"
-          rows="10"
+          class="px-4 text-2xl bg-white border-2 rounded-xl"
+          rows="7"
           cols="50"
         ></textarea>
       </div>
@@ -45,6 +45,4 @@
     </div>
   </form>
 </template>
-<script setup>
-console.log(window.innerHeight);
-</script>
+<script setup></script>

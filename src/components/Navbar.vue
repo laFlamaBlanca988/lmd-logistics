@@ -6,13 +6,19 @@
       <img :src="mainLogo" />
     </div>
     <div class="flex items-center gap-8">
-      <RouterLink to="#" class="text-sm font-medium text-main-blue"
+      <RouterLink
+        to="/"
+        class="text-sm font-medium text-black hover:text-main-blue hover:border-b-2 border-black"
         >Home</RouterLink
       >
-      <RouterLink to="#" class="text-sm font-medium text-main-blue"
+      <RouterLink
+        to="#"
+        class="text-sm font-medium text-black hover:text-main-blue hover:border-b-2 border-black"
         >Services</RouterLink
       >
-      <RouterLink to="#" class="text-sm font-medium text-main-blue"
+      <RouterLink
+        to="/about-us"
+        class="text-sm font-medium text-black hover:text-main-blue hover:border-b-2 border-black"
         >About Us</RouterLink
       >
       <RouterLink
@@ -27,8 +33,4 @@
 <script setup>
 import mainLogo from "@/assets/images/logo.svg";
 </script>
-<style scoped>
-.navbar {
-  z-index: 999; /* IS NOT WORKING... O_o...*/
-}
-</style>
+<style scoped></style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex pl-[8%] h-auto pb-40">
+  <div class="flex pl-[8%] h-auto">
     <div class="flex flex-col mt-20">
       <div class="font-black text-main-red xl:text-7xl 2xl:text-9xl italic">
         LOAD.MOVE.

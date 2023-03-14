@@ -32,21 +32,18 @@
           We recognizes that our clients are at the heart of everything we do,
           and we prioritize their needs above all else
         </p>
-        <carousel
-          :items-to-show="4"
-          class="flex flex-col justify-start w-[675px] -translate-x-4"
-        >
-          <slide v-for="image in images" :key="image">
+        <Swiper :items-to-show="4" id="custom-swiper">
+          <SwiperSlide
+            v-for="image in images"
+            :key="image"
+            class="custom-slide"
+          >
             <div
               class="w-full h-[119px] bg-cover bg-no-repeat bg-center"
               :style="{ 'background-image': `url(${image.path})` }"
             ></div>
-          </slide>
-
-          <template #addons>
-            <pagination />
-          </template>
-        </carousel>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   </div>
@@ -55,8 +52,11 @@
 import aboutUsImage from "@/assets/images/about-us-image.png";
 import AppButton from "./AppButton.vue";
 import { ref } from "vue";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper";
+
+// import "swiper/css";
+import "swiper/css/navigation";
 import image_1 from "@/assets/images/about-us-partners-1.png";
 import image_2 from "@/assets/images/about-us-partners-2.png";
 import image_3 from "@/assets/images/about-us-partners-3.png";
@@ -76,12 +76,13 @@ const images = ref([
   },
 ]);
 </script>
-<style scoped>
-/* .carousel__slide {
-  display: flex;
-  justify-content: flex-start;
-} */
-.carousel__slide {
-  width: 169px !important;
+<style>
+#custom-swiper .swiper-wrapper {
+  display: flex !important;
+  justify-content: flex-start !important;
+}
+
+.custom-slide {
+  width: 100px !important;
 }
 </style>

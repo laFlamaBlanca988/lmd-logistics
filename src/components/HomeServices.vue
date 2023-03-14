@@ -21,24 +21,27 @@
       >
         FLEET
       </h1>
-      <carousel :items-to-show="4" class="w-[120%]">
-        <slide
-          v-for="slide in caoruselData"
-          :key="slide"
-          class="relative w-[230px] h-[200px] z-10"
+      <div>
+        <swiper
+          :slides-per-view="4"
+          :modules="[Pagination]"
+          :loop="true"
+          :pagination="true"
+          :space-between="50"
+          pagination="true"
+          class="default-slider"
         >
-          <img :src="slide.url" class="rounded-xl" />
-        </slide>
-
-        <template #addons>
-          <pagination />
-        </template>
-      </carousel>
+          <swiper-slide
+            v-for="slide in caoruselData"
+            :key="slide"
+            class="relative z-10"
+          >
+            <img :src="slide.url" class="rounded-xl" />
+          </swiper-slide>
+        </swiper>
+      </div>
     </div>
-    <!-- <div
-      class="absolute right-10 z-0 w-[50%] h-full bg-cover bg-no-repeat"
-      :style="{ 'background-image': `url(${truckDriver_3})` }"
-    ></div> -->
+
     <div class="flex items-center h-full w-auto">
       <img class="w-auto h-full m-auto" :src="truckDriver_3" />
     </div>
@@ -47,9 +50,11 @@
 <script setup>
 import AppButton from "./AppButton.vue";
 import fleetTruck_1 from "@/assets/images/fleetTruck_1.svg";
-import "vue3-carousel/dist/carousel.css";
 import truckDriver_3 from "@/assets/images/truck-driver-3.png";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper";
+
 const caoruselData = [
   { url: fleetTruck_1 },
   { url: fleetTruck_1 },
@@ -58,11 +63,24 @@ const caoruselData = [
   { url: fleetTruck_1 },
 ];
 </script>
-<style scoped>
-.carousel__track {
-  justify-content: space-between;
+<style>
+.default-slider {
+  /* overflow: visible; */
+  height: 200px !important;
 }
-.carousel__slide {
-  width: 230px;
+.default-slider .swiper-wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  /* overflow: visible; */
+  height: 100% !important;
+  gap: 4rem !important;
+}
+.default-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+
+  margin-right: 0 !important;
+  width: 150px !important;
 }
 </style>

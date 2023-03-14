@@ -6,7 +6,11 @@ const routes = [
     name: "Home",
     component: () => import("../pages/HomePage.vue"),
   },
-
+  {
+    path: "/about-us",
+    name: "AbouUs",
+    component: () => import("../pages/AboutUsPage.vue"),
+  },
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",

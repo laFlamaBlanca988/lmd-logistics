@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <div class="flex h-[210px]">
+    <div class="flex h-[180px]">
       <div
         class="flex flex-col justify-center px-[8%] gap-2 bg-main-blue w-[70%] text-white"
       >
@@ -99,7 +99,7 @@
           experienced professionals and a fleet of modern trucks.
         </p>
       </div>
-      <div class="w-[30%] h- bg-cover bg-center z-50">
+      <div class="w-[30%] bg-cover bg-center z-50">
         <img :src="footerTruck" />
       </div>
     </div>

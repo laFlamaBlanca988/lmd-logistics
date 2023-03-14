@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col">
-    <div class="flex flex-col justify-center items-center">
+  <div class="flex flex-col pb-20">
+    <div class="flex flex-col justify-center items-center mb-20">
       <h1
         class="italic font-black text-9xl text-main-blue opacity-10 translate-y-14"
       >
@@ -13,26 +13,35 @@
         What our partners and satisfied customers say about our work
       </p>
     </div>
-    <carousel :items-to-show="3" class="flex flex-col">
-      <slide v-for="testimonial in testimonials" :key="testimonial">
+    <Swiper
+      :slides-per-view="4"
+      :modules="[Pagination]"
+      :loop="true"
+      :pagination="true"
+      :space-between="50"
+      pagination="true"
+      class="flex testimonials-swiper"
+    >
+      <SwiperSlide
+        v-for="testimonial in testimonials"
+        :key="testimonial"
+        class="testimonials-slide"
+      >
         <HomeTestimonial
           :name="testimonial.name"
           :title="testimonial.title"
           :description="testimonial.description"
           :img-url="testimonial.imageUrl"
         ></HomeTestimonial>
-      </slide>
-
-      <template #addons>
-        <pagination />
-      </template>
-    </carousel>
+      </SwiperSlide>
+    </Swiper>
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper";
+
 import image_1 from "@/assets/images/testimonials-businessman-1.svg";
 import image_3 from "@/assets/images/testimonials-businessman-3.svg";
 
@@ -61,8 +70,25 @@ const testimonials = ref([
   },
 ]);
 </script>
-<style scoped>
-.carousel {
-  margin: auto;
+<style>
+.testimonials-swiper,
+.swiper {
+  width: 100% !important;
+  margin-right: 0 !important;
+  margin-right: 0 !important;
+}
+.testimonials-swiper,
+.swiper-wrapper {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  overflow: visible;
+  gap: 4rem !important;
+}
+
+.testimonials-slide,
+.swiper-slide {
+  overflow: visible;
+  width: 500px;
 }
 </style>
