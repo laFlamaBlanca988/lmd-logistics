@@ -2,12 +2,12 @@
   <div class="text-center text-8xl text-main-red font-extrabold italic my-14">
     WE DELIVER MORE
   </div>
-  <div class="flex flex-col">
+  <div class="flex flex-col mb-40">
     <div class="flex">
-      <div
-        class="w-3/6 h-[500px] bg-cover bg-no-repeat bg-center"
-        :style="{ 'background-image': `url(${expertiseImage})` }"
-      ></div>
+      <div class="flex justify-center items-center w-3/6">
+        <img :src="expertiseImage" />
+      </div>
+
       <div class="flex items-center w-3/6 pl-8 pr-40 z-0 overflow-visible">
         <div class="relative h-[100px]">
           <div
@@ -48,16 +48,14 @@
           </div>
         </div>
       </div>
-      <div
-        class="w-3/6 h-[500px] -mt-[35px] bg-cover bg-no-repeat bg-center z-50 overflow-visible"
-        :style="{ 'background-image': `url(${cultureImage})` }"
-      ></div>
+      <div class="flex justify-center items-center w-3/6">
+        <img :src="cultureImage" />
+      </div>
     </div>
     <div class="flex">
-      <div
-        class="w-3/6 h-[500px] -mt-[13px] bg-cover bg-no-repeat bg-center"
-        :style="{ 'background-image': `url(${technologyImage})` }"
-      ></div>
+      <div class="flex justify-center items-center w-3/6">
+        <img :src="technologyImage" />
+      </div>
       <div class="flex items-center w-3/6 pl-8 pr-40">
         <div class="relative h-[100px]">
           <div

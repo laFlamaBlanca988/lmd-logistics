@@ -13,39 +13,40 @@
         What our partners and satisfied customers say about our work
       </p>
     </div>
-    <Swiper
-      :slides-per-view="4"
-      :modules="[Pagination]"
-      :loop="true"
-      :pagination="true"
-      :space-between="50"
-      pagination="true"
-      class="flex testimonials-swiper"
-    >
-      <SwiperSlide
-        v-for="testimonial in testimonials"
-        :key="testimonial"
-        class="testimonials-slide"
+    <div class="px-[10%]">
+      <carousel
+        :items-to-show="3"
+        :wrap-around="true"
+        snap-align="start"
+        class="overflow-visible"
       >
-        <HomeTestimonial
-          :name="testimonial.name"
-          :title="testimonial.title"
-          :description="testimonial.description"
-          :img-url="testimonial.imageUrl"
-        ></HomeTestimonial>
-      </SwiperSlide>
-    </Swiper>
+        <slide v-for="testimonial in testimonials" :key="testimonial">
+          <HomeTestimonial
+            class="z-50"
+            :name="testimonial.name"
+            :title="testimonial.title"
+            :description="testimonial.description"
+            :img-url="testimonial.imageUrl"
+          ></HomeTestimonial>
+        </slide>
+        <template #addons>
+          <navigation />
+          <pagination />
+        </template>
+      </carousel>
+    </div>
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Pagination } from "swiper";
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+
+import HomeTestimonial from "./HomeTestimonial.vue";
 
 import image_1 from "@/assets/images/testimonials-businessman-1.svg";
 import image_3 from "@/assets/images/testimonials-businessman-3.svg";
 
-import HomeTestimonial from "./HomeTestimonial.vue";
 const testimonials = ref([
   {
     name: "John Doe",
@@ -70,25 +71,4 @@ const testimonials = ref([
   },
 ]);
 </script>
-<style>
-.testimonials-swiper,
-.swiper {
-  width: 100% !important;
-  margin-right: 0 !important;
-  margin-right: 0 !important;
-}
-.testimonials-swiper,
-.swiper-wrapper {
-  display: flex !important;
-  justify-content: space-between !important;
-  width: 100% !important;
-  overflow: visible;
-  gap: 4rem !important;
-}
-
-.testimonials-slide,
-.swiper-slide {
-  overflow: visible;
-  width: 500px;
-}
-</style>
+<style></style>

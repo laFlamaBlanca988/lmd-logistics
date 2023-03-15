@@ -1,6 +1,8 @@
 <template>
   <div
-    class="sticky bg-white flex justify-between items-center h-[88px] px-[8%] shadow-lg z-50"
+    class="bg-white flex justify-between items-center h-[88px] px-[8%] shadow-lg z-50 overflow-hidden"
+    ref="el"
+    :class="stickyStyle"
   >
     <div class="flex items-center">
       <img :src="mainLogo" />
@@ -32,5 +34,22 @@
 
 <script setup>
 import mainLogo from "@/assets/images/logo.svg";
+import { onMounted, onUnmounted, ref } from "vue";
+const el = ref(null);
+const stickyStyle = ref([]);
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+const handleScroll = (event) => {
+  if (window.scrollY >= 42) {
+    stickyStyle.value = ["fixed", "top-0", "w-100vh", "right-0", "left-0"];
+  } else {
+    stickyStyle.value = [];
+  }
+};
 </script>
 <style scoped></style>
