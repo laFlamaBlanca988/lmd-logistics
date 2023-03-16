@@ -4,7 +4,7 @@
     ref="el"
     :class="stickyStyle"
   >
-    <div class="flex items-center">
+    <div class="flex items-center" @click="router.push('/')">
       <img :src="mainLogo" />
     </div>
     <div class="flex items-center gap-8">
@@ -14,7 +14,7 @@
         >Home</RouterLink
       >
       <RouterLink
-        to="#"
+        to="services"
         class="text-sm font-medium text-black hover:text-main-blue hover:border-b-2 border-black"
         >Services</RouterLink
       >
@@ -23,10 +23,11 @@
         class="text-sm font-medium text-black hover:text-main-blue hover:border-b-2 border-black"
         >About Us</RouterLink
       >
-      <RouterLink
-        to="#"
+      <a
+        href="#"
+        target="_blank"
         class="text-sm font-medium bg-main-red p-3 rounded-md text-white"
-        >WE ARE HIRING</RouterLink
+        >WE ARE HIRING</a
       >
     </div>
   </div>
@@ -35,6 +36,8 @@
 <script setup>
 import mainLogo from "@/assets/images/logo.svg";
 import { onMounted, onUnmounted, ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
 const el = ref(null);
 const stickyStyle = ref([]);
 
@@ -52,4 +55,8 @@ const handleScroll = (event) => {
   }
 };
 </script>
-<style scoped></style>
+<style scoped>
+.router-link-active {
+  @apply text-main-blue border-b-2 border-main-blue;
+}
+</style>

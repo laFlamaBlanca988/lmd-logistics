@@ -1,5 +1,5 @@
 <template>
-  <form class="m-10 border rounded-2xl shadow-xl w-[50%] h-[130%] bg-white">
+  <form class="m-10 border rounded-2xl shadow-xl w-[50%] h-[120%] bg-white">
     <div class="flex flex-col p-6">
       <div class="flex flex-col">
         <p class="text-2xl text-main-blue">CONTACT US</p>
@@ -31,13 +31,13 @@
         <p class="text-2xl">Message:</p>
 
         <textarea
-          class="px-4 text-2xl bg-white border-2 rounded-xl"
-          rows="7"
+          class="p-4 text-2xl bg-white border-2 rounded-xl"
+          rows="5"
           cols="50"
         ></textarea>
       </div>
       <button
-        class="w-[241px] h-[59px] mt-4 bg-main-red p-4 flex items-center justify-center gap-2 text-white rounded-lg"
+        class="w-[241px] h-[59px] mt-2 bg-main-red p-4 flex items-center justify-center gap-2 text-white rounded-lg"
         type="submit"
       >
         Send Message

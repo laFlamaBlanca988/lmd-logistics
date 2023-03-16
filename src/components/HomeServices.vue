@@ -28,13 +28,17 @@
           snap-align="start"
           class="w-[120%]"
         >
-          <slide
-            v-for="slide in caoruselData"
-            :key="slide"
-            class="relative z-10"
-          >
-            <img :src="slide.url" class="rounded-xl" />
-          </slide>
+          <div v-for="slide in caoruselData" :key="slide">
+            <slide
+              @mouseover="onMouseHover(slide.id)"
+              @mouseleave="onMouseLeave(slide.id)"
+              class="relative z-10 cursor-pointer"
+            >
+              <input type="hidden" :id="slide.id" ref="slideID" />
+              <img :src="slide.url" class="rounded-xl h-full" />
+            </slide>
+          </div>
+
           <template #addons>
             <navigation />
             <pagination />
@@ -49,18 +53,34 @@
   </div>
 </template>
 <script setup>
+import { ref } from "vue";
 import AppButton from "./AppButton.vue";
-import fleetTruck_1 from "@/assets/images/fleetTruck_1.svg";
+import fleetTruck_1 from "@/assets/images/fleet-truck-1.png";
+import fleetTruck_2 from "@/assets/images/fleet-truck-2.png";
+import fleetTruck_3 from "@/assets/images/fleet-truck-3.png";
+import fleetTruck_4 from "@/assets/images/fleet-truck-4.png";
+import hoverImage from "@/assets/images/fleet-explore-card.png";
 import truckDriver_3 from "@/assets/images/truck-driver-3.png";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
-const caoruselData = [
-  { url: fleetTruck_1 },
-  { url: fleetTruck_1 },
-  { url: fleetTruck_1 },
-  { url: fleetTruck_1 },
-  { url: fleetTruck_1 },
-];
+let hoverIsActive = ref(false);
+let slideID = ref(null);
+const caoruselData = ref([
+  { url: fleetTruck_1, id: 1 },
+  { url: fleetTruck_2, id: 2 },
+  { url: fleetTruck_4, id: 3 },
+  { url: fleetTruck_4, id: 4 },
+]);
+const onMouseHover = (slideID) => {
+  hoverIsActive.value = true;
+  caoruselData.value[slideID - 1].url = hoverImage;
+};
+const onMouseLeave = (slideID) => {
+  hoverIsActive.value = false;
+  caoruselData.value[
+    slideID - 1
+  ].url = `src/assets/images/fleet-truck-${slideID}.png`;
+};
 </script>
 <style></style>

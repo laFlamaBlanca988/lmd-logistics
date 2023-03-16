@@ -12,6 +12,11 @@ const routes = [
     component: () => import("../pages/AboutUsPage.vue"),
   },
   {
+    path: "/services",
+    name: "Services",
+    component: () => import("../pages/ServicesPage.vue"),
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("../pages/NotFoundPage.vue"),
@@ -24,11 +29,17 @@ const router = createRouter({
 });
 
 // router.beforeEach((to, from, next) => {
-//     if (to.meta.requiresAuth && !sessionStorage.getItem("AUTH-TOKEN")) {
-//         next("/welcome");
-//     } else {
-//         next();
-//     }
+//   if (to) {
+//     console.log(3);
+//   }
+//   // window.scrollTo(0, 0);
+//   // if (to.meta.requiresAuth && !sessionStorage.getItem("AUTH-TOKEN")) {
+//   //     next("/welcome");
+//   // } else {
+//   //     next();
+//   // }
 // });
-
+router.afterEach((to, from) => {
+  window.scrollTo(0, 0);
+});
 export default router;

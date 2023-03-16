@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex flex-col w-full items-center mb-20">
+  <div class="relative flex flex-col w-full items-center">
     <div
       class="absolute -top-10 flex items-end h-full text-9xl font-bold text-main-blue italic opacity-10"
     >

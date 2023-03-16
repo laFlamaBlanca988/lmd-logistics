@@ -1,5 +1,10 @@
 <template>
-  <carousel :items-to-show="6" :wrap-around="true" snap-align="start">
+  <carousel
+    :items-to-show="6"
+    :wrap-around="true"
+    snap-align="start"
+    class="mb-20"
+  >
     <slide v-for="image in images" :key="image">
       <!-- <div
         class="w-full h-[150px] bg-cover bg-no-repeat bg-center"

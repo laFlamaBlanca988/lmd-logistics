@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="flex">
+    <div class="flex justify-center">
       <div class="flex items-center w-3/6 pl-8 pr-40">
         <div class="relative h-[100px]">
           <div
@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-center items-center w-3/6">
+      <div class="flex justify-center items-center w-3/6 -m-[100px]">
         <img :src="cultureImage" />
       </div>
     </div>

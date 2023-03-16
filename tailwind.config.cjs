@@ -20,7 +20,13 @@ module.exports = {
         "bleue-royale": "#25988B",
         "sweet-yellow": "#F8DE7A",
       },
-      backgroundImage: {},
+      backgroundImage: {
+        "fleet-truck-1": "url('src/assets/images/fleet-truck-1.png)",
+        "fleet-truck-2": "url('src/assets/images/fleet-truck-2.png')",
+        "fleet-truck-3": "url('src/assets/images/fleet-truck-3.png')",
+        "fleet-truck-4": "url('src/assets/images/fleet-truck-4.png')",
+        "fleet-explore-card": "url('src/assets/images/fleet-explore-card')",
+      },
       boxShadow: {
         opportunities: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       },

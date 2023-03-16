@@ -1,9 +1,9 @@
 <template>
-  <AboutUsSectionTitle
+  <SectionTitle
     main-title="ABOUT US"
     shadow-title="ABOUT US"
     class="mb-8"
-  ></AboutUsSectionTitle>
+  ></SectionTitle>
   <div
     class="flex flex-col justify-center gap-8 mb-10 text-xl lg:flex-row sm:text-xl lg:text-2xl px-[10%] sm:flex xl:px-[20%]"
   >
@@ -27,7 +27,7 @@
       improve our services and exceed our clients' expectations.
     </div>
   </div>
-  <AboutUsCertificates class="mb-10"></AboutUsCertificates>
+  <SectionCertificates class="mb-10"></SectionCertificates>
 
   <div
     class="flex flex-col justify-center mb-20 lg:flex-row text-xl sm:text-xl lg:text-2xl px-[10%] gap-8 sm:flex xl:px-[20%]"
@@ -66,6 +66,6 @@
   </div>
 </template>
 <script setup>
-import AboutUsSectionTitle from "./AboutUsSectionTitle.vue";
-import AboutUsCertificates from "../components/AboutUsCertificates.vue";
+import SectionTitle from "./SectionTitle.vue";
+import SectionCertificates from "./SectionCertificates.vue";
 </script>

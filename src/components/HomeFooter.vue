@@ -12,15 +12,16 @@
         </p>
       </div>
       <div class="flex items-center justify-center bg-main-red w-[30%]">
-        <RouterLink
-          to="#"
-          class="flex items-center justify-center w-[300px] h-[75px] text-2xl text-main-red font-bold bg-white rounded-lg"
-          >WE ARE HIRING</RouterLink
+        <a
+          href="#"
+          target="_blank"
+          class="flex items-center justify-center w-[280px] h-[60px] text-2xl text-main-red font-bold bg-white rounded-lg"
+          >WE ARE HIRING</a
         >
       </div>
     </div>
     <div class="relative flex justify-between">
-      <div class="flex justify-between h-[552px] w-[70%] bg-white">
+      <div class="flex justify-between h-[552px] pl-[5.5%] w-[70%] bg-white">
         <ContactForm></ContactForm>
 
         <div
@@ -91,16 +92,16 @@
         </div>
       </div>
     </div>
-    <div class="flex justify-end items-center h-[275px] bg-main-blue">
-      <div class="flex items-center justify-center w-[30%]">
+    <div class="flex justify-end items-center h-[200px] bg-main-blue">
+      <div class="flex items-center justify-center px-10 w-[30%]">
         <p class="text-xl text-white">
           At our company, we are dedicated to providing top-notch cargo
           transport and logistics services to our clients. With a team of
           experienced professionals and a fleet of modern trucks.
         </p>
       </div>
-      <div class="w-[30%] bg-cover bg-center z-50">
-        <img :src="footerTruck" />
+      <div class="flex justify-center w-[30%] bg-cover bg-center z-50">
+        <img class="h-[250px]" :src="footerTruck" />
       </div>
     </div>
 

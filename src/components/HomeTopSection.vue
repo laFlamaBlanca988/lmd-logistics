@@ -1,11 +1,21 @@
 <template>
   <div class="flex pl-[8%] h-auto">
     <div class="flex flex-col mt-20">
-      <div class="font-black text-main-red xl:text-7xl 2xl:text-9xl italic">
-        LOAD.MOVE.
-      </div>
-      <div class="font-black text-main-red xl:text-7xl 2xl:text-9xl italic">
-        DELIVER.
+      <div>
+        <Transition name="load-move" appear mode="in-out">
+          <div>
+            <div
+              class="font-black text-main-red xl:text-7xl 2xl:text-9xl italic"
+            >
+              LOAD.MOVE.
+            </div>
+            <div
+              class="h-[128px] font-black text-main-red xl:text-7xl 2xl:text-9xl italic"
+            >
+              DELIVER.
+            </div>
+          </div>
+        </Transition>
       </div>
       <div
         class="flex items-center text-black font-semibold text-5xl leading-[72px]"
@@ -31,13 +41,31 @@
         <RouterLink to="#" class="text-black">Drive With Us</RouterLink>
       </div>
     </div>
+
     <HomeTruckDriver_1></HomeTruckDriver_1>
   </div>
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
-import HomeTruckDriver_2 from "../components/HomeTruckDriver_2.vue";
-import basedInUsa from "@/assets/images/based_in_usa.svg";
+import { ref } from "vue";
 import HomeTruckDriver_1 from "./HomeTruckDriver_1.vue";
 import AppButton from "./AppButton.vue";
 </script>
+<style scoped>
+@keyframes slide-in {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.load-move-enter-active {
+  animation: slide-in 0.5s ease;
+}
+.deliver-enter-active {
+  animation: slide-in 0.5s ease;
+  animation-delay: 0.5s;
+}
+</style>

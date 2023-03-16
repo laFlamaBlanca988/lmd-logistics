@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col mb-40">
-    <AboutUsSectionTitle
+    <SectionTitle
       main-title="OUR TEAM"
       shadow-title="TEAM"
       paragraph="What our partners and satisfied customers say about our work"
-    ></AboutUsSectionTitle>
+    ></SectionTitle>
     <div class="flex flex-wrap justify-center gap-4">
       <HomeTestimonial
         v-for="testimonial in testimonials"
@@ -22,7 +22,7 @@ import HomeTestimonial from "./HomeTestimonial.vue";
 import image_1 from "@/assets/images/testimonials-businessman-1.svg";
 import image_3 from "@/assets/images/testimonials-businessman-3.svg";
 import { ref } from "vue";
-import AboutUsSectionTitle from "./AboutUsSectionTitle.vue";
+import SectionTitle from "./SectionTitle.vue";
 
 const testimonials = ref([
   {
