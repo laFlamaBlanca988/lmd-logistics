@@ -48,7 +48,7 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-center items-center w-3/6 -m-[100px]">
+      <div class="flex justify-center items-center w-3/6 -m-[4.5%]">
         <img :src="cultureImage" />
       </div>
     </div>

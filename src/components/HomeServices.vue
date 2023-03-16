@@ -1,5 +1,20 @@
 <template>
   <div class="relative flex min-h-[1000px] pl-[8%] pr-20">
+    <AppOverlay v-if="fleetModalIsActive">
+      <HomeFleetModal
+        ref="elementModal"
+        :image-url="modalFleetTruck_1"
+        :model="fleetModalData.model"
+        :model-title="fleetModalData.modelTitle"
+        :model-description="fleetModalData.modelDescription"
+        :year="fleetModalData.year"
+        :horsepower="fleetModalData.horsePower"
+        :engine-model="fleetModalData.engineModel"
+        :transmission="fleetModalData.transmission"
+        :sleeper-size="fleetModalData.sleeperSize"
+        :footer-text="fleetModalData.footerText"
+      ></HomeFleetModal>
+    </AppOverlay>
     <div class="flex flex-col gap-4 w-[50%] pt-40 z-40">
       <h4 class="text-6xl text-main-blue font-bold italic">OUR SERVICES</h4>
       <p class="text-2xl w-[50%]">
@@ -28,13 +43,13 @@
           snap-align="start"
           class="w-[120%]"
         >
-          <div v-for="slide in caoruselData" :key="slide">
+          <div v-for="slide in fleetData" :key="slide">
             <slide
+              @click="showModal(slide.id)"
               @mouseover="onMouseHover(slide.id)"
               @mouseleave="onMouseLeave(slide.id)"
-              class="relative z-10 cursor-pointer"
+              class="relative cursor-pointer"
             >
-              <input type="hidden" :id="slide.id" ref="slideID" />
               <img :src="slide.url" class="rounded-xl h-full" />
             </slide>
           </div>
@@ -53,34 +68,48 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, computed, watch } from "vue";
 import AppButton from "./AppButton.vue";
-import fleetTruck_1 from "@/assets/images/fleet-truck-1.png";
-import fleetTruck_2 from "@/assets/images/fleet-truck-2.png";
-import fleetTruck_3 from "@/assets/images/fleet-truck-3.png";
-import fleetTruck_4 from "@/assets/images/fleet-truck-4.png";
+import AppOverlay from "../components/AppOverlay.vue";
+
+import { onClickOutside } from "@vueuse/core";
+
 import hoverImage from "@/assets/images/fleet-explore-card.png";
 import truckDriver_3 from "@/assets/images/truck-driver-3.png";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import HomeFleetModal from "./HomeFleetModal.vue";
+import modalFleetTruck_1 from "@/assets/images/modal-fleet-truck-1.png";
+import { useGlobalStore } from "../stores/global";
 
+const globalStore = useGlobalStore();
 let hoverIsActive = ref(false);
-let slideID = ref(null);
-const caoruselData = ref([
-  { url: fleetTruck_1, id: 1 },
-  { url: fleetTruck_2, id: 2 },
-  { url: fleetTruck_4, id: 3 },
-  { url: fleetTruck_4, id: 4 },
-]);
+let fleetModalIsActive = computed(() => globalStore.fleetModalIsActive);
+const elementModal = ref(null);
+const fleetData = computed(() => globalStore.fleetData);
+let fleetModalData = computed(() => globalStore.fleetModalData);
 const onMouseHover = (slideID) => {
   hoverIsActive.value = true;
-  caoruselData.value[slideID - 1].url = hoverImage;
+  globalStore.fleetData[slideID - 1].url = hoverImage;
 };
 const onMouseLeave = (slideID) => {
   hoverIsActive.value = false;
-  caoruselData.value[
+  globalStore.fleetData[
     slideID - 1
   ].url = `src/assets/images/fleet-truck-${slideID}.png`;
 };
+const showModal = (id) => {
+  globalStore.fleetModalIsActive = true;
+  globalStore.fleetModalData = fleetData.value.find((el) => el.id === id);
+};
+watch(fleetModalIsActive, (newVal) => {
+  newVal === true
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
+});
+onClickOutside(
+  elementModal,
+  (event) => (globalStore.fleetModalIsActive = false)
+);
 </script>
 <style></style>

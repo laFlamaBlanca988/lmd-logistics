@@ -4,7 +4,7 @@
     ref="el"
     :class="stickyStyle"
   >
-    <div class="flex items-center" @click="router.push('/')">
+    <div class="flex items-center cursor-pointer" @click="router.push('/')">
       <img :src="mainLogo" />
     </div>
     <div class="flex items-center gap-8">
