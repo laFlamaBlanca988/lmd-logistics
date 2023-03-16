@@ -80,13 +80,20 @@
         <div
           class="flex flex-col justify-evenly items-center w-[430px] h-[361px] shadow-xl rounded-xl bg-white"
         >
-          <h4 class="text-4xl px-[10%] text-center font-bold">
-            Ready To Start Driving
-          </h4>
-          <img :src="postCar" class="w-[173px] h-[84px]" />
+          <div class="flex justify-center items-center">
+            <h4 class="text-4xl text-center font-bold">
+              Ready To <br />
+              Start Driving
+            </h4>
+          </div>
+          <div
+            class="flex justify-center items-center w-full -translate-x-[15px]"
+          >
+            <img :src="postCar" class="w-[173px] h-[84px]" />
+          </div>
           <RouterLink
             to="#"
-            class="flex items-center justify-center w-[241px] h-[59px] border-[3px] border-main-red text-2xl text-main-red font-bold bg-white rounded-lg"
+            class="flex items-center justify-center w-[241px] h-[59px] border-[3px] border-main-red text-xl text-main-red font-bold bg-white rounded-lg"
             >Fill The Form</RouterLink
           >
         </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center w-full h-[704px] bg-center bg-cover bg-fixed"
+    class="flex flex-col items-center w-full h-auto pb-20 bg-center bg-cover bg-fixed"
     :style="{ 'background-image': `url(${backgroundImage})` }"
   >
     <h1 class="italic font-black text-9xl text-white opacity-50 translate-y-14">
@@ -10,7 +10,7 @@
     <p class="text-2xl mb-10 text-white">
       What our partners and satisfied customers say about our work
     </p>
-    <div class="flex justify-between w-full px-[8%]">
+    <div class="grid grid-cols-2 w-full px-[8%]">
       <HomeWhyUsCard
         title="HIGH EARNINGS"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
