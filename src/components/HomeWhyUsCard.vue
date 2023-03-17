@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-[375px] h-[303px]">
+  <div class="flex flex-col h-[303px] mx-4">
     <div
       class="w-full h-[55%] bg-center bg-no-repeat bg-cover rounded-t-2xl"
       :style="{ 'background-image': `url(${backgroundImage})` }"

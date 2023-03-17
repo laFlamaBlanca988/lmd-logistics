@@ -10,36 +10,75 @@
     <p class="text-2xl mb-10 text-white">
       What our partners and satisfied customers say about our work
     </p>
-    <div class="grid grid-cols-2 w-full px-[8%]">
-      <HomeWhyUsCard
-        title="HIGH EARNINGS"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-        :background-image="image_1"
-      ></HomeWhyUsCard>
-      <HomeWhyUsCard
-        title="GOOD MAINTENANCE"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-        :background-image="image_2"
-      ></HomeWhyUsCard>
-      <HomeWhyUsCard
-        title="24/7 SUPPORT"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-        :background-image="image_3"
-      ></HomeWhyUsCard>
-      <HomeWhyUsCard
-        title="BEST PAYING LOADS"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-        :background-image="image_4"
-      ></HomeWhyUsCard>
+    <div class="w-full px-[8%]">
+      <Carousel
+        :items-to-show="4"
+        :wrap-around="true"
+        :items-to-scroll="1"
+        :breakpoints="breakpoints"
+        snap-align="center"
+      >
+        <Slide v-for="card in whyUsCards" :key="card">
+          <HomeWhyUsCard
+            class="carousel__item"
+            :title="card.title"
+            :description="card.description"
+            :background-image="card.backgroundImage"
+          ></HomeWhyUsCard>
+        </Slide>
+        <template #addons>
+          <pagination />
+        </template>
+      </Carousel>
     </div>
   </div>
 </template>
 <script setup>
+import { computed, reactive } from "vue";
 import backgroundImage from "@/assets/images/bg-why-us.jpg";
 import HomeWhyUsCard from "./HomeWhyUsCard.vue";
-import image_1 from "@/assets/images/why-us-image-1.png";
-import image_2 from "@/assets/images/why-us-image-2.png";
-import image_3 from "@/assets/images/why-us-image-3.png";
-import image_4 from "@/assets/images/why-us-image-4.png";
+// import "vue3-carousel/dist/carousel.css";
+
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { useGlobalStore } from "../stores/global";
+const globalStore = useGlobalStore();
+const whyUsCards = computed(() => globalStore.whyUsCards);
+
+let breakpoints = reactive({
+  // 700px and up
+  360: {
+    itemsToShow: 1,
+    snapAlign: "start",
+  },
+  940: {
+    itemsToShow: 2,
+    snapAlign: "start",
+  },
+  1402: {
+    itemsToShow: 3,
+    snapAlign: "start",
+  },
+  1864: {
+    itemsToShow: 4,
+    snapAlign: "start",
+  },
+});
 </script>
-<style scoped></style>
+<style>
+.carousel {
+  /* background: red !important; */
+}
+.carousel__pagination-button {
+  height: 30px;
+  border-radius: 50% !important;
+  border: 1px solid #244088;
+  border-color: red !important;
+}
+.carousel__pagination-button::after {
+  border-radius: 50% !important;
+  border: 2px !important;
+  border-color: white !important;
+  color: red !important;
+  background: #f2f7fb;
+}
+</style>

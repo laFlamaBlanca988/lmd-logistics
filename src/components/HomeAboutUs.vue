@@ -5,11 +5,11 @@
     </div>
     <div class="flex flex-col w-3/6 gap-6">
       <div class="flex flex-col gap-6 mb-8">
-        <h1
+        <!-- <h1
           class="italic font-black text-9xl text-main-blue opacity-10 translate-y-14"
         >
           ABOUT US
-        </h1>
+        </h1> -->
         <h4 class="text-6xl text-main-blue font-bold italic">ABOUT US</h4>
         <div>
           <p class="text-3xl font-bold mb-2">OUT TEAM NEVER SLEEPS!</p>

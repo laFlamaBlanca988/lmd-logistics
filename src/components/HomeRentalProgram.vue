@@ -11,11 +11,11 @@
           Get all the benefits owners have but spare yourself from all the
           hassle owners have!
         </p>
-        <h1
+        <!-- <h1
           class="absolute top-[160px] italic font-black text-9xl text-main-blue opacity-10"
         >
           WINNING
-        </h1>
+        </h1> -->
       </div>
 
       <!-- </Transition> -->

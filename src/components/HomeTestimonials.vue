@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col pb-20">
     <div class="flex flex-col justify-center items-center mb-20">
-      <h1
+      <!-- <h1
         class="italic font-black text-9xl text-main-blue opacity-10 translate-y-14"
       >
         TESTIMONIALS
-      </h1>
+      </h1> -->
       <h3 class="text-6xl text-main-blue font-bold italic mb-4">
         TESTIMONIALS
       </h3>
@@ -17,6 +17,7 @@
       <carousel
         :items-to-show="3"
         :wrap-around="true"
+        :breakpoints="breakpoints"
         snap-align="start"
         class="overflow-visible"
       >
@@ -38,7 +39,7 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
@@ -70,5 +71,20 @@ const testimonials = ref([
     imageUrl: image_1,
   },
 ]);
+let breakpoints = reactive({
+  // 700px and up
+  360: {
+    itemsToShow: 1,
+    snapAlign: "start",
+  },
+  940: {
+    itemsToShow: 2,
+    snapAlign: "start",
+  },
+  1402: {
+    itemsToShow: 3,
+    snapAlign: "start",
+  },
+});
 </script>
 <style></style>

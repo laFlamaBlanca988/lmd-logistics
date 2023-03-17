@@ -4,7 +4,10 @@ import fleetTruck_1 from "@/assets/images/fleet-truck-1.png";
 import fleetTruck_2 from "@/assets/images/fleet-truck-2.png";
 import fleetTruck_3 from "@/assets/images/fleet-truck-3.png";
 import fleetTruck_4 from "@/assets/images/fleet-truck-4.png";
-
+import whyUsImage_1 from "@/assets/images/why-us-image-1.png";
+import whyUsImage_2 from "@/assets/images/why-us-image-2.png";
+import whyUsImage_3 from "@/assets/images/why-us-image-3.png";
+import whyUsImage_4 from "@/assets/images/why-us-image-4.png";
 export const useGlobalStore = defineStore("global", () => {
   let fleetModalIsActive = ref(false);
   let fleetModalData = ref({});
@@ -70,11 +73,37 @@ export const useGlobalStore = defineStore("global", () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     },
   ]);
-
+  let whyUsCards = ref([
+    {
+      title: "HIGH EARNINGS",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      backgroundImage: whyUsImage_1,
+    },
+    {
+      title: "GOOD MAINTENANCE",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      backgroundImage: whyUsImage_2,
+    },
+    {
+      title: "24/7 SUPPORT",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      backgroundImage: whyUsImage_3,
+    },
+    {
+      title: "BEST PAYING LOADS",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      backgroundImage: whyUsImage_4,
+    },
+  ]);
   return {
     fleetModalIsActive,
     fleetData,
     fleetModalData,
+    whyUsCards,
   };
 });
 
