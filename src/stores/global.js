@@ -4,73 +4,81 @@ import fleetTruck_1 from "@/assets/images/fleet-truck-1.png";
 import fleetTruck_2 from "@/assets/images/fleet-truck-2.png";
 import fleetTruck_3 from "@/assets/images/fleet-truck-3.png";
 import fleetTruck_4 from "@/assets/images/fleet-truck-4.png";
+import modalFleetTruck_1 from "@/assets/images/modal-fleet-truck-1.png";
+import modalFleetTruck_2 from "@/assets/images/modal-fleet-truck-2.png";
+import modalFleetTruck_3 from "@/assets/images/modal-fleet-truck-3.png";
+import modalFleetTruck_4 from "@/assets/images/modal-fleet-truck-4.png";
 import whyUsImage_1 from "@/assets/images/why-us-image-1.png";
 import whyUsImage_2 from "@/assets/images/why-us-image-2.png";
 import whyUsImage_3 from "@/assets/images/why-us-image-3.png";
 import whyUsImage_4 from "@/assets/images/why-us-image-4.png";
+
 export const useGlobalStore = defineStore("global", () => {
   let fleetModalIsActive = ref(false);
-  let fleetModalData = ref({});
   let fleetData = ref([
     {
-      url: fleetTruck_1,
       id: 1,
-      model: "1",
-      modelTitle: "Volvo VNR represents the future of regional haul.",
+      carouselImageUrl: fleetTruck_1,
+      modalImageUrl: modalFleetTruck_1,
+      model: "VOLVO",
+      modelTitle: "Volvo represents the future of regional haul.",
       modelDescription:
-        "This truck does not compromise, delivering productivity and efficiency with quality and long-haul amenities. The standard cab offers a spacious interior with plenty of leg room, and it's equipped with air conditioning and heating to keep you comfortable in any weather. The engine is durable and powerful, allowing you to haul large loads with ease. ",
+        "This truck does not compromise, delivering productivity and efficiency with quality and long-haul amenities. The standard cab offers a spacious interior with plenty of leg room, and it's equipped with air conditioning and heating to keep you comfortable in any weather. The engine is durable and powerful, allowing you to haul large loads with ease.",
       year: "2019 and up",
       horsePower: "455 hp",
       engineModel: "VED13",
-      transmission: "Automatic and Manual",
+      transmission: "Automatic",
       sleeperSize: "77 inc",
       footerText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "Join our team and be part of a dynamic and innovative company that values its employees.",
     },
     {
-      url: fleetTruck_2,
       id: 2,
-      model: "2",
-      modelTitle: "Volvo VNR represents the future of regional haul.",
+      carouselImageUrl: fleetTruck_2,
+      modalImageUrl: modalFleetTruck_2,
+      model: "KENWORTH",
+      modelTitle: "Kenworth is a truck with power and style.",
       modelDescription:
-        "This truck does not compromise, delivering productivity and efficiency with quality and long-haul amenities. The standard cab offers a spacious interior with plenty of leg room, and it's equipped with air conditioning and heating to keep you comfortable in any weather. The engine is durable and powerful, allowing you to haul large loads with ease. ",
-      year: "2019 and up",
+        "The Kenworth is one of the best trucks on the market. It has a large cab, which means you can fit more in it. The truck is also strong and durable, making it perfect for long-haul driving.",
+      year: "2018 and up",
       horsePower: "455 hp",
-      engineModel: "VED13",
+      engineModel: "ISX15",
       transmission: "Automatic and Manual",
-      sleeperSize: "77 inc",
+      sleeperSize: "76 inc",
       footerText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "Join our team and be part of a dynamic and innovative company that values its employees.",
     },
     {
-      url: fleetTruck_3,
       id: 3,
-      model: "3",
-      modelTitle: "Volvo VNR represents the future of regional haul.",
+      carouselImageUrl: fleetTruck_3,
+      modalImageUrl: modalFleetTruck_3,
+      model: "PETERBILT",
+      modelTitle: "Peterbilt is known for their durability and reliability.",
       modelDescription:
-        "This truck does not compromise, delivering productivity and efficiency with quality and long-haul amenities. The standard cab offers a spacious interior with plenty of leg room, and it's equipped with air conditioning and heating to keep you comfortable in any weather. The engine is durable and powerful, allowing you to haul large loads with ease. ",
+        "The Peterbilt truck model is a classic, one of the most well-known trucks on the road. It is known for its reliability and durability. The Peterbilt features a wide variety of options, including a sleeper cab, an aerodynamic hood, and a Cummins ISX engine. It comes in three different cab styles: conventional, day cab, and high roof.",
       year: "2019 and up",
       horsePower: "455 hp",
-      engineModel: "VED13",
-      transmission: "Automatic and Manual",
-      sleeperSize: "77 inc",
+      engineModel: "ISX15",
+      transmission: "Manual",
+      sleeperSize: "72 inc",
       footerText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "Join our team and be part of a dynamic and innovative company that values its employees.",
     },
     {
-      url: fleetTruck_4,
       id: 4,
-      model: "4",
-      modelTitle: "Volvo VNR represents the future of regional haul.",
+      carouselImageUrl: fleetTruck_4,
+      modalImageUrl: modalFleetTruck_4,
+      model: "INTERNATIONAL",
+      modelTitle: "International LT is an all-new, fully redesigned truck.",
       modelDescription:
-        "This truck does not compromise, delivering productivity and efficiency with quality and long-haul amenities. The standard cab offers a spacious interior with plenty of leg room, and it's equipped with air conditioning and heating to keep you comfortable in any weather. The engine is durable and powerful, allowing you to haul large loads with ease. ",
+        "The International LT truck is an all-around great choice for those who need to transport heavy cargo. It's got a powerful engine, a spacious interior for cargo, and even enough room for people to ride comfortably.",
       year: "2019 and up",
       horsePower: "455 hp",
-      engineModel: "VED13",
-      transmission: "Automatic and Manual",
-      sleeperSize: "77 inc",
+      engineModel: "ISX15",
+      transmission: "Automatic",
+      sleeperSize: "73 inc",
       footerText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+        "Join our team and be part of a dynamic and innovative company that values its employees.",
     },
   ]);
   let whyUsCards = ref([
@@ -102,7 +110,6 @@ export const useGlobalStore = defineStore("global", () => {
   return {
     fleetModalIsActive,
     fleetData,
-    fleetModalData,
     whyUsCards,
   };
 });

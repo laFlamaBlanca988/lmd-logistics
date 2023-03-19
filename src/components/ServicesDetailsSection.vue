@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between mb-40">
+  <div class="mb-40 flex justify-between">
     <ServicesDetailsCard>
       <template #title><div class="text-main-blue">SERVICE #1</div></template>
       <template #shadowTitle
@@ -19,7 +19,7 @@
         <div>
           <Icon
             icon="material-symbols:arrow-circle-right-outline-rounded"
-            class="w-[40px] h-[40px] text-main-blue"
+            class="h-[40px] w-[40px] text-main-blue"
           />
         </div>
       </template>
@@ -36,15 +36,15 @@
         >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
       >
     </ServicesDetailsCard>
-    <div class="relative flex justify-center w-[50%] -m-6 z-10">
-      <video autoplay muted loop class="w-[75%] h-auto bg-transparent">
+    <div class="relative z-10 flex w-[50%] justify-center">
+      <video autoplay muted loop class="h-auto w-[75%] bg-transparent">
         <source :src="serviceVideo_1" type="video/mp4" />
       </video>
     </div>
   </div>
-  <div class="flex justify-between mb-40 bg-main-blue pt-36 text-white">
-    <div class="relative flex justify-center w-[50%] -m-6 z-10">
-      <video autoplay muted loop class="w-[75%] h-auto bg-transparent">
+  <div class="mb-40 flex justify-center bg-main-blue px-[8%] py-36 text-white">
+    <div class="6 relative z-10 flex w-[50%] justify-center">
+      <video autoplay muted loop class="h-auto w-[75%] bg-transparent">
         <source :src="serviceVideo_1" type="video/mp4" />
       </video>
     </div>
@@ -62,7 +62,7 @@
       <template #icon>
         <Icon
           icon="material-symbols:arrow-circle-right-outline-rounded"
-          class="w-[40px] h-[40px] text-white"
+          class="h-[40px] w-[40px] text-white"
         />
       </template>
       <template #service_1
@@ -79,7 +79,7 @@
       >
     </ServicesDetailsCard>
   </div>
-  <div class="flex justify-between mb-40">
+  <div class="mb-40 flex justify-between">
     <ServicesDetailsCard>
       <template #title><div class="text-main-blue">SERVICE #3</div></template>
       <template #shadowTitle
@@ -99,7 +99,7 @@
         <div>
           <Icon
             icon="material-symbols:arrow-circle-right-outline-rounded"
-            class="w-[40px] h-[40px] text-main-blue"
+            class="h-[40px] w-[40px] text-main-blue"
           />
         </div>
       </template>
@@ -116,8 +116,8 @@
         >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
       >
     </ServicesDetailsCard>
-    <div class="relative flex justify-center w-[50%] -m-6 z-10">
-      <video autoplay muted loop class="w-[75%] h-auto bg-transparent">
+    <div class="6 relative z-10 flex w-[50%] justify-center">
+      <video autoplay muted loop class="h-auto w-[75%] bg-transparent">
         <source :src="serviceVideo_1" type="video/mp4" />
       </video>
     </div>

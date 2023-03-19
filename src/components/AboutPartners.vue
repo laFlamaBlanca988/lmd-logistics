@@ -3,7 +3,7 @@
     :items-to-show="6"
     :wrap-around="true"
     snap-align="start"
-    class="mb-20"
+    class="mx-auto mb-20 w-[80%]"
   >
     <slide v-for="image in images" :key="image">
       <!-- <div
@@ -14,7 +14,6 @@
     </slide>
 
     <template #addons>
-      <navigation />
       <pagination />
     </template>
   </carousel>
@@ -27,6 +26,9 @@ import image_1 from "@/assets/images/about/partner-1.png";
 import image_2 from "@/assets/images/about/partner-2.png";
 import image_3 from "@/assets/images/about/partner-3.png";
 import image_4 from "@/assets/images/about/partner-4.png";
+import image_5 from "@/assets/images/about/partner-5.png";
+import image_6 from "@/assets/images/about/partner-6.png";
+
 const images = ref([
   {
     path: image_1,
@@ -41,16 +43,10 @@ const images = ref([
     path: image_4,
   },
   {
-    path: image_1,
+    path: image_5,
   },
   {
-    path: image_2,
-  },
-  {
-    path: image_3,
-  },
-  {
-    path: image_4,
+    path: image_6,
   },
 ]);
 </script>

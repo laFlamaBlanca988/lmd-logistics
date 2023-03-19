@@ -1,13 +1,23 @@
 <template>
   <div
-    class="flex flex-col items-center w-full h-auto pb-20 bg-center bg-cover bg-fixed"
+    class="flex h-auto w-full flex-col items-center bg-cover bg-fixed bg-center pb-20"
     :style="{ 'background-image': `url(${backgroundImage})` }"
   >
-    <h1 class="italic font-black text-9xl text-white opacity-50 translate-y-14">
-      WHY US
-    </h1>
-    <h3 class="text-6xl text-white font-bold italic mb-4">WHY US</h3>
-    <p class="text-2xl mb-10 text-white">
+    <div
+      class="relative flex justify-center md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
+    >
+      <h1
+        class="text-center text-6xl font-black italic text-white opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
+      >
+        WHY US
+      </h1>
+      <h4
+        class="absolute bottom-0 text-center text-xl font-extrabold italic text-white md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+      >
+        WHY US
+      </h4>
+    </div>
+    <p class="mb-10 text-2xl text-white">
       What our partners and satisfied customers say about our work
     </p>
     <div class="w-full px-[8%]">
@@ -64,21 +74,4 @@ let breakpoints = reactive({
   },
 });
 </script>
-<style>
-.carousel {
-  /* background: red !important; */
-}
-.carousel__pagination-button {
-  height: 30px;
-  border-radius: 50% !important;
-  border: 1px solid #244088;
-  border-color: red !important;
-}
-.carousel__pagination-button::after {
-  border-radius: 50% !important;
-  border: 2px !important;
-  border-color: white !important;
-  color: red !important;
-  background: #f2f7fb;
-}
-</style>
+<style></style>

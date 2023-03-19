@@ -1,15 +1,21 @@
 <template>
   <div class="flex flex-col pb-20">
-    <div class="flex flex-col justify-center items-center mb-20">
-      <!-- <h1
-        class="italic font-black text-9xl text-main-blue opacity-10 translate-y-14"
+    <div class="mb-20 flex flex-col items-center justify-center gap-4">
+      <div
+        class="relative flex justify-center md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
       >
-        TESTIMONIALS
-      </h1> -->
-      <h3 class="text-6xl text-main-blue font-bold italic mb-4">
-        TESTIMONIALS
-      </h3>
-      <p class="text-2xl mb-10">
+        <h1
+          class="text-center text-6xl font-black italic text-main-blue opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
+        >
+          TESTIMONIALS
+        </h1>
+        <h4
+          class="absolute bottom-0 text-center text-xl font-extrabold italic text-main-blue md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+        >
+          TESTIMONIALS
+        </h4>
+      </div>
+      <p class="mb-10 text-3xl">
         What our partners and satisfied customers say about our work
       </p>
     </div>

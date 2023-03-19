@@ -1,6 +1,11 @@
 <template>
-  <div class="flex h-auto justify-between pl-[8%]">
-    <div class="flex w-3/6 flex-col gap-4 lg:justify-center lg:gap-3 3xl:pb-28">
+  <div class="relative left-0 right-0 top-0 flex h-[calc(100vh-130px)]">
+    <video autoplay muted loop class="background-video">
+      <source :src="driverVideo" type="video/mp4" />
+    </video>
+    <div
+      class="md:gap-8l g:gap-3 absolute top-[130px] left-0 flex w-3/6 flex-col items-start justify-center gap-4 pl-[8%] xxs:gap-6 3xl:pb-28"
+    >
       <div>
         <Transition name="load-move" appear mode="in-out">
           <div>
@@ -18,7 +23,7 @@
         </Transition>
       </div>
       <div
-        class="flex items-center font-semibold leading-[72px] text-black lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl"
+        class="flex items-center justify-start font-semibold leading-[72px] text-white lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl"
       >
         <h3 class="mr-2">FAST</h3>
         <Icon
@@ -32,26 +37,31 @@
         ></Icon>
         <h3>REFINED</h3>
       </div>
-      <p class="leading-9 lg:text-lg xl:text-xl 2xl:text-2xl">
+      <p class="leading-9 text-white lg:text-lg xl:text-xl 2xl:text-2xl">
         Our vision is to be the leading cargo transportation and logistics
         company, recognized for our excellence in service, innovation, and
         commitment.
       </p>
       <div class="mt-2 flex items-center gap-6 font-semibold">
         <AppButton url="#" content="Give Us A Call"></AppButton>
-        <RouterLink to="#" class="text-black">Drive With Us</RouterLink>
+        <RouterLink to="#" class="text-white">Drive With Us</RouterLink>
       </div>
     </div>
-
-    <HomeTruckDriver_1 class="w-[45%]"></HomeTruckDriver_1>
+    <div
+      class="absolute bottom-0 right-0 flex h-[30%] px-[3%] xxs:h-[38%] lg:h-[75%]"
+    >
+      <img :src="videoOverlayImage" class="mx-auto h-full w-auto" />
+    </div>
   </div>
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
-import { ref } from "vue";
-import HomeTruckDriver_1 from "./HomeTruckDriver_1.vue";
+import videoOverlayImage from "@/assets/images/mobile-video-overlay-img.png";
 import AppButton from "./AppButton.vue";
+import driverVideo from "@/assets/videos/bg-video-v2.mp4";
+import Navbar from "./Navbar.vue";
 </script>
+
 <style scoped>
 @keyframes slide-in {
   from {
@@ -63,10 +73,20 @@ import AppButton from "./AppButton.vue";
 }
 
 .load-move-enter-active {
-  animation: slide-in 0.9s ease;
+  animation: slide-in 0.5s ease;
 }
 .deliver-enter-active {
   animation: slide-in 0.5s ease;
   animation-delay: 0.5s;
+}
+.background-video {
+  width: 100vw;
+  height: 937px;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 </style>

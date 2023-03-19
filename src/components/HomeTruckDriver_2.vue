@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center h-full w-auto pl-14">
-    <img class="w-auto h-full m-auto" :src="truckDriver" />
+  <div class="flex h-[200%] w-full items-center pt-20 lg:w-[50%]">
+    <img class="m-auto h-full w-auto" :src="truckDriver" />
   </div>
 </template>
 <script setup>

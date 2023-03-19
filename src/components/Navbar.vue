@@ -1,7 +1,7 @@
 <template>
   <div
     class="bg-white flex justify-between items-center h-[88px] px-[8%] shadow-lg z-50 overflow-hidden"
-    ref="el"
+    ref="navbarElement"
     :class="stickyStyle"
   >
     <div class="flex items-center cursor-pointer" @click="router.push('/')">
@@ -38,7 +38,7 @@ import mainLogo from "@/assets/images/logo.svg";
 import { onMounted, onUnmounted, ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-const el = ref(null);
+const navbarElement = ref(null);
 const stickyStyle = ref([]);
 
 onMounted(() => {

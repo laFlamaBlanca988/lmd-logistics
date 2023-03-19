@@ -1,9 +1,9 @@
 <template>
-  <div class="relative flex min-h-[1000px] pl-[8%] pr-20">
+  <div class="relative mb-20 flex pl-[8%] pr-20">
     <AppOverlay v-if="fleetModalIsActive">
       <HomeFleetModal
         ref="elementModal"
-        :image-url="modalFleetTruck_1"
+        :image-url="fleetModalData.modalImageUrl"
         :model="fleetModalData.model"
         :model-title="fleetModalData.modelTitle"
         :model-description="fleetModalData.modelDescription"
@@ -15,27 +15,48 @@
         :footer-text="fleetModalData.footerText"
       ></HomeFleetModal>
     </AppOverlay>
-    <div class="flex flex-col gap-4 w-[50%] pt-40 z-40">
-      <h4 class="text-6xl text-main-blue font-bold italic">OUR SERVICES</h4>
-      <p class="text-2xl w-[50%]">
+    <div class="z-40 flex w-[50%] flex-col justify-center gap-4">
+      <div
+        class="relative md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
+      >
+        <h1
+          class="text-6xl font-black italic text-main-blue opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
+        >
+          SERVICES
+        </h1>
+        <h4
+          class="absolute bottom-0 text-xl font-extrabold italic text-main-blue md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+        >
+          OUR SERVICES
+        </h4>
+      </div>
+
+      <p class="text-sm md:text-2xl">
         We provide reliable and efficient solutions for all our customers
         logistics needs to help customers cut costs and increase efficiency.
       </p>
 
-      <AppButton url="#" content="Find Out More" class="w-[240px]"></AppButton>
-      <h1
-        class="absolute top-[80px] italic font-black text-9xl text-main-blue opacity-10"
+      <AppButton
+        url="#"
+        content="Find Out More"
+        class="my-2 w-[240px]"
+      ></AppButton>
+
+      <div
+        class="relative md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
       >
-        SERVICES
-      </h1>
-      <h4 class="mt-[80px] text-6xl text-main-blue font-bold italic">
-        OUR FLEET
-      </h4>
-      <h1
-        class="absolute top-[455px] italic font-black text-9xl text-main-blue opacity-10"
-      >
-        FLEET
-      </h1>
+        <h1
+          class="text-6xl font-black italic text-main-blue opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
+        >
+          FLEET
+        </h1>
+        <h4
+          class="absolute bottom-0 text-xl font-extrabold italic text-main-blue md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+        >
+          OUR FLEET
+        </h4>
+      </div>
+
       <div>
         <carousel
           :items-to-show="4"
@@ -50,7 +71,10 @@
               @mouseleave="onMouseLeave(slide.id)"
               class="relative cursor-pointer"
             >
-              <img :src="slide.url" class="rounded-xl h-full" />
+              <img
+                :src="slide.carouselImageUrl"
+                class="max-h-[201px] rounded-xl"
+              />
             </slide>
           </div>
 
@@ -62,8 +86,8 @@
       </div>
     </div>
 
-    <div class="flex items-center h-full w-auto">
-      <img class="w-auto h-full m-auto" :src="truckDriver_3" />
+    <div class="flex h-full w-auto items-center">
+      <img class="m-auto h-full w-auto" :src="truckDriver_3" />
     </div>
   </div>
 </template>
@@ -87,20 +111,20 @@ let hoverIsActive = ref(false);
 let fleetModalIsActive = computed(() => globalStore.fleetModalIsActive);
 const elementModal = ref(null);
 const fleetData = computed(() => globalStore.fleetData);
-let fleetModalData = computed(() => globalStore.fleetModalData);
+let fleetModalData = ref([]);
 const onMouseHover = (slideID) => {
   hoverIsActive.value = true;
-  globalStore.fleetData[slideID - 1].url = hoverImage;
+  globalStore.fleetData[slideID - 1].carouselImageUrl = hoverImage;
 };
 const onMouseLeave = (slideID) => {
   hoverIsActive.value = false;
   globalStore.fleetData[
     slideID - 1
-  ].url = `src/assets/images/fleet-truck-${slideID}.png`;
+  ].carouselImageUrl = `src/assets/images/fleet-truck-${slideID}.png`;
 };
 const showModal = (id) => {
   globalStore.fleetModalIsActive = true;
-  globalStore.fleetModalData = fleetData.value.find((el) => el.id === id);
+  fleetModalData.value = fleetData.value.find((el) => el.id === id);
 };
 watch(fleetModalIsActive, (newVal) => {
   newVal === true

@@ -1,9 +1,9 @@
 <template>
   <AboutTopSection></AboutTopSection>
-  <AboutOurTeam></AboutOurTeam>
+  <!-- <AboutOurTeam></AboutOurTeam>
   <AboutUsDescription></AboutUsDescription>
   <AboutPartners></AboutPartners>
-  <HomeFooter></HomeFooter>
+  <HomeFooter></HomeFooter> -->
 </template>
 <script setup>
 import AboutTopSection from "../components/AboutTopSection.vue";
