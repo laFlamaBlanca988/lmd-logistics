@@ -1,32 +1,32 @@
 <template>
   <div
-    class="bg-white flex justify-between items-center h-[88px] px-[8%] shadow-lg z-50 overflow-hidden"
+    class="z-50 hidden h-[88px] items-center justify-between overflow-hidden bg-white px-[8%] shadow-lg xl:flex"
     ref="navbarElement"
     :class="stickyStyle"
   >
-    <div class="flex items-center cursor-pointer" @click="router.push('/')">
+    <div class="flex cursor-pointer items-center" @click="router.push('/')">
       <img :src="mainLogo" />
     </div>
     <div class="flex items-center gap-8">
       <RouterLink
         to="/"
-        class="text-sm font-medium text-black hover:text-main-blue hover:border-b-2 border-black"
+        class="border-black text-sm font-medium text-black hover:border-b-2 hover:text-main-blue"
         >Home</RouterLink
       >
       <RouterLink
         to="services"
-        class="text-sm font-medium text-black hover:text-main-blue hover:border-b-2 border-black"
+        class="border-black text-sm font-medium text-black hover:border-b-2 hover:text-main-blue"
         >Services</RouterLink
       >
       <RouterLink
         to="/about-us"
-        class="text-sm font-medium text-black hover:text-main-blue hover:border-b-2 border-black"
+        class="border-black text-sm font-medium text-black hover:border-b-2 hover:text-main-blue"
         >About Us</RouterLink
       >
       <a
         href="#"
         target="_blank"
-        class="text-sm font-medium bg-main-red p-3 rounded-md text-white"
+        class="hover:bg-button-hover rounded-md bg-main-red p-3 text-sm font-medium text-white"
         >WE ARE HIRING</a
       >
     </div>
@@ -57,6 +57,6 @@ const handleScroll = (event) => {
 </script>
 <style scoped>
 .router-link-active {
-  @apply text-main-blue border-b-2 border-main-blue;
+  @apply border-b-2 border-main-blue text-main-blue;
 }
 </style>

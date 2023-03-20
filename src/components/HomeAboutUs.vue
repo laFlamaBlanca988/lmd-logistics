@@ -45,7 +45,7 @@
           :wrap-around="true"
           snap-align="start"
           id="custom-swiper"
-          class="w-[70%]"
+          class="w-full"
         >
           <slide v-for="image in images" :key="image" class="custom-slide">
             <div

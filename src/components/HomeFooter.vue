@@ -2,7 +2,7 @@
   <div class="flex flex-col">
     <div class="flex h-[180px]">
       <div
-        class="flex flex-col justify-center px-[8%] gap-2 bg-main-blue w-[70%] text-white"
+        class="flex w-[70%] flex-col justify-center gap-2 bg-main-blue px-[8%] text-white"
       >
         <h4 class="text-4xl font-bold">Join our team</h4>
         <p class="text-xl">
@@ -11,108 +11,108 @@
           to delivering exceptional service to our clients.
         </p>
       </div>
-      <div class="flex items-center justify-center bg-main-red w-[30%]">
+      <div class="flex w-[30%] items-center justify-center bg-main-red">
         <a
           href="#"
           target="_blank"
-          class="flex items-center justify-center w-[280px] h-[60px] text-2xl text-main-red font-bold bg-white rounded-lg"
+          class="flex h-[60px] w-[280px] items-center justify-center rounded-lg bg-white text-2xl font-bold text-main-red hover:border-2 hover:bg-main-red hover:text-white"
           >WE ARE HIRING</a
         >
       </div>
     </div>
     <div class="relative flex justify-between">
-      <div class="flex justify-between h-[552px] pl-[5.5%] w-[70%] bg-white">
+      <div class="flex h-[552px] w-[70%] justify-between bg-white pl-[5.5%]">
         <ContactForm></ContactForm>
 
         <div
-          class="flex flex-col mt-24 gap-6 justify-between w-[45%] h-[200px]"
+          class="mt-24 flex h-[200px] w-[45%] flex-col justify-between gap-6"
         >
           <div class="flex items-center gap-2">
             <Icon
               icon="ph:map-pin"
-              class="w-[38px] h-[38px] text-main-blue"
+              class="h-[38px] w-[38px] text-main-blue"
             ></Icon>
             <p class="text-xl font-medium">Street Address, Chicago, IL</p>
           </div>
           <div class="flex items-center gap-2">
             <Icon
               icon="material-symbols:phone-in-talk-sharp"
-              class="w-[38px] h-[38px] text-main-blue"
+              class="h-[38px] w-[38px] text-main-blue"
             ></Icon>
             <p class="text-xl font-medium">(708) 400 - 7258</p>
           </div>
           <div class="flex items-center gap-2">
             <Icon
               icon="ic:twotone-mail-outline"
-              class="w-[38px] h-[38px] text-main-blue"
+              class="h-[38px] w-[38px] text-main-blue"
             ></Icon>
             <p class="text-xl font-medium">recruiting@lmdlogisticsinc.com</p>
           </div>
           <div class="flex items-center gap-2">
             <Icon
               icon="mdi:clock-time-four-outline"
-              class="w-[38px] h-[38px] text-main-blue"
+              class="h-[38px] w-[38px] text-main-blue"
             ></Icon>
             <p class="text-xl font-medium">
               [Mon-Fri] 6am - 18pm [SAT, SUN] 6am - 16pm
             </p>
           </div>
-          <div class="flex flex-col gap-2 mt-10">
+          <div class="mt-10 flex flex-col gap-2">
             <h4 class="text-3xl font-medium">Folow Us On:</h4>
             <div class="flex items-center gap-3">
               <Icon
                 icon="ant-design:facebook-outlined"
-                class="flex justify-start w-[55px] h-[55px] text-main-red cursor-pointer"
+                class="flex h-[55px] w-[55px] cursor-pointer justify-start text-main-red"
               ></Icon>
               <Icon
                 icon="ri:instagram-line"
-                class="w-[55px] h-[55px] text-main-red cursor-pointer"
+                class="h-[55px] w-[55px] cursor-pointer text-main-red"
               ></Icon>
               <Icon
                 icon="jam:linkedin-square"
-                class="w-[55px] h-[55px] text-main-red cursor-pointer"
+                class="h-[55px] w-[55px] cursor-pointer text-main-red"
               ></Icon>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-center w-[30%]">
+      <div class="flex w-[30%] items-center justify-center">
         <div
-          class="flex flex-col justify-evenly items-center w-[430px] h-[361px] shadow-xl rounded-xl bg-white"
+          class="flex h-[361px] w-[430px] flex-col items-center justify-evenly rounded-xl bg-white shadow-xl"
         >
-          <div class="flex justify-center items-center">
-            <h4 class="text-4xl text-center font-bold">
+          <div class="flex items-center justify-center">
+            <h4 class="text-center text-4xl font-bold">
               Ready To <br />
               Start Driving
             </h4>
           </div>
           <div
-            class="flex justify-center items-center w-full -translate-x-[15px]"
+            class="flex w-full -translate-x-[15px] items-center justify-center"
           >
-            <img :src="postCar" class="w-[173px] h-[84px]" />
+            <img :src="postCar" class="h-[84px] w-[173px]" />
           </div>
           <RouterLink
             to="#"
-            class="flex items-center justify-center w-[241px] h-[59px] border-[3px] border-main-red text-xl text-main-red font-bold bg-white rounded-lg"
+            class="flex h-[59px] w-[241px] items-center justify-center rounded-lg border-[3px] border-main-red bg-white text-xl font-bold text-main-red hover:bg-main-red hover:text-white"
             >Fill The Form</RouterLink
           >
         </div>
       </div>
     </div>
-    <div class="flex justify-end items-center h-[200px] bg-main-blue">
-      <div class="flex items-center justify-center px-10 w-[30%]">
+    <div class="flex h-[200px] items-center justify-end bg-main-blue">
+      <div class="flex w-[30%] items-center justify-center px-10">
         <p class="text-xl text-white">
           At our company, we are dedicated to providing top-notch cargo
           transport and logistics services to our clients. With a team of
           experienced professionals and a fleet of modern trucks.
         </p>
       </div>
-      <div class="flex justify-center w-[30%] bg-cover bg-center z-50">
+      <div class="z-50 flex w-[30%] justify-center bg-cover bg-center">
         <img class="h-[250px]" :src="footerTruck" />
       </div>
     </div>
 
-    <div class="flex justify-center items-center h-[51px] bg-[#13285B]">
+    <div class="flex h-[51px] items-center justify-center bg-[#13285B]">
       <p class="text-sm text-white">
         Copyright 2023 LMD Logistics All Rights Reserved
       </p>

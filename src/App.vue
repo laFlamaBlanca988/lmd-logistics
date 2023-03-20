@@ -1,7 +1,5 @@
 <template>
-  <div v-if="innerWidth > 1280">
-    <Header></Header>
-  </div>
+  <Header></Header>
   <Navbar></Navbar>
 
   <router-view></router-view>

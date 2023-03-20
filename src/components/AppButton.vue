@@ -1,7 +1,7 @@
 <template>
   <RouterLink
     :to="url"
-    class="bg-main-red p-4 flex items-center justify-between gap-2 text-white rounded-lg"
+    class="flex items-center justify-between gap-2 rounded-lg bg-main-red p-4 text-white hover:bg-button-hover"
     >{{ content }}
     <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
   </RouterLink>

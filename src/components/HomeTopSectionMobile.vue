@@ -1,7 +1,7 @@
 <template>
-  <div class="relative">
+  <div class="relative left-0 right-0 top-0 bottom-0 flex h-screen">
     <NavbarMobile></NavbarMobile>
-    <video autoplay muted loop class="w-full">
+    <video autoplay muted loop class="background-video w-full">
       <source :src="driverVideo" type="video/mp4" />
     </video>
     <div
@@ -45,7 +45,7 @@
       </p>
       <RouterLink
         to="#"
-        class="relative flex w-[200px] items-center justify-between gap-2 rounded-lg bg-main-red p-3 font-semibold text-white lg:pl-20"
+        class="relative flex w-[200px] items-center justify-between gap-2 rounded-lg bg-main-red p-3 font-semibold text-white md:pl-10"
         >Give Us A Call
         <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
       </RouterLink>
@@ -61,7 +61,7 @@
 import { Icon } from "@iconify/vue";
 import videoOverlayImage from "@/assets/images/mobile-video-overlay-img.png";
 import AppButton from "./AppButton.vue";
-import driverVideo from "@/assets/videos/bg-video-mobile.mp4";
+import driverVideo from "@/assets/videos/bg-video.mp4";
 import NavbarMobile from "./NavbarMobile.vue";
 </script>
 
@@ -81,5 +81,15 @@ import NavbarMobile from "./NavbarMobile.vue";
 .deliver-enter-active {
   animation: slide-in 0.5s ease;
   animation-delay: 0.5s;
+}
+.background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  /* left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; */
 }
 </style>

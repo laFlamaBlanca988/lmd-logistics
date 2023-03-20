@@ -1,40 +1,30 @@
 <template>
   <div class="mb-40 flex justify-between">
     <ServicesDetailsCard>
-      <template #title><div class="text-main-blue">SERVICE #1</div></template>
+      <template #title
+        ><div class="text-main-blue">FREIGHT TRANSPORTATION</div></template
+      >
       <template #shadowTitle
-        ><div class="text-main-blue">SERVICE #1</div></template
+        ><div class="text-main-blue">TRANSPORTATION</div></template
       >
-      <template #service-features
-        ><div class="text-main-blue">Service features</div></template
-      >
-      <template #description
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      <template #description-top
+        >Freight transportation is the backbone of global commerce, responsible
+        for the movement of goods across vast distances and multiple modes of
+        transportation. From shipping containers on massive cargo ships to
+        pallets on semi-trucks, freight transportation is essential for
+        businesses of all sizes to reach customers around the world. With a
+        range of transportation options available, including air, rail, sea, and
+        road, companies can choose the best mode of transportation to meet their
+        shipping needs.
       </template>
-      <template #icon>
-        <div>
-          <Icon
-            icon="material-symbols:arrow-circle-right-outline-rounded"
-            class="h-[40px] w-[40px] text-main-blue"
-          />
-        </div>
+      <template #description-bottom
+        >Whether it's delivering raw materials to a factory or transporting
+        finished products to retail stores, reliable freight transportation is
+        critical to the success of any supply chain. By partnering with a
+        trusted freight transportation provider, businesses can ensure that
+        their products arrive on time and in good condition, no matter where
+        they are headed.
       </template>
-      <template #service_1
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_2
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_3
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_4
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
     </ServicesDetailsCard>
     <div class="relative z-10 flex w-[50%] justify-center">
       <video autoplay muted loop class="h-auto w-[75%] bg-transparent">
@@ -42,86 +32,38 @@
       </video>
     </div>
   </div>
-  <div class="mb-40 flex justify-center bg-main-blue px-[8%] py-36 text-white">
+  <div class="mb-40 flex justify-center px-[8%] py-36">
     <div class="6 relative z-10 flex w-[50%] justify-center">
       <video autoplay muted loop class="h-auto w-[75%] bg-transparent">
         <source :src="serviceVideo_1" type="video/mp4" />
       </video>
     </div>
-    <ServicesDetailsCard class="text-white">
-      <template #title>SERVICE #1</template>
-      <template #shadowTitle>SERVICE #1</template>
-
-      <template #description
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.</template
-      >
-      <template #icon>
-        <Icon
-          icon="material-symbols:arrow-circle-right-outline-rounded"
-          class="h-[40px] w-[40px] text-white"
-        />
-      </template>
-      <template #service_1
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_2
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_3
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_4
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-    </ServicesDetailsCard>
-  </div>
-  <div class="mb-40 flex justify-between">
     <ServicesDetailsCard>
-      <template #title><div class="text-main-blue">SERVICE #3</div></template>
+      <template #title
+        ><div class="text-main-blue">FREIGHT BROKERAGE</div></template
+      >
       <template #shadowTitle
-        ><div class="text-main-blue">SERVICE #3</div></template
+        ><div class="text-main-blue">BROKERAGE</div></template
       >
-      <template #service-features
-        ><div class="text-main-blue">Service features</div></template
-      >
-      <template #description
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+
+      <template #description-top
+        >Freight brokerage is a service that connects shippers and carriers to
+        facilitate the transportation of goods. At its core, freight brokerage
+        involves matching the shipping needs of businesses with available
+        transportation capacity. Brokers act as intermediaries, negotiating
+        rates and contracts between shippers and carriers to ensure the timely
+        and efficient delivery of goods.
       </template>
-      <template #icon>
-        <div>
-          <Icon
-            icon="material-symbols:arrow-circle-right-outline-rounded"
-            class="h-[40px] w-[40px] text-main-blue"
-          />
-        </div>
+      <template #description-bottom
+        >With their deep knowledge of the transportation industry, freight
+        brokers can help businesses streamline their supply chain and reduce
+        shipping costs. By partnering with a reputable freight brokerage firm,
+        companies can benefit from a range of services, including freight
+        tracking, logistics management, and customs clearance.
       </template>
-      <template #service_1
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_2
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_3
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
-      <template #service_4
-        >Lorem ipsum dolor sit amet, consectetur adipiscing elit</template
-      >
     </ServicesDetailsCard>
-    <div class="6 relative z-10 flex w-[50%] justify-center">
-      <video autoplay muted loop class="h-auto w-[75%] bg-transparent">
-        <source :src="serviceVideo_1" type="video/mp4" />
-      </video>
-    </div>
   </div>
+
   <SectionCertificates></SectionCertificates>
 </template>
 <script setup>

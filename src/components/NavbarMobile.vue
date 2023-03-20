@@ -1,9 +1,9 @@
 <template>
   <div
-    class="absolute top-0 right-0 left-0 flex justify-between items-center px-[4%] h-[88px] bg-transparent"
+    class="absolute top-0 right-0 left-0 z-10 flex h-[88px] items-center justify-between bg-transparent px-[4%]"
   >
-    <img class="h-[45px] mt-2" :src="logo" />
-    <Icon icon="ci:hamburger-md" class="w-[45px] h-[45px] text-white"></Icon>
+    <img class="mt-2 h-[45px]" :src="logo" />
+    <Icon icon="ci:hamburger-md" class="h-[45px] w-[45px] text-white"></Icon>
   </div>
 </template>
 <script setup>

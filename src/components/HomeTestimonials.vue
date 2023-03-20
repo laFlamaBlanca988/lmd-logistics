@@ -2,18 +2,22 @@
   <div class="flex flex-col pb-20">
     <div class="mb-20 flex flex-col items-center justify-center gap-4">
       <div
-        class="relative flex justify-center md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
+        class="flex flex-col items-center justify-center md:items-start md:justify-start"
       >
-        <h1
-          class="text-center text-6xl font-black italic text-main-blue opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
+        <div
+          class="relative flex w-full items-center justify-center md:h-[96pxpx] lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
         >
-          TESTIMONIALS
-        </h1>
-        <h4
-          class="absolute bottom-0 text-center text-xl font-extrabold italic text-main-blue md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
-        >
-          TESTIMONIALS
-        </h4>
+          <h1
+            class="text-center text-[40px] font-black italic text-main-blue opacity-10 xxs:text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-8xl 2xl:text-9xl"
+          >
+            TESTIMONIALS
+          </h1>
+          <h1
+            class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
+          >
+            TESTIMONIALS
+          </h1>
+        </div>
       </div>
       <p class="mb-10 text-3xl">
         What our partners and satisfied customers say about our work
@@ -51,8 +55,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 import HomeTestimonial from "./HomeTestimonial.vue";
 
-import image_1 from "@/assets/images/testimonials-businessman-1.svg";
-import image_3 from "@/assets/images/testimonials-businessman-3.svg";
+import image_1 from "@/assets/images/testimonials-img-1.png";
 
 const testimonials = ref([
   {
@@ -67,7 +70,7 @@ const testimonials = ref([
     title: "Driver",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageUrl: image_3,
+    imageUrl: image_1,
   },
   {
     name: "John Doe",
@@ -79,7 +82,7 @@ const testimonials = ref([
 ]);
 let breakpoints = reactive({
   // 700px and up
-  360: {
+  320: {
     itemsToShow: 1,
     snapAlign: "start",
   },

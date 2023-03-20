@@ -1,5 +1,7 @@
 <template>
-  <div class="relative mb-20 flex pl-[8%] pr-20">
+  <div
+    class="relative mb-20 flex flex-col items-center px-[5%] md:flex-row md:pl-[8%] md:pr-20"
+  >
     <AppOverlay v-if="fleetModalIsActive">
       <HomeFleetModal
         ref="elementModal"
@@ -15,54 +17,64 @@
         :footer-text="fleetModalData.footerText"
       ></HomeFleetModal>
     </AppOverlay>
-    <div class="z-40 flex w-[50%] flex-col justify-center gap-4">
+    <div
+      class="z-40 order-1 flex w-full flex-col justify-center gap-4 md:order-1 md:w-[50%]"
+    >
       <div
-        class="relative md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
+        class="flex flex-col items-center justify-center md:items-start md:justify-start"
       >
-        <h1
-          class="text-6xl font-black italic text-main-blue opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
+        <div
+          class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
         >
-          SERVICES
-        </h1>
-        <h4
-          class="absolute bottom-0 text-xl font-extrabold italic text-main-blue md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
-        >
-          OUR SERVICES
-        </h4>
+          <h1
+            class="text-center text-6xl font-black italic text-main-blue opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
+          >
+            SERVICES
+          </h1>
+          <h1
+            class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
+          >
+            OUR SERVICES
+          </h1>
+        </div>
       </div>
-
-      <p class="text-sm md:text-2xl">
-        We provide reliable and efficient solutions for all our customers
-        logistics needs to help customers cut costs and increase efficiency.
+      <p class="my-4 text-center text-lg md:text-left xl:text-2xl">
+        Get all the benefits owners have but spare yourself from all the hassle
+        owners have!
       </p>
 
       <AppButton
         url="#"
         content="Find Out More"
-        class="my-2 w-[240px]"
+        class="mx-auto my-2 w-[240px] md:ml-0"
       ></AppButton>
 
       <div
-        class="relative md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
+        class="flex flex-col items-center justify-center md:items-start md:justify-start"
       >
-        <h1
-          class="text-6xl font-black italic text-main-blue opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
+        <div
+          class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
         >
-          FLEET
-        </h1>
-        <h4
-          class="absolute bottom-0 text-xl font-extrabold italic text-main-blue md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
-        >
-          OUR FLEET
-        </h4>
+          <h1
+            class="text-center text-6xl font-black italic text-main-blue opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
+          >
+            FLEET
+          </h1>
+          <h1
+            class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
+          >
+            OUR FLEET
+          </h1>
+        </div>
       </div>
 
       <div>
         <carousel
           :items-to-show="4"
           :wrap-around="true"
+          :breakpoints="breakpoints"
           snap-align="start"
-          class="w-[120%]"
+          class="w-[99%] md:w-[120%]"
         >
           <div v-for="slide in fleetData" :key="slide">
             <slide
@@ -86,13 +98,13 @@
       </div>
     </div>
 
-    <div class="flex h-full w-auto items-center">
+    <div class="order-0 flex h-full w-auto items-center md:order-1">
       <img class="m-auto h-full w-auto" :src="truckDriver_3" />
     </div>
   </div>
 </template>
 <script setup>
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, reactive } from "vue";
 import AppButton from "./AppButton.vue";
 import AppOverlay from "../components/AppOverlay.vue";
 
@@ -135,5 +147,17 @@ onClickOutside(
   elementModal,
   (event) => (globalStore.fleetModalIsActive = false)
 );
+// let breakpoints = reactive({
+//   // 700px and up
+//   360: {
+//     itemsToShow: 1,
+//     snapAlign: "start",
+//   },
+
+//   1402: {
+//     itemsToShow: 4,
+//     snapAlign: "start",
+//   },
+// });
 </script>
 <style></style>

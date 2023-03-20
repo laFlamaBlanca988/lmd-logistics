@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex justify-between h-[42px] px-[8%] bg-main-blue text-xs text-white font-bold z-50"
+    class="relative hidden xl:flex  justify-between h-[42px] px-[8%] bg-main-blue text-xs text-white font-bold z-50"
   >
     <div class="flex items-center justify-start gap-8">
       <div class="flex items-center gap-2">

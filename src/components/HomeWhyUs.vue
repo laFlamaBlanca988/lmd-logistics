@@ -1,18 +1,18 @@
 <template>
   <div
-    class="flex h-auto w-full flex-col items-center bg-cover bg-fixed bg-center pb-20"
+    class="flex h-auto w-full flex-col items-center bg-cover bg-fixed bg-center pb-20 pt-10"
     :style="{ 'background-image': `url(${backgroundImage})` }"
   >
     <div
-      class="relative flex justify-center md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
+      class="relative mb-6 flex justify-center md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
     >
       <h1
-        class="text-center text-6xl font-black italic text-white opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
+        class="text-center text-6xl font-black italic text-white opacity-10 md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
       >
         WHY US
       </h1>
       <h4
-        class="absolute bottom-0 text-center text-xl font-extrabold italic text-white md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
+        class="absolute bottom-0 text-center text-2xl font-extrabold italic text-white md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
       >
         WHY US
       </h4>
@@ -37,7 +37,7 @@
           ></HomeWhyUsCard>
         </Slide>
         <template #addons>
-          <pagination />
+          <navigation />
         </template>
       </Carousel>
     </div>
@@ -45,9 +45,9 @@
 </template>
 <script setup>
 import { computed, reactive } from "vue";
-import backgroundImage from "@/assets/images/bg-why-us.jpg";
+import backgroundImage from "@/assets/images/bg-why-us.png";
 import HomeWhyUsCard from "./HomeWhyUsCard.vue";
-// import "vue3-carousel/dist/carousel.css";
+import "vue3-carousel/dist/carousel.css";
 
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import { useGlobalStore } from "../stores/global";
@@ -74,4 +74,14 @@ let breakpoints = reactive({
   },
 });
 </script>
-<style></style>
+<style>
+.carousel__icon {
+  color: white;
+}
+.carousel__prev {
+  transform: translateX(-100%);
+}
+.carousel__next {
+  transform: translateX(100%);
+}
+</style>

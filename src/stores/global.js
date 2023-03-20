@@ -8,10 +8,10 @@ import modalFleetTruck_1 from "@/assets/images/modal-fleet-truck-1.png";
 import modalFleetTruck_2 from "@/assets/images/modal-fleet-truck-2.png";
 import modalFleetTruck_3 from "@/assets/images/modal-fleet-truck-3.png";
 import modalFleetTruck_4 from "@/assets/images/modal-fleet-truck-4.png";
-import whyUsImage_1 from "@/assets/images/why-us-image-1.png";
-import whyUsImage_2 from "@/assets/images/why-us-image-2.png";
-import whyUsImage_3 from "@/assets/images/why-us-image-3.png";
-import whyUsImage_4 from "@/assets/images/why-us-image-4.png";
+import whyUsImage_1 from "@/assets/images/icon-high-earnings.svg";
+import whyUsImage_2 from "@/assets/images/icon-good-maintenance.svg";
+import whyUsImage_3 from "@/assets/images/icon-247-support.svg";
+import whyUsImage_4 from "@/assets/images/icon-best-paying-loads.svg";
 
 export const useGlobalStore = defineStore("global", () => {
   let fleetModalIsActive = ref(false);

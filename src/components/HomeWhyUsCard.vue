@@ -1,18 +1,19 @@
 <template>
-  <div class="flex flex-col h-[303px] mx-4">
+  <div
+    class="mx-4 flex h-[303px] flex-col items-center justify-center rounded-2xl border-2 text-white"
+  >
+    <div>
+      <img class="h-[100px]" :src="backgroundImage" />
+    </div>
     <div
-      class="w-full h-[55%] bg-center bg-no-repeat bg-cover rounded-t-2xl"
-      :style="{ 'background-image': `url(${backgroundImage})` }"
-    ></div>
-    <div
-      class="flex flex-col items-center justify-center gap-3 h-[45%] bg-white rounded-b-2xl"
+      class="flex h-[45%] flex-col items-center justify-center gap-2 rounded-b-2xl"
     >
-      <h3 class="text-main-red text-xl font-bold">{{ title }}</h3>
+      <h3 class="text-xl font-bold">{{ title }}</h3>
       <Icon
         icon="mdi:horizontal-line"
-        class="w-[37px] bg-black h-[3px] rounded-lg"
+        class="h-[3px] w-[37px] rounded-lg bg-white"
       />
-      <p class="px-6 text-center text-sm text-black">{{ description }}</p>
+      <p class="px-6 text-center text-sm">{{ description }}</p>
     </div>
   </div>
 </template>

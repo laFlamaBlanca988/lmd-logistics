@@ -20,6 +20,7 @@ module.exports = {
         "velvet-blue": "#40434F",
         "bleue-royale": "#25988B",
         "sweet-yellow": "#F8DE7A",
+        "button-hover": "#761b1b"
       },
       backgroundImage: {
         "fleet-truck-1": "url('src/assets/images/fleet-truck-1.png)",

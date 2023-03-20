@@ -68,7 +68,7 @@
       <div class="mt-4 flex flex-col gap-3 md:gap-4 lg:flex-row">
         <RouterLink
           to="#"
-          class="flex h-[44px] w-full items-center justify-center gap-2 rounded-lg border border-main-red bg-white text-main-red xl:h-[57px] xl:w-[240px]"
+          class="flex h-[44px] w-full items-center justify-center gap-2 rounded-lg border border-main-red bg-white text-main-red hover:bg-main-red hover:text-white xl:h-[57px] xl:w-[240px]"
           >Sign Up
           <Icon
             icon="material-symbols:arrow-forward-ios-rounded"
@@ -77,7 +77,7 @@
         </RouterLink>
         <RouterLink
           to="#"
-          class="flex h-[44px] w-full items-center justify-center gap-2 rounded-lg bg-main-red text-white xl:h-[57px] xl:w-[240px]"
+          class="flex h-[44px] w-full items-center justify-center gap-2 rounded-lg bg-main-red text-white hover:bg-button-hover xl:h-[57px] xl:w-[240px]"
           >Give Us A Call
           <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
         </RouterLink>
