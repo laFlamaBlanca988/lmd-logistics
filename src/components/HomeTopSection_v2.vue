@@ -1,5 +1,5 @@
 <template>
-  <div class="relative left-0 right-0 top-0 flex h-[calc(100vh-130px)]">
+  <div class="relative left-0 right-0 top-0 mb-20 flex h-[calc(100vh-130px)]">
     <video autoplay muted loop class="background-video">
       <source :src="driverVideo" type="video/mp4" />
     </video>
@@ -58,7 +58,7 @@
 import { Icon } from "@iconify/vue";
 import videoOverlayImage from "@/assets/images/mobile-video-overlay-img.png";
 import AppButton from "./AppButton.vue";
-import driverVideo from "@/assets/videos/bg-video-v2.mp4";
+import driverVideo from "@/assets/videos/bg-video-v2.webm";
 import Navbar from "./Navbar.vue";
 </script>
 
@@ -81,9 +81,11 @@ import Navbar from "./Navbar.vue";
 }
 .background-video {
   width: 100vw;
-  height: 937px;
+  /* height: calc(100vh - 130px); */
+  /* display: flex;
+  flex-grow: 1; */
   object-fit: cover;
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   right: 0;
   bottom: 0;

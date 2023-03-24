@@ -98,7 +98,7 @@
 <script setup>
 import { ref } from "vue";
 import SectionCertificates from "./SectionCertificates.vue";
-import serviceVideo_1 from "@/assets/videos/bg-services-video-1.mp4";
+import serviceVideo_1 from "@/assets/videos/bg-services-video-1.webm";
 import { Icon } from "@iconify/vue";
 import { useIntersectionObserver } from "@vueuse/core";
 

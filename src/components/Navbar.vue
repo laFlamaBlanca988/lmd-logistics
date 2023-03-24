@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-50 hidden h-[88px] items-center justify-between overflow-hidden bg-white px-[8%] shadow-lg lg:flex"
+    class="z-50 hidden h-[88px] w-full items-center justify-between overflow-hidden bg-white px-[8%] shadow-lg lg:flex"
     ref="navbarElement"
     :class="stickyStyle"
   >

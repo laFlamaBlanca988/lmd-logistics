@@ -61,7 +61,7 @@
 import { Icon } from "@iconify/vue";
 import videoOverlayImage from "@/assets/images/mobile-video-overlay-img.png";
 import AppButton from "./AppButton.vue";
-import driverVideo from "@/assets/videos/bg-video.mp4";
+import driverVideo from "@/assets/videos/bg-video.webm";
 import NavbarMobile from "./NavbarMobile.vue";
 </script>
 

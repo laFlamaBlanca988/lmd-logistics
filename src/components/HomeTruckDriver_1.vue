@@ -6,7 +6,7 @@
   </figure>
 </template>
 <script setup>
-import driverVideo from "@/assets/videos/bg-home-video.mp4";
+import driverVideo from "@/assets/videos/bg-home-video.webm";
 </script>
 <style scoped>
 .mask {
