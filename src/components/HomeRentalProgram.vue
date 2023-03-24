@@ -2,35 +2,44 @@
   <div
     class="mb-14 flex flex-col items-center justify-center gap-10 px-[5%] md:flex-row md:justify-start md:px-[3%] xl:gap-20"
   >
-    <HomeTruckDriver_2></HomeTruckDriver_2>
+    <Transition name="truck-driver">
+      <div
+        v-if="targetIsVisible"
+        class="flex h-[200%] w-full items-center lg:w-[50%]"
+      >
+        <img class="m-auto h-full w-auto" :src="truckDriver" />
+      </div>
+    </Transition>
+
     <div
-      class="relative mt-4 flex w-full flex-col justify-center gap-2 md:pt-14 lg:w-[40%] lg:gap-4"
+      ref="animatedElement"
+      class="relative flex w-full flex-col justify-center gap-2 lg:w-[40%] lg:gap-4"
     >
-      <!-- <Transition name="rental-text"> -->
       <div
         class="flex flex-col items-center justify-center md:items-start md:justify-start"
       >
-        <div
-          class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
-        >
-          <h1
-            class="text-center text-6xl font-black italic text-main-blue opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
+        <Transition name="rental-program-title">
+          <div
+            v-if="targetIsVisible"
+            class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
           >
-            WINNING
-          </h1>
-          <h1
-            class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
-          >
-            OUR AWARD WINNING
-          </h1>
-        </div>
+            <h1
+              class="text-center text-6xl font-black italic text-main-blue opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
+            >
+              WINNING
+            </h1>
+            <h1
+              class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
+            >
+              OUR AWARD WINNING
+            </h1>
+          </div>
+        </Transition>
       </div>
       <p class="my-4 text-lg xl:text-2xl">
         Get all the benefits owners have but spare yourself from all the hassle
         owners have!
       </p>
-
-      <!-- </Transition> -->
 
       <div class="flex items-center gap-2 md:gap-3 xl:gap-4">
         <Icon
@@ -65,7 +74,10 @@
           Don't worry about maintenance
         </p>
       </div>
-      <div class="mt-4 flex flex-col gap-3 md:gap-4 lg:flex-row">
+      <div
+        ref="animatedElement"
+        class="mt-4 flex flex-col gap-3 md:gap-4 lg:flex-row"
+      >
         <RouterLink
           to="#"
           class="flex h-[44px] w-full items-center justify-center gap-2 rounded-lg border border-main-red bg-white text-main-red hover:bg-main-red hover:text-white xl:h-[57px] xl:w-[240px]"
@@ -87,6 +99,45 @@
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
-import HomeTruckDriver_2 from "./HomeTruckDriver_2.vue";
+import { ref } from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
+import truckDriver from "@/assets/images/truck-driver-2.png";
+
+const animatedElement = ref(null);
+const targetIsVisible = ref(false);
+
+const { stop } = useIntersectionObserver(
+  animatedElement,
+  ([{ isIntersecting }], observerElement) => {
+    if (isIntersecting) {
+      targetIsVisible.value = isIntersecting;
+      stop();
+    }
+  }
+);
 </script>
-<style scoped></style>
+<style scoped>
+@keyframes slide-in {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-from-bottom {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.rental-program-title-enter-active {
+  animation: slide-in 0.9s ease;
+}
+.truck-driver-enter-active {
+  animation: slide-from-bottom 0.9s ease;
+}
+</style>

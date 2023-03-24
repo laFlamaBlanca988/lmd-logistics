@@ -31,4 +31,5 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
+  background-size: cover;
 }

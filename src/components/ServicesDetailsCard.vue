@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex w-[50%] flex-col pl-[8%]">
     <div
-      class="absolute -top-[73px] flex items-start text-9xl font-extrabold italic opacity-10"
+      class="absolute -top-[73px] flex items-start text-8xl font-extrabold italic opacity-10"
     >
       <slot name="shadowTitle"></slot>
     </div>

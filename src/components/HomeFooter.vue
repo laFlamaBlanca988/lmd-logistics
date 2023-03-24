@@ -99,7 +99,10 @@
         </div>
       </div>
     </div>
-    <div class="flex h-[200px] items-center justify-end bg-main-blue">
+    <div
+      ref="animatedElement"
+      class="flex h-[200px] items-center justify-end bg-main-blue"
+    >
       <div class="flex w-[30%] items-center justify-center px-10">
         <p class="text-xl text-white">
           At our company, we are dedicated to providing top-notch cargo
@@ -107,7 +110,10 @@
           experienced professionals and a fleet of modern trucks.
         </p>
       </div>
-      <div class="z-50 flex w-[30%] justify-center bg-cover bg-center">
+      <div
+        v-if="targetIsVisible"
+        class="z-50 flex w-[30%] animate-slideFromLeft justify-center bg-cover bg-center"
+      >
         <img class="h-[250px]" :src="footerTruck" />
       </div>
     </div>
@@ -121,7 +127,24 @@
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
+import { ref } from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
 import postCar from "@/assets/images/post-car.svg";
 import ContactForm from "./ContactForm.vue";
 import footerTruck from "@/assets/images/footer-truck.png";
+const targetIsVisible = ref(false);
+const animatedElement = ref(null);
+
+const { stop } = useIntersectionObserver(
+  animatedElement,
+  ([{ isIntersecting }], observerElement) => {
+    if (isIntersecting) {
+      targetIsVisible.value = isIntersecting;
+      console.log(targetIsVisible.value);
+
+      stop();
+    }
+  }
+);
 </script>
+<style scoped></style>

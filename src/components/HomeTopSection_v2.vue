@@ -7,20 +7,20 @@
       class="md:gap-8l g:gap-3 absolute top-[130px] left-0 flex w-3/6 flex-col items-start justify-center gap-4 pl-[8%] xxs:gap-6 3xl:pb-28"
     >
       <div>
-        <Transition name="load-move" appear mode="in-out">
+        <div>
           <div>
             <div
-              class="font-black italic text-main-red lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl"
+              class="animate-[slideFromLeft_1s_ease] font-black italic text-main-red lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl"
             >
               LOAD.MOVE.
             </div>
             <div
-              class="font-black italic text-main-red lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl"
+              class="animate-[slideFromLeft_2s_ease] font-black italic text-main-red lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl"
             >
               DELIVER.
             </div>
           </div>
-        </Transition>
+        </div>
       </div>
       <div
         class="flex items-center justify-start font-semibold leading-[72px] text-white lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl"
@@ -87,6 +87,5 @@ import Navbar from "./Navbar.vue";
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
 }
 </style>

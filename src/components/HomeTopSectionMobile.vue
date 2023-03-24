@@ -1,7 +1,7 @@
 <template>
-  <div class="relative left-0 right-0 top-0 bottom-0 flex h-screen">
+  <div class="relative left-0 right-0 top-0 flex h-screen">
     <NavbarMobile></NavbarMobile>
-    <video autoplay muted loop class="background-video w-full">
+    <video autoplay muted loop class="background-video w-full object-cover">
       <source :src="driverVideo" type="video/mp4" />
     </video>
     <div

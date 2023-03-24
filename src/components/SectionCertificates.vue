@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-[200px] items-center justify-center gap-8 bg-[#f3f3f3]">
+  <div class="flex h-[200px] items-center justify-center gap-8 bg-[#F4F6F9]">
     <div
       class="h-[123px] w-[172px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
       :style="{ 'background-image': `url(${certImage1})` }"

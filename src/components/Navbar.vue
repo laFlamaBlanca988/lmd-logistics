@@ -1,32 +1,32 @@
 <template>
   <div
-    class="z-50 hidden h-[88px] items-center justify-between overflow-hidden bg-white px-[8%] shadow-lg xl:flex"
+    class="z-50 hidden h-[88px] items-center justify-between overflow-hidden bg-white px-[8%] shadow-lg lg:flex"
     ref="navbarElement"
     :class="stickyStyle"
   >
     <div class="flex cursor-pointer items-center" @click="router.push('/')">
       <img :src="mainLogo" />
     </div>
-    <div class="flex items-center gap-8">
+    <div class="flex items-center gap-8 text-base">
       <RouterLink
         to="/"
-        class="border-black text-sm font-medium text-black hover:border-b-2 hover:text-main-blue"
+        class="border-black font-medium text-black hover:border-b-2 hover:text-main-blue"
         >Home</RouterLink
       >
       <RouterLink
         to="services"
-        class="border-black text-sm font-medium text-black hover:border-b-2 hover:text-main-blue"
+        class="border-black font-medium text-black hover:border-b-2 hover:text-main-blue"
         >Services</RouterLink
       >
       <RouterLink
         to="/about-us"
-        class="border-black text-sm font-medium text-black hover:border-b-2 hover:text-main-blue"
+        class="border-black font-medium text-black hover:border-b-2 hover:text-main-blue"
         >About Us</RouterLink
       >
       <a
         href="#"
         target="_blank"
-        class="hover:bg-button-hover rounded-md bg-main-red p-3 text-sm font-medium text-white"
+        class="rounded-md bg-main-red p-3 text-sm font-medium text-white hover:bg-button-hover"
         >WE ARE HIRING</a
       >
     </div>

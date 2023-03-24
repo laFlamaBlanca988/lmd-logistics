@@ -1,16 +1,16 @@
 <template>
   <div
-    class="fixed left-0 right-0 top-[88px] bottom-[88px] m-auto p-6 w-[90%] bg-white z-50 rounded-xl overflow-y-auto"
+    class="fixed left-0 right-0 top-[88px] bottom-[88px] z-50 m-auto w-[90%] animate-fadeIn overflow-y-auto rounded-xl bg-white p-6"
   >
     <div class="relative flex flex-col gap-10">
       <Icon
         @click="globalStore.fleetModalIsActive = false"
         icon="ph:x-circle-bold"
-        class="absolute -top-5 -right-6 w-[50px] h-[50px] text-[#DFE6F0] rounded-full bg-white z-50 cursor-pointer"
+        class="absolute -top-5 -right-6 z-50 h-[50px] w-[50px] cursor-pointer rounded-full bg-white text-[#DFE6F0]"
       ></Icon>
 
-      <div class="flex justify-start gap-8 p-3 bg-[#DFE6F0] rounded-xl">
-        <img :src="imageUrl" class="h-[250px] -mt-6 pl-4" />
+      <div class="flex justify-start gap-8 rounded-xl bg-[#DFE6F0] p-3">
+        <img :src="imageUrl" class="-mt-6 h-[250px] pl-4" />
         <div class="flex flex-col">
           <h4 class="mb-4 text-start text-2xl text-main-blue">
             {{ model }}
@@ -18,41 +18,41 @@
           <p class="mb-4 text-start text-4xl font-bold">
             {{ modelTitle }}
           </p>
-          <p class="text-2xl text-start">{{ modelDescription }}</p>
+          <p class="text-start text-2xl">{{ modelDescription }}</p>
         </div>
       </div>
       <div class="flex flex-col gap-1">
-        <div class="flex items-center px-4 h-[60px] bg-[#dfe6f080] rounded-lg">
+        <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
           <div class="w-3/6 text-2xl font-medium text-main-blue">Year:</div>
           <div class="w-3/6 text-2xl font-medium">{{ year }}</div>
         </div>
 
-        <div class="flex items-center px-4 h-[60px] bg-white rounded-lg">
+        <div class="flex h-[60px] items-center rounded-lg bg-white px-4">
           <div class="w-3/6 text-2xl font-medium text-main-blue">
             Horsepower:
           </div>
           <div class="w-3/6 text-2xl font-medium">{{ horsepower }}</div>
         </div>
-        <div class="flex items-center px-4 h-[60px] bg-[#dfe6f080] rounded-lg">
+        <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
           <div class="w-3/6 text-2xl font-medium text-main-blue">
             Engine model:
           </div>
           <div class="w-3/6 text-2xl font-medium">{{ engineModel }}</div>
         </div>
-        <div class="flex items-center px-4 h-[60px] bg-white rounded-lg">
+        <div class="flex h-[60px] items-center rounded-lg bg-white px-4">
           <div class="w-3/6 text-2xl font-medium text-main-blue">
             Transmission:
           </div>
           <div class="w-3/6 text-2xl font-medium">{{ transmission }}</div>
         </div>
-        <div class="flex items-center px-4 h-[60px] bg-[#dfe6f080] rounded-lg">
+        <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
           <div class="w-3/6 text-2xl font-medium text-main-blue">
             Sleeper size:
           </div>
           <div class="w-3/6 text-2xl font-medium">{{ sleeperSize }}</div>
         </div>
       </div>
-      <div class="flex justify-between items-center px-4">
+      <div class="flex items-center justify-between px-4">
         <div class="text-2xl">{{ footerText }}</div>
         <AppButton
           content="Start Driving"

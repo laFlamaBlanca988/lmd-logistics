@@ -1,21 +1,19 @@
 <template>
-  <div class="flex h-auto justify-between pl-[8%]">
+  <div class="flex h-screen justify-between pl-[8%]">
     <div class="flex w-3/6 flex-col gap-4 lg:justify-center lg:gap-3 3xl:pb-28">
       <div>
-        <Transition name="load-move" appear mode="in-out">
-          <div>
-            <div
-              class="font-black italic text-main-red lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl"
-            >
-              LOAD.MOVE.
-            </div>
-            <div
-              class="font-black italic text-main-red lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl"
-            >
-              DELIVER.
-            </div>
+        <div>
+          <div
+            class="animate-[slideFromLeft_1s_ease] font-black italic text-main-red lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl"
+          >
+            LOAD.MOVE.
           </div>
-        </Transition>
+          <div
+            class="animate-[slideFromLeft_2s_ease] font-black italic text-main-red lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl"
+          >
+            DELIVER.
+          </div>
+        </div>
       </div>
       <div
         class="flex items-center font-semibold leading-[72px] text-black lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl"
@@ -23,12 +21,12 @@
         <h3 class="mr-2">FAST</h3>
         <Icon
           icon="material-symbols:star"
-          class="mr-3 h-[22px] w-[22px]"
+          class="mr-3 h-[22px] w-[22px] text-main-blue"
         ></Icon>
         <h3 class="mr-3">RELIABLE</h3>
         <Icon
           icon="material-symbols:star"
-          class="mr-3 h-[22px] w-[22px]"
+          class="mr-3 h-[22px] w-[22px] text-main-blue"
         ></Icon>
         <h3>REFINED</h3>
       </div>
@@ -43,7 +41,7 @@
       </div>
     </div>
 
-    <HomeTruckDriver_1 class="w-[45%]"></HomeTruckDriver_1>
+    <HomeTruckDriver_1 class="h-[calc(100%-160px)]"></HomeTruckDriver_1>
   </div>
 </template>
 <script setup>
@@ -52,21 +50,4 @@ import { ref } from "vue";
 import HomeTruckDriver_1 from "./HomeTruckDriver_1.vue";
 import AppButton from "./AppButton.vue";
 </script>
-<style scoped>
-@keyframes slide-in {
-  from {
-    transform: translateX(-1000px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-.load-move-enter-active {
-  animation: slide-in 0.9s ease;
-}
-.deliver-enter-active {
-  animation: slide-in 0.5s ease;
-  animation-delay: 0.5s;
-}
-</style>
+<style scoped></style>
