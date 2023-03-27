@@ -107,9 +107,9 @@
   </div>
 </template>
 <script setup>
-import expertiseImage from "@/assets/images/about/expertise.png";
-import cultureImage from "@/assets/images/about/culture.png";
-import technologyImage from "@/assets/images/about/technology.png";
+import expertiseImage from "@/assets/images/about/expertise.webp";
+import cultureImage from "@/assets/images/about/culture.webp";
+import technologyImage from "@/assets/images/about/technology.webp";
 import { useIntersectionObserver } from "@vueuse/core";
 import { ref } from "vue";
 const animatedElement = ref(null);

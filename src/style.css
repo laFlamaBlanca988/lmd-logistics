@@ -27,7 +27,7 @@ body,
   scroll-behavior: smooth;
 }
 body {
-  background-image: url("@/assets/images/bg-body.png");
+  background-image: url("@/assets/images/bg-body.webp");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;

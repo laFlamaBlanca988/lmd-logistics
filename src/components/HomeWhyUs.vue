@@ -49,7 +49,7 @@
 </template>
 <script setup>
 import { computed, reactive, ref } from "vue";
-import backgroundImage from "@/assets/images/bg-why-us.png";
+import backgroundImage from "@/assets/images/bg-why-us.webp";
 import HomeWhyUsCard from "./HomeWhyUsCard.vue";
 import "vue3-carousel/dist/carousel.css";
 import { useIntersectionObserver } from "@vueuse/core";

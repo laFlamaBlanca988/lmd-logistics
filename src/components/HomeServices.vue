@@ -175,7 +175,7 @@ import AppButton from "./AppButton.vue";
 import AppOverlay from "../components/AppOverlay.vue";
 import FleetOnHoverBackground from "./FleetOnHoverBackground.vue";
 import { onClickOutside } from "@vueuse/core";
-import truckDriver_3 from "@/assets/images/truck-driver-3.png";
+import truckDriver_3 from "@/assets/images/truck-driver-3.webp";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import HomeFleetModal from "./HomeFleetModal.vue";

@@ -9,8 +9,10 @@
         class="absolute -top-5 -right-6 z-50 h-[50px] w-[50px] cursor-pointer rounded-full bg-white text-[#DFE6F0]"
       ></Icon>
 
-      <div class="flex justify-start gap-8 rounded-xl bg-[#DFE6F0] p-3">
-        <img :src="imageUrl" class="-mt-6 h-[250px] pl-4" />
+      <div
+        class="flex flex-col items-center gap-8 rounded-xl bg-[#DFE6F0] p-3 xl:justify-start"
+      >
+        <img :src="imageUrl" class="w h-[250px] w-[320px] pl-4 xl:-mt-6" />
         <div class="flex flex-col">
           <h4 class="mb-4 text-start text-2xl text-main-blue">
             {{ model }}

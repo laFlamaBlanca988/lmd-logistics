@@ -27,18 +27,30 @@
       </div>
     </div>
     <div class="flex items-center gap-2">
-      <Icon
-        icon="ant-design:facebook-outlined"
-        class="h-[24px] w-[24px] cursor-pointer"
-      ></Icon>
-      <Icon
-        icon="ri:instagram-line"
-        class="h-[24px] w-[24px] cursor-pointer"
-      ></Icon>
-      <Icon
-        icon="jam:linkedin-square"
-        class="h-[24px] w-[24px] cursor-pointer"
-      ></Icon>
+      <a
+        target="_blank"
+        href="https://www.facebook.com/people/LMD-Logistics-INC-CargoFreight/100085688446262/"
+      >
+        <Icon
+          icon="ant-design:facebook-outlined"
+          class="h-[24px] w-[24px] cursor-pointer"
+        ></Icon>
+      </a>
+      <a
+        target="_blank"
+        href="https://www.instagram.com/lmdloginc/?igshid=YmMyMTA2M2Y%3D"
+      >
+        <Icon
+          icon="ri:instagram-line"
+          class="h-[24px] w-[24px] cursor-pointer"
+        ></Icon>
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/company/lmd-log-inc/">
+        <Icon
+          icon="jam:linkedin-square"
+          class="h-[24px] w-[24px] cursor-pointer"
+        ></Icon>
+      </a>
     </div>
   </div>
 </template>

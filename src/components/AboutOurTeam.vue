@@ -64,7 +64,7 @@
   </div>
 </template>
 <script setup>
-import parallax from "@/assets/images/about/paralax-about-us.png";
+import parallax from "@/assets/images/about/paralax-about-us.webp";
 import { useIntersectionObserver } from "@vueuse/core";
 import { ref } from "vue";
 const ourTeamElement = ref(null);

@@ -23,10 +23,10 @@ module.exports = {
         "button-hover": "#c50e28",
       },
       backgroundImage: {
-        "fleet-truck-1": "url('src/assets/images/fleet-truck-1.png)",
-        "fleet-truck-2": "url('src/assets/images/fleet-truck-2.png')",
-        "fleet-truck-3": "url('src/assets/images/fleet-truck-3.png')",
-        "fleet-truck-4": "url('src/assets/images/fleet-truck-4.png')",
+        "fleet-truck-1": "url('src/assets/images/fleet-truck-1.webp)",
+        "fleet-truck-2": "url('src/assets/images/fleet-truck-2.webp')",
+        "fleet-truck-3": "url('src/assets/images/fleet-truck-3.webp')",
+        "fleet-truck-4": "url('src/assets/images/fleet-truck-4.webp')",
         "fleet-explore-card": "url('src/assets/images/fleet-explore-card')",
       },
       boxShadow: {

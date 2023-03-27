@@ -101,7 +101,7 @@
 import { Icon } from "@iconify/vue";
 import { ref } from "vue";
 import { useIntersectionObserver } from "@vueuse/core";
-import truckDriver from "@/assets/images/truck-driver-2.png";
+import truckDriver from "@/assets/images/truck-driver-2.webp";
 
 const animatedElement = ref(null);
 const targetIsVisible = ref(false);

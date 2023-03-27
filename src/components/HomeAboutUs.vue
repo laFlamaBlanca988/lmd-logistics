@@ -1,7 +1,7 @@
 <template>
   <div
     ref="animatedElement"
-    class="my-14 flex h-auto w-full justify-between gap-14 px-14"
+    class="my-14 flex h-auto w-full flex-col justify-between gap-14 px-[5%] xl:flex-row xl:px-14"
   >
     <Transition name="why-us-image">
       <div v-if="targetIsVisible" class="flex h-full w-auto items-center">
@@ -9,12 +9,12 @@
       </div>
     </Transition>
 
-    <div class="mt-16 flex w-3/6 flex-col gap-6">
+    <div class="mt-16 flex w-full flex-col justify-center gap-6 xl:w-3/6">
       <div class="mb-8 flex flex-col gap-6">
         <Transition name="why-us-title">
           <div
             v-if="targetIsVisible"
-            class="relative md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
+            class="relative flex justify-center md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:justify-start xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
           >
             <h1
               class="text-6xl font-black italic text-main-blue opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
@@ -30,8 +30,10 @@
         </Transition>
 
         <div>
-          <p class="text-3xl font-bold">OUT TEAM NEVER SLEEPS!</p>
-          <p class="mb-3 w-[80%] text-2xl">
+          <p class="text-center text-3xl font-bold xl:text-left">
+            OUT TEAM NEVER SLEEPS!
+          </p>
+          <p class="mb-3 text-center text-2xl xl:w-[80%] xl:text-left">
             We are constantly working on resolving your logistical problems!
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -41,16 +43,19 @@
         <AppButton
           url="#"
           content="Find Out More"
-          class="w-[240px]"
+          class="mx-auto w-[240px] xl:mx-0"
         ></AppButton>
       </div>
       <div class="flex flex-col gap-4">
-        <h4 class="text-4xl font-bold italic">OUR PARTNERS</h4>
-        <p class="mb-4 max-w-[60%] text-xl">
+        <h4 class="text-center text-4xl font-bold italic xl:text-left">
+          OUR PARTNERS
+        </h4>
+        <p class="mb-4 text-center text-xl xl:max-w-[60%] xl:text-left">
           We recognizes that our clients are at the heart of everything we do,
           and we prioritize their needs above all else
         </p>
         <carousel
+          :breakpoints="breakpoints"
           :items-to-show="4"
           :wrap-around="true"
           snap-align="start"
@@ -59,7 +64,7 @@
         >
           <slide v-for="image in images" :key="image" class="custom-slide">
             <div
-              class="h-[130px] w-full bg-cover bg-center bg-no-repeat"
+              class="h-[140px] w-full bg-center bg-no-repeat"
               :style="{ 'background-image': `url(${image.path})` }"
             ></div>
           </slide>
@@ -73,9 +78,9 @@
   </div>
 </template>
 <script setup>
-import aboutUsImage from "@/assets/images/about-us-image.png";
+import aboutUsImage from "@/assets/images/about-us-image.webp";
 import AppButton from "./AppButton.vue";
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import { useIntersectionObserver } from "@vueuse/core";
@@ -120,6 +125,37 @@ const { stop } = useIntersectionObserver(
     }
   }
 );
+let breakpoints = reactive({
+  // 700px and up
+  320: {
+    itemsToShow: 1,
+    snapAlign: "start",
+  },
+  460: {
+    itemsToShow: 2,
+    snapAlign: "start",
+  },
+  600: {
+    itemsToShow: 3,
+    snapAlign: "start",
+  },
+  900: {
+    itemsToShow: 4,
+    snapAlign: "start",
+  },
+  1080: {
+    itemsToShow: 5,
+    snapAlign: "start",
+  },
+  1280: {
+    itemsToShow: 3,
+    snapAlign: "start",
+  },
+  1500: {
+    itemsToShow: 4,
+    snapAlign: "start",
+  },
+});
 </script>
 <style scoped>
 @keyframes slide-in {

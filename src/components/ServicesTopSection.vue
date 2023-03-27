@@ -31,5 +31,5 @@
   </div>
 </template>
 <script setup>
-import servicesParallax from "@/assets/images/services/services-parallax.png";
+import servicesParallax from "@/assets/images/services/services-parallax.webp";
 </script>

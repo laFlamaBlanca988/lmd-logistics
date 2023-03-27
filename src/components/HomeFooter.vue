@@ -1,17 +1,21 @@
 <template>
   <div class="flex flex-col">
-    <div class="flex h-[180px]">
+    <div class="flex flex-col xl:flex-row">
       <div
-        class="flex w-[70%] flex-col justify-center gap-2 bg-main-blue px-[8%] text-white"
+        class="flex h-[180px] flex-col justify-center gap-2 bg-main-blue px-[8%] text-white xl:w-3/6 2xl:w-[70%]"
       >
-        <h4 class="text-4xl font-bold">Join our team</h4>
-        <p class="text-xl">
+        <h4 class="text-center text-4xl font-bold xl:text-left">
+          Join our team
+        </h4>
+        <p class="text-center text-xl xl:text-left">
           Join our team and be part of a dynamic and innovative company that
           values its employees, fosters growth and development, and is dedicated
           to delivering exceptional service to our clients.
         </p>
       </div>
-      <div class="flex w-[30%] items-center justify-center bg-main-red">
+      <div
+        class="flex h-[180px] items-center justify-center bg-main-red xl:w-3/6 2xl:w-[30%]"
+      >
         <a
           href="#"
           target="_blank"
@@ -20,65 +24,20 @@
         >
       </div>
     </div>
-    <div class="relative flex justify-between">
-      <div class="flex h-[552px] w-[70%] justify-between bg-white pl-[5.5%]">
+    <div class="relative flex flex-col justify-between md:flex-row">
+      <div
+        class="flex w-full justify-between bg-white p-[3%] md:w-3/6 lg:pl-[5%] 2xl:w-[70%] 2xl:pl-[8%]"
+      >
         <ContactForm></ContactForm>
-
-        <div
-          class="mt-24 flex h-[200px] w-[45%] flex-col justify-between gap-6"
-        >
-          <div class="flex items-center gap-2">
-            <Icon
-              icon="ph:map-pin"
-              class="h-[38px] w-[38px] text-main-blue"
-            ></Icon>
-            <p class="text-xl font-medium">Street Address, Chicago, IL</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <Icon
-              icon="material-symbols:phone-in-talk-sharp"
-              class="h-[38px] w-[38px] text-main-blue"
-            ></Icon>
-            <p class="text-xl font-medium">(708) 400 - 7258</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <Icon
-              icon="ic:twotone-mail-outline"
-              class="h-[38px] w-[38px] text-main-blue"
-            ></Icon>
-            <p class="text-xl font-medium">recruiting@lmdlogisticsinc.com</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <Icon
-              icon="mdi:clock-time-four-outline"
-              class="h-[38px] w-[38px] text-main-blue"
-            ></Icon>
-            <p class="text-xl font-medium">
-              [Mon-Fri] 6am - 18pm [SAT, SUN] 6am - 16pm
-            </p>
-          </div>
-          <div class="mt-10 flex flex-col gap-2">
-            <h4 class="text-3xl font-medium">Folow Us On:</h4>
-            <div class="flex items-center gap-3">
-              <Icon
-                icon="ant-design:facebook-outlined"
-                class="flex h-[55px] w-[55px] cursor-pointer justify-start text-main-red"
-              ></Icon>
-              <Icon
-                icon="ri:instagram-line"
-                class="h-[55px] w-[55px] cursor-pointer text-main-red"
-              ></Icon>
-              <Icon
-                icon="jam:linkedin-square"
-                class="h-[55px] w-[55px] cursor-pointer text-main-red"
-              ></Icon>
-            </div>
-          </div>
-        </div>
+        <HomeFooterSocial
+          class="hidden 2xl:mt-24 2xl:flex 2xl:h-[200px] 2xl:w-[45%]"
+        ></HomeFooterSocial>
       </div>
-      <div class="flex w-[30%] items-center justify-center">
+      <div
+        class="mb-4 flex w-full items-center justify-center md:w-3/6 2xl:w-[30%]"
+      >
         <div
-          class="flex h-[361px] w-[430px] flex-col items-center justify-evenly rounded-xl bg-white shadow-xl"
+          class="mx-[3%] flex h-[361px] w-full flex-col items-center justify-evenly rounded-xl bg-white shadow-xl md:mx-[5%] xl:w-[430px]"
         >
           <div class="flex items-center justify-center">
             <h4 class="text-center text-4xl font-bold">
@@ -99,12 +58,16 @@
         </div>
       </div>
     </div>
+    <HomeFooterSocial class="flex justify-center 2xl:hidden"></HomeFooterSocial>
+
     <div
       ref="animatedElement"
-      class="flex h-[200px] items-center justify-end bg-main-blue"
+      class="flex h-auto items-center justify-between bg-main-blue py-6 md:h-[200px] 2xl:justify-end"
     >
-      <div class="flex w-[30%] items-center justify-center px-10">
-        <p class="text-xl text-white">
+      <div
+        class="flex w-full items-center justify-center px-10 md:w-[50%] xl:w-[70%] 2xl:w-[30%]"
+      >
+        <p class="text-center text-xl text-white md:text-left">
           At our company, we are dedicated to providing top-notch cargo
           transport and logistics services to our clients. With a team of
           experienced professionals and a fleet of modern trucks.
@@ -112,7 +75,7 @@
       </div>
       <div
         v-if="targetIsVisible"
-        class="z-50 flex w-[30%] animate-slideFromLeft justify-center bg-cover bg-center"
+        class="z-50 hidden w-[50%] animate-slideFromLeft justify-end bg-cover bg-center pr-[3%] md:flex 2xl:w-[30%] 2xl:justify-center"
       >
         <img class="h-[250px]" :src="footerTruck" />
       </div>
@@ -126,12 +89,12 @@
   </div>
 </template>
 <script setup>
-import { Icon } from "@iconify/vue";
 import { ref } from "vue";
 import { useIntersectionObserver } from "@vueuse/core";
 import postCar from "@/assets/images/post-car.svg";
 import ContactForm from "./ContactForm.vue";
-import footerTruck from "@/assets/images/footer-truck.png";
+import footerTruck from "@/assets/images/footer-truck.webp";
+import HomeFooterSocial from "./HomeFooterSocial.vue";
 const targetIsVisible = ref(false);
 const animatedElement = ref(null);
 
