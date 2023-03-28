@@ -7,7 +7,7 @@
       <div class="text-xl font-semibold">{{ engineNumber }}</div>
     </div>
 
-    <button class="mx-auto w-4/5 rounded-lg border border-white p-2 text-xl">
+    <button class="mx-auto w-4/5 rounded-lg border border-white p-2 text-base">
       Explore Truck
     </button>
   </div>

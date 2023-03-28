@@ -2,14 +2,11 @@
   <carousel
     :items-to-show="6"
     :wrap-around="true"
+    :breakpoints="breakpoints"
     snap-align="start"
     class="mx-auto mb-20 w-[80%]"
   >
     <slide v-for="image in images" :key="image">
-      <!-- <div
-        class="w-full h-[150px] bg-cover bg-no-repeat bg-center"
-        :style="{ 'background-image': `url(${image.path})` }"
-      ></div> -->
       <img :src="image.path" class="h-[150px]" />
     </slide>
 
@@ -19,7 +16,7 @@
   </carousel>
 </template>
 <script setup>
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, reactive, watch } from "vue";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import image_1 from "@/assets/images/about/partner-1.png";
@@ -49,6 +46,33 @@ const images = ref([
     path: image_6,
   },
 ]);
+
+let breakpoints = reactive({
+  320: {
+    itemsToShow: 1,
+    snapAlign: "start",
+  },
+  500: {
+    itemsToShow: 2,
+    snapAlign: "start",
+  },
+  650: {
+    itemsToShow: 3,
+    snapAlign: "start",
+  },
+  1024: {
+    itemsToShow: 4,
+    snapAlign: "start",
+  },
+  1280: {
+    itemsToShow: 5,
+    snapAlign: "start",
+  },
+  1500: {
+    itemsToShow: 6,
+    snapAlign: "start",
+  },
+});
 </script>
 <style scoped>
 .swiper-slide {

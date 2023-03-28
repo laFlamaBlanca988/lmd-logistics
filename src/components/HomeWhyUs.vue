@@ -4,7 +4,7 @@
     class="flex h-auto w-full flex-col items-center bg-cover bg-fixed bg-center pb-20 pt-10"
     :style="{ 'background-image': `url(${backgroundImage})` }"
   >
-    <Transition name="why-us-title">
+    <Transition :name="innerWidth > 1280 ? 'why-us-title' : ''">
       <div
         v-if="targetIsVisible"
         class="relative mb-6 flex justify-center md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
@@ -21,7 +21,7 @@
         </h4>
       </div>
     </Transition>
-    <p class="mb-10 text-2xl text-white">
+    <p class="mb-10 px-[3%] text-center text-2xl text-white md:px-[5%]">
       What our partners and satisfied customers say about our work
     </p>
     <div class="w-full px-[8%]">
@@ -53,9 +53,9 @@ import backgroundImage from "@/assets/images/bg-why-us.webp";
 import HomeWhyUsCard from "./HomeWhyUsCard.vue";
 import "vue3-carousel/dist/carousel.css";
 import { useIntersectionObserver } from "@vueuse/core";
-
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import { useGlobalStore } from "../stores/global";
+const innerWidth = window.innerWidth;
 const globalStore = useGlobalStore();
 const whyUsCards = computed(() => globalStore.whyUsCards);
 const animatedElement = ref(null);

@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col pb-20">
-    <div class="mb-20 flex flex-col items-center justify-center gap-4">
+    <div class="mb-20 flex flex-col items-center justify-center gap-4 px-[5%]">
       <div
         ref="animatedElement"
         class="flex flex-col items-center justify-center md:items-start md:justify-start"
       >
-        <Transition name="testimonials-title">
+        <Transition :name="innerWidth > 1280 ? 'testimonials-title' : ''">
           <div
             v-if="targetIsVisible"
             class="relative flex w-full items-center justify-center md:h-[96pxpx] lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
@@ -23,17 +23,17 @@
           </div>
         </Transition>
       </div>
-      <p class="mb-10 text-3xl">
+      <p class="mb-10 px-[3%`] text-center text-xl md:px-[5%] md:text-3xl">
         What our partners and satisfied customers say about our work
       </p>
     </div>
-    <div class="px-[10%]">
+    <div class="px-[8%]">
       <carousel
         :items-to-show="3"
         :wrap-around="true"
         :breakpoints="breakpoints"
         snap-align="start"
-        class="overflow-visible"
+        class=""
       >
         <slide v-for="testimonial in testimonials" :key="testimonial">
           <HomeTestimonial
@@ -63,7 +63,7 @@ import HomeTestimonial from "./HomeTestimonial.vue";
 import image_1 from "@/assets/images/testimonials-img-1.png";
 import image_2 from "@/assets/images/testimonials-img-2.png";
 import image_3 from "@/assets/images/testimonials-img-3.png";
-
+const innerWidth = window.innerWidth;
 const testimonials = ref([
   {
     name: "James Grant",
@@ -93,11 +93,11 @@ let breakpoints = reactive({
     itemsToShow: 1,
     snapAlign: "start",
   },
-  940: {
+  1266: {
     itemsToShow: 2,
     snapAlign: "start",
   },
-  1402: {
+  1564: {
     itemsToShow: 3,
     snapAlign: "start",
   },

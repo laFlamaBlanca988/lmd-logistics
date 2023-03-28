@@ -1,19 +1,21 @@
 <template>
-  <div class="flex h-[200px] items-center justify-center gap-8 bg-[#F4F6F9]">
+  <div
+    class="grid h-[800px] grid-cols-1 items-center justify-center gap-8 bg-[#F4F6F9] px-[5%] xs:h-[400px] xs:grid-cols-2 md:h-[200px] md:grid-cols-4"
+  >
     <div
-      class="h-[123px] w-[172px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
+      class="mx-auto h-[123px] w-[162px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
       :style="{ 'background-image': `url(${certImage1})` }"
     ></div>
     <div
-      class="h-[123px] w-[172px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
+      class="mx-auto h-[123px] w-[162px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
       :style="{ 'background-image': `url(${certImage2})` }"
     ></div>
     <div
-      class="h-[123px] w-[172px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
+      class="mx-auto h-[123px] w-[162px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
       :style="{ 'background-image': `url(${certImage3})` }"
     ></div>
     <div
-      class="h-[123px] w-[172px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
+      class="mx-auto h-[123px] w-[162px] rounded-t-2xl bg-cover bg-center bg-no-repeat"
       :style="{ 'background-image': `url(${certImage4})` }"
     ></div>
   </div>

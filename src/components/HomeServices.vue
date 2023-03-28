@@ -1,7 +1,7 @@
 <template>
   <div
     ref="animatedElement"
-    class="relative mb-20 flex flex-col items-center px-[5%] md:flex-row md:pl-[8%] md:pr-20"
+    class="relative mb-20 flex flex-col items-center px-[5%] md:flex-row md:px-[3%]"
   >
     <AppOverlay v-if="fleetModalIsActive">
       <HomeFleetModal
@@ -24,7 +24,7 @@
       <div
         class="flex flex-col items-center justify-center md:items-start md:justify-start"
       >
-        <Transition name="services-title">
+        <Transition :name="innerWidth > 1280 ? 'services-title' : ''">
           <div
             v-if="targetIsVisible"
             class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
@@ -43,20 +43,19 @@
         </Transition>
       </div>
       <p class="my-4 text-center text-lg md:text-left xl:text-2xl">
-        Get all the benefits owners have but spare yourself from all the hassle
-        owners have!
+        We provide reliable and efficient solutions for all our customers
+        logistics needs to help customers cut costs and increase efficiency.
       </p>
-
-      <AppButton
-        url="#"
-        content="Find Out More"
-        class="mx-auto my-2 w-[240px] md:ml-0"
-      ></AppButton>
-
+      <RouterLink
+        to="#"
+        class="mx-auto my-2 flex w-[240px] items-center justify-end gap-9 rounded-lg bg-main-red p-4 text-white hover:bg-button-hover md:ml-0"
+        >Find Out More
+        <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
+      </RouterLink>
       <div
         class="flex flex-col items-center justify-center md:items-start md:justify-start"
       >
-        <Transition name="services-title">
+        <Transition :name="innerWidth > 1280 ? 'services-title' : ''">
           <div
             v-if="targetIsVisible"
             class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
@@ -159,10 +158,10 @@
         </carousel>
       </div>
     </div>
-    <Transition name="services-image">
+    <Transition :name="innerWidth > 1280 ? 'services-image' : ''">
       <div
         v-if="targetIsVisible"
-        class="order-0 flex h-full w-auto items-center md:order-1"
+        class="order-0 mb-10 flex h-full w-auto items-center md:order-1"
       >
         <img class="m-auto h-full w-auto" :src="truckDriver_3" />
       </div>
@@ -171,7 +170,7 @@
 </template>
 <script setup>
 import { ref, computed, watch, reactive, onMounted } from "vue";
-import AppButton from "./AppButton.vue";
+import { Icon } from "@iconify/vue";
 import AppOverlay from "../components/AppOverlay.vue";
 import FleetOnHoverBackground from "./FleetOnHoverBackground.vue";
 import { onClickOutside } from "@vueuse/core";
@@ -182,6 +181,7 @@ import HomeFleetModal from "./HomeFleetModal.vue";
 import { useGlobalStore } from "../stores/global";
 import { useIntersectionObserver } from "@vueuse/core";
 
+const innerWidth = window.innerWidth;
 const globalStore = useGlobalStore();
 const fleetData = computed(() => globalStore.fleetData);
 const fleetModalIsActive = computed(() => globalStore.fleetModalIsActive);
@@ -227,18 +227,26 @@ const { stop } = useIntersectionObserver(
     }
   }
 );
-// let breakpoints = reactive({
-//   // 700px and up
-//   360: {
-//     itemsToShow: 1,
-//     snapAlign: "start",
-//   },
+let breakpoints = reactive({
+  // 700px and up
+  320: {
+    itemsToShow: 1,
+    snapAlign: "start",
+  },
 
-//   1402: {
-//     itemsToShow: 4,
-//     snapAlign: "start",
-//   },
-// });
+  503: {
+    itemsToShow: 2,
+    snapAlign: "start",
+  },
+  760: {
+    itemsToShow: 3,
+    snapAlign: "start",
+  },
+  1550: {
+    itemsToShow: 4,
+    snapAlign: "start",
+  },
+});
 </script>
 <style scoped>
 @keyframes slide-in {

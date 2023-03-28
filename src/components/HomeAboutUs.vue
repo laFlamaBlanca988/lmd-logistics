@@ -3,15 +3,15 @@
     ref="animatedElement"
     class="my-14 flex h-auto w-full flex-col justify-between gap-14 px-[5%] xl:flex-row xl:px-14"
   >
-    <Transition name="why-us-image">
+    <Transition :name="innerWidth > 1280 ? 'why-us-image' : ''">
       <div v-if="targetIsVisible" class="flex h-full w-auto items-center">
         <img class="m-auto h-full w-auto" :src="aboutUsImage" />
       </div>
     </Transition>
 
-    <div class="mt-16 flex w-full flex-col justify-center gap-6 xl:w-3/6">
+    <div class="flex w-full flex-col justify-center gap-2 xl:mt-8 xl:w-3/6">
       <div class="mb-8 flex flex-col gap-6">
-        <Transition name="why-us-title">
+        <Transition :name="innerWidth > 1280 ? 'why-us-title' : ''">
           <div
             v-if="targetIsVisible"
             class="relative flex justify-center md:h-[48px] md:text-5xl lg:h-[60px] lg:text-6xl xl:h-[72px] xl:justify-start xl:text-7xl 2xl:h-[128px] 2xl:text-9xl"
@@ -35,8 +35,6 @@
           </p>
           <p class="mb-3 text-center text-2xl xl:w-[80%] xl:text-left">
             We are constantly working on resolving your logistical problems!
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
@@ -91,7 +89,7 @@ import image_3 from "@/assets/images/about/partner-3.png";
 import image_4 from "@/assets/images/about/partner-4.png";
 import image_5 from "@/assets/images/about/partner-5.png";
 import image_6 from "@/assets/images/about/partner-6.png";
-
+const innerWidth = window.innerWidth;
 const images = ref([
   {
     path: image_1,

@@ -10,56 +10,73 @@
       ></Icon>
 
       <div
-        class="flex flex-col items-center gap-8 rounded-xl bg-[#DFE6F0] p-3 xl:justify-start"
+        class="flex flex-col items-center gap-8 rounded-xl bg-[#DFE6F0] p-3 xl:flex-row xl:justify-start"
       >
-        <img :src="imageUrl" class="w h-[250px] w-[320px] pl-4 xl:-mt-6" />
+        <img
+          :src="imageUrl"
+          class="h-[250px] w-full max-w-[320px] md:pl-4 xl:-mt-6"
+        />
         <div class="flex flex-col">
           <h4 class="mb-4 text-start text-2xl text-main-blue">
             {{ model }}
           </h4>
-          <p class="mb-4 text-start text-4xl font-bold">
+          <p class="mb-4 text-start text-2xl font-bold md:text-4xl">
             {{ modelTitle }}
           </p>
-          <p class="text-start text-2xl">{{ modelDescription }}</p>
+          <p class="text-start text-base md:text-2xl">{{ modelDescription }}</p>
         </div>
       </div>
       <div class="flex flex-col gap-1">
         <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
-          <div class="w-3/6 text-2xl font-medium text-main-blue">Year:</div>
-          <div class="w-3/6 text-2xl font-medium">{{ year }}</div>
+          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
+            Year:
+          </div>
+          <div class="w-3/6 text-base font-medium md:text-2xl">{{ year }}</div>
         </div>
 
         <div class="flex h-[60px] items-center rounded-lg bg-white px-4">
-          <div class="w-3/6 text-2xl font-medium text-main-blue">
+          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
             Horsepower:
           </div>
-          <div class="w-3/6 text-2xl font-medium">{{ horsepower }}</div>
+          <div class="w-3/6 text-base font-medium md:text-2xl">
+            {{ horsepower }}
+          </div>
         </div>
         <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
-          <div class="w-3/6 text-2xl font-medium text-main-blue">
+          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
             Engine model:
           </div>
-          <div class="w-3/6 text-2xl font-medium">{{ engineModel }}</div>
+          <div class="w-3/6 text-base font-medium md:text-2xl">
+            {{ engineModel }}
+          </div>
         </div>
         <div class="flex h-[60px] items-center rounded-lg bg-white px-4">
-          <div class="w-3/6 text-2xl font-medium text-main-blue">
+          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
             Transmission:
           </div>
-          <div class="w-3/6 text-2xl font-medium">{{ transmission }}</div>
+          <div class="w-3/6 text-base font-medium md:text-2xl">
+            {{ transmission }}
+          </div>
         </div>
         <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
-          <div class="w-3/6 text-2xl font-medium text-main-blue">
+          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
             Sleeper size:
           </div>
-          <div class="w-3/6 text-2xl font-medium">{{ sleeperSize }}</div>
+          <div class="w-3/6 text-base font-medium md:text-2xl">
+            {{ sleeperSize }}
+          </div>
         </div>
       </div>
-      <div class="flex items-center justify-between px-4">
-        <div class="text-2xl">{{ footerText }}</div>
+      <div
+        class="flex flex-col items-center justify-between gap-6 lg:flex-row lg:px-4"
+      >
+        <div class="text-center text-base md:text-2xl lg:text-left">
+          {{ footerText }}
+        </div>
         <AppButton
           content="Start Driving"
           url="#"
-          class="w-[200px]"
+          class="w-full lg:w-[200px]"
         ></AppButton>
       </div>
     </div>

@@ -1,19 +1,22 @@
 <template>
   <div
-    class="my-14 animate-slideFromLeft text-center text-3xl font-extrabold italic text-main-red xxs:text-4xl xs:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl"
+    class="mb-14 mt-28 text-center text-3xl font-extrabold italic text-main-red xxs:text-4xl xs:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl"
+    :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
   >
     WE DELIVER MORE
   </div>
   <div class="flex max-w-full flex-col">
     <div class="flex flex-col md:flex-row">
       <div
-        class="flex w-full animate-slideFromLeft items-center justify-center md:w-3/6"
+        class="flex w-full items-center justify-center md:w-3/6"
+        :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
       >
         <img class="w-full" :src="expertiseImage" />
       </div>
 
       <div
-        class="z-0 flex w-full animate-slideFromRight flex-col items-center justify-center py-6 sm:px-[5%] sm:pt-10 sm:pb-10 md:w-3/6 md:py-0 md:pl-8 md:pr-10 2xl:pr-20"
+        class="z-0 flex w-full flex-col items-center justify-center py-6 sm:px-[5%] sm:pt-10 sm:pb-10 md:w-3/6 md:py-0 md:pl-8 md:pr-10 2xl:pr-20"
+        :class="innerWidth > 1280 ? 'animate-slideFromRight' : ''"
       >
         <div
           class="relative mb-4 flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] 2xl:h-[96px]"
@@ -40,7 +43,8 @@
     </div>
     <div class="flex flex-col justify-center md:flex-row">
       <div
-        class="md:order-0 order-1 flex w-full animate-slideFromLeft flex-col items-center justify-center py-6 sm:pt-14 sm:pb-20 md:w-3/6 md:py-0"
+        class="md:order-0 order-1 flex w-full flex-col items-center justify-center py-6 sm:pt-14 sm:pb-20 md:w-3/6 md:py-0"
+        :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
       >
         <div
           class="relative mb-4 flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] 2xl:h-[96px]"
@@ -65,7 +69,8 @@
         </div>
       </div>
       <div
-        class="order-0 flex animate-slideFromRight items-center justify-center md:order-1 md:-m-[4.5%] md:w-3/6"
+        class="order-0 flex items-center justify-center md:order-1 md:-m-[4.5%] md:w-3/6"
+        :class="innerWidth > 1280 ? 'animate-slideFromRight' : ''"
       >
         <img class="w-full" :src="cultureImage" />
       </div>
@@ -73,13 +78,15 @@
     <div ref="animatedElement" class="flex flex-col md:flex-row">
       <div
         v-if="targetIsVisible"
-        class="flex w-full animate-slideFromLeft items-center justify-center md:w-3/6"
+        class="flex w-full items-center justify-center md:w-3/6"
+        :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
       >
         <img class="w-full" :src="technologyImage" />
       </div>
       <div
         v-if="targetIsVisible"
-        class="flex w-full animate-slideFromRight flex-col items-center justify-center py-6 sm:pt-10 sm:pb-10 md:w-3/6 md:pb-0 md:pl-8 md:pr-10 2xl:pr-20"
+        class="flex w-full flex-col items-center justify-center py-6 sm:pt-10 sm:pb-10 md:w-3/6 md:pb-0 md:pl-8 md:pr-10 2xl:pr-20"
+        :class="innerWidth > 1280 ? 'animate-slideFromRight' : ''"
       >
         <div
           class="relative mb-4 flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] 2xl:h-[96px]"
@@ -114,7 +121,7 @@ import { useIntersectionObserver } from "@vueuse/core";
 import { ref } from "vue";
 const animatedElement = ref(null);
 const targetIsVisible = ref(false);
-
+const innerWidth = window.innerWidth;
 const { stop } = useIntersectionObserver(
   animatedElement,
   ([{ isIntersecting }], observerElement) => {

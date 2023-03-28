@@ -1,6 +1,8 @@
 <template>
   <div class="flex h-screen justify-between pl-[8%]">
-    <div class="flex w-3/6 flex-col gap-4 lg:justify-center lg:gap-3 3xl:pb-28">
+    <div
+      class="mt-[8%] flex w-3/6 flex-col gap-4 lg:justify-start lg:gap-3 3xl:pb-28"
+    >
       <div>
         <div>
           <div

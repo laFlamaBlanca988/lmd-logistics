@@ -19,5 +19,6 @@ import HomeTopSection from "../components/HomeTopSection.vue";
 import HomeWhyUs from "../components/HomeWhyUs.vue";
 import HomeTopSectionMobile from "../components/HomeTopSectionMobile.vue";
 import HomeTopSection_v2 from "../components/HomeTopSection_v2.vue";
+
 const innerWidth = window.innerWidth;
 </script>

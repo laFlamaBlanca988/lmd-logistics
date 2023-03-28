@@ -32,7 +32,7 @@
         href="https://www.facebook.com/people/LMD-Logistics-INC-CargoFreight/100085688446262/"
       >
         <Icon
-          icon="ant-design:facebook-outlined"
+          icon="jam:facebook-square"
           class="h-[24px] w-[24px] cursor-pointer"
         ></Icon>
       </a>

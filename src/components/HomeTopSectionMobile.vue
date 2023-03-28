@@ -1,6 +1,7 @@
+px
 <template>
-  <div class="relative left-0 right-0 top-0 flex h-screen">
-    <NavbarMobile></NavbarMobile>
+  <div class="custom-height relative left-0 right-0 top-0 mb-10 flex">
+    <NavbarMobile :logo="logo" icon-color="text-white"></NavbarMobile>
     <video autoplay muted loop class="background-video w-full object-cover">
       <source :src="driverVideo" type="video/mp4" />
     </video>
@@ -45,7 +46,7 @@
       </p>
       <RouterLink
         to="#"
-        class="relative flex w-[200px] items-center justify-between gap-2 rounded-lg bg-main-red p-3 font-semibold text-white md:pl-10"
+        class="relative flex w-[200px] items-center justify-end gap-7 rounded-lg bg-main-red p-3 font-semibold text-white md:pl-10"
         >Give Us A Call
         <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
       </RouterLink>
@@ -59,8 +60,8 @@
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
+import logo from "@/assets/images/navbar-logo-mobile.svg";
 import videoOverlayImage from "@/assets/images/mobile-video-overlay-img.webp";
-import AppButton from "./AppButton.vue";
 import driverVideo from "@/assets/videos/bg-video.mp4";
 import NavbarMobile from "./NavbarMobile.vue";
 </script>
@@ -84,12 +85,11 @@ import NavbarMobile from "./NavbarMobile.vue";
 }
 .background-video {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   object-fit: cover;
   position: absolute;
-  /* left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1; */
+}
+.custom-height {
+  height: 100dvh;
 }
 </style>

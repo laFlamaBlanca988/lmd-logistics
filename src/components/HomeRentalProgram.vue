@@ -2,11 +2,8 @@
   <div
     class="mb-14 flex flex-col items-center justify-center gap-10 px-[5%] md:flex-row md:justify-start md:px-[3%] xl:gap-20"
   >
-    <Transition name="truck-driver">
-      <div
-        v-if="targetIsVisible"
-        class="flex h-[200%] w-full items-center lg:w-[50%]"
-      >
+    <Transition :name="innerWidth > 1280 ? 'truck-driver' : ''">
+      <div v-show="targetIsVisible" class="flex w-full items-center lg:w-[50%]">
         <img class="m-auto h-full w-auto" :src="truckDriver" />
       </div>
     </Transition>
@@ -18,9 +15,9 @@
       <div
         class="flex flex-col items-center justify-center md:items-start md:justify-start"
       >
-        <Transition name="rental-program-title">
+        <Transition :name="innerWidth > 1280 ? 'rental-program-title' : ''">
           <div
-            v-if="targetIsVisible"
+            v-show="targetIsVisible"
             class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
           >
             <h1
@@ -36,7 +33,9 @@
           </div>
         </Transition>
       </div>
-      <p class="my-4 text-lg xl:text-2xl">
+      <p
+        class="mt-2 mb-4 text-center text-lg xxs:text-xl md:mt-4 md:text-left xl:text-2xl"
+      >
         Get all the benefits owners have but spare yourself from all the hassle
         owners have!
       </p>
@@ -47,7 +46,7 @@
           class="h-[40px] w-[40px] bg-white text-main-blue lg:h-[45px] lg:w-[45px] xl:h-[50px] xl:w-[50px] 2xl:h-[55px] 2xl:w-[55px] 3xl:h-[65px] 3xl:w-[65px]"
         ></Icon>
         <p
-          class="text-sm font-bold text-black sm:text-lg md:text-xl lg:text-xl xl:text-2xl"
+          class="text-base font-bold text-black xxs:text-lg xs:text-xl sm:text-lg md:text-xl lg:text-xl xl:text-2xl"
         >
           Drive a well maintained truck
         </p>
@@ -58,7 +57,7 @@
           class="h-[40px]w-[40px] h-[40px] w-[40px] bg-white text-main-blue lg:h-[45px] lg:w-[45px] xl:h-[50px] xl:w-[50px] 2xl:h-[55px] 2xl:w-[55px] 3xl:h-[65px] 3xl:w-[65px]"
         ></Icon>
         <p
-          class="text-sm font-bold text-black sm:text-lg md:text-xl lg:text-xl xl:text-2xl"
+          class="text-base font-bold text-black xxs:text-lg xs:text-xl sm:text-lg md:text-xl lg:text-xl xl:text-2xl"
         >
           Make $2,300 - $4,700/week
         </p>
@@ -69,7 +68,7 @@
           class="h-[40px] w-[40px] bg-white text-main-blue lg:h-[45px] lg:w-[45px] xl:h-[50px] xl:w-[50px] 2xl:h-[55px] 2xl:w-[55px] 3xl:h-[65px] 3xl:w-[65px]"
         ></Icon>
         <p
-          class="text-sm font-bold text-black sm:text-lg md:text-xl lg:text-xl xl:text-2xl"
+          class="text-base font-bold text-black xxs:text-lg xs:text-xl sm:text-lg md:text-xl lg:text-xl xl:text-2xl"
         >
           Don't worry about maintenance
         </p>
@@ -105,6 +104,7 @@ import truckDriver from "@/assets/images/truck-driver-2.webp";
 
 const animatedElement = ref(null);
 const targetIsVisible = ref(false);
+const innerWidth = window.innerWidth;
 
 const { stop } = useIntersectionObserver(
   animatedElement,
@@ -135,9 +135,9 @@ const { stop } = useIntersectionObserver(
 }
 
 .rental-program-title-enter-active {
-  animation: slide-in 0.9s ease;
+  animation: slide-in 1.5s ease;
 }
 .truck-driver-enter-active {
-  animation: slide-from-bottom 0.9s ease;
+  animation: slide-from-bottom 1.5s ease;
 }
 </style>

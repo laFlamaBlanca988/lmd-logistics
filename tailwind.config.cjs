@@ -45,8 +45,16 @@ module.exports = {
           "0%": { transform: "translateX(-1000px)" },
           "100%": { transform: "translateX(0)" },
         },
+        slideTruckFromLeft: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(0)" },
+        },
         slideFromRight: {
           "0%": { transform: "translateX(1000px)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slideNavbarFromRight: {
+          "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
         },
       },
@@ -54,7 +62,9 @@ module.exports = {
         fadeIn: "fadeIn 0.5s ease-in-out",
         slideFromLeft: "slideFromLeft 1.2s ease-in-out",
         slideFromRight: "slideFromRight 1.2s ease-in-out",
-        slideFromBottom: "slideFromBottom 1.5 ease",
+        slideFromBottom: "slideFromBottom 1.5 ease-in-out",
+        slideTruckFromLeft: "slideTruckFromLeft 1s ease-in-out",
+        slideNavbarFromRight: "slideNavbarFromRight 0.3s ease-in-out",
       },
     },
   },

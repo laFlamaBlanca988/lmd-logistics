@@ -2,19 +2,19 @@
   <div class="flex flex-col">
     <div class="flex flex-col xl:flex-row">
       <div
-        class="flex h-[180px] flex-col justify-center gap-2 bg-main-blue px-[8%] text-white xl:w-3/6 2xl:w-[70%]"
+        class="flex h-[180px] flex-col justify-center gap-2 bg-main-blue px-[3%] text-white xl:w-3/6 2xl:w-[70%]"
       >
-        <h4 class="text-center text-4xl font-bold xl:text-left">
+        <h4 class="text-center text-2xl font-bold lg:text-4xl xl:text-left">
           Join our team
         </h4>
-        <p class="text-center text-xl xl:text-left">
+        <p class="text-center text-base lg:text-xl xl:text-left">
           Join our team and be part of a dynamic and innovative company that
           values its employees, fosters growth and development, and is dedicated
           to delivering exceptional service to our clients.
         </p>
       </div>
       <div
-        class="flex h-[180px] items-center justify-center bg-main-red xl:w-3/6 2xl:w-[30%]"
+        class="flex h-[150px] items-center justify-center bg-main-red lg:h-[180px] xl:w-3/6 2xl:w-[30%]"
       >
         <a
           href="#"
@@ -75,7 +75,7 @@
       </div>
       <div
         v-if="targetIsVisible"
-        class="z-50 hidden w-[50%] animate-slideFromLeft justify-end bg-cover bg-center pr-[3%] md:flex 2xl:w-[30%] 2xl:justify-center"
+        class="z-50 hidden w-[50%] animate-slideTruckFromLeft justify-end bg-cover bg-center pr-[3%] md:flex 2xl:w-[30%]"
       >
         <img class="h-[250px]" :src="footerTruck" />
       </div>
@@ -103,8 +103,6 @@ const { stop } = useIntersectionObserver(
   ([{ isIntersecting }], observerElement) => {
     if (isIntersecting) {
       targetIsVisible.value = isIntersecting;
-      console.log(targetIsVisible.value);
-
       stop();
     }
   }

@@ -15,6 +15,7 @@ import whyUsImage_4 from "@/assets/images/icon-best-paying-loads.svg";
 
 export const useGlobalStore = defineStore("global", () => {
   let fleetModalIsActive = ref(false);
+  let navbarMobileIsActive = ref(false);
   let fleetData = ref([
     {
       id: 1,
@@ -107,8 +108,22 @@ export const useGlobalStore = defineStore("global", () => {
       backgroundImage: whyUsImage_4,
     },
   ]);
+
+  const handleScroll = (element) => {
+    if (window.scrollY >= 42) {
+      stickyStyle.value = ["fixed", "top-0", "w-100vh", "right-0", "left-0"];
+    } else {
+      stickyStyle.value = [];
+    }
+  };
+  const toggleMenu = () => {
+    navbarMobileIsActive.value = !navbarMobileIsActive.value;
+  };
   return {
     fleetModalIsActive,
+    navbarMobileIsActive,
+    toggleMenu,
+    handleScroll,
     fleetData,
     whyUsCards,
   };

@@ -70,7 +70,7 @@
   <div class="mb-10 flex flex-col items-center justify-center">
     <div class="text-4xl font-extrabold italic text-main-red">OUR PARTNERS</div>
     <div
-      class="w-full px-[10%] text-xl sm:text-xl lg:w-3/4 lg:text-2xl xl:px-[20%]"
+      class="w-full px-[10%] text-center text-xl sm:text-xl lg:w-3/4 lg:text-2xl xl:px-[20%]"
     >
       We recognizes that our clients are at the heart of everything we do, and
       we prioritize their needs above all else

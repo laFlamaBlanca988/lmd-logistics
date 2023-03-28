@@ -6,7 +6,9 @@
   >
     <div class="flex flex-col p-6">
       <div class="flex flex-col">
-        <p class="text-lg text-main-blue xl:text-xl 2xl:text-2xl">CONTACT US</p>
+        <p class="text-lg font-bold text-main-blue xl:text-xl 2xl:text-2xl">
+          CONTACT US
+        </p>
         <h3 class="font-bold lg:text-2xl xl:text-3xl 2xl:text-4xl">
           Drop Us A Message
         </h3>
@@ -37,7 +39,7 @@
           />
         </div>
 
-        <p class="text-base lg:text-lg xl:text-xl 2xl:text-2xl">Message:</p>
+        <p class="text-lg xl:text-xl 2xl:text-2xl">Message:</p>
 
         <textarea
           v-model="message"
@@ -46,7 +48,7 @@
         ></textarea>
       </div>
       <button
-        class="mt-2 flex h-[59px] w-[241px] items-center justify-center gap-2 rounded-lg bg-main-red p-4 text-white hover:bg-button-hover"
+        class="mt-2 flex h-[59px] w-full items-center justify-center gap-2 rounded-lg bg-main-red p-4 text-white hover:bg-button-hover md:w-[241px]"
         type="submit"
       >
         Send Message
@@ -56,19 +58,8 @@
 </template>
 <script setup>
 import { ref } from "vue";
-import { Email } from "@/assets/smtp/smtp.js";
 const name = ref("");
 const email = ref("");
 const phone = ref("");
 const message = ref("");
-const sendEmail = () => {
-  Email.send({
-    SecureToken: "10faabc6-6863-47dc-9512-009e8481702f",
-    To: "sandipopovic988@outlook.com",
-    From: "laflamablanca988@hotmail.com",
-    name: name.value,
-    Subject: name.value,
-    Body: message.value,
-  }).then((message) => alert(message));
-};
 </script>
