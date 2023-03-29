@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mb-10 flex flex-col justify-center gap-20 bg-cover bg-fixed bg-center py-32 text-white"
+    class="mb-10 flex flex-col justify-center gap-10 bg-cover bg-fixed bg-center py-20 text-white md:gap-20 md:py-32"
     :style="{ 'background-image': `url(${parallax})` }"
   >
     <div
@@ -34,14 +34,14 @@
     </div>
     <div
       ref="ourTeamElement"
-      class="mx-auto grid w-[90%] grid-cols-2 gap-6 xs:w-[80%] md:grid-cols-4 lg:w-[80%]"
+      class="mx-auto grid w-[90%] grid-cols-2 gap-0 xs:w-[80%] md:grid-cols-4 md:gap-6 lg:w-[80%]"
     >
       <div
         class="flex h-[200px] w-full flex-col items-center justify-center gap-4"
       >
-        <h1 class="text-6xl font-extrabold italic">23</h1>
+        <h1 class="text-5xl font-extrabold italic md:text-6xl">23</h1>
         <div class="flex items-center justify-center">
-          <div class="text-center text-2xl">
+          <div class="text-center text-xl md:text-2xl">
             Dedicated <br />
             Team members
           </div>
@@ -50,9 +50,9 @@
       <div
         class="flex h-[200px] w-full flex-col items-center justify-center gap-4"
       >
-        <h1 class="text-6xl font-extrabold italic">85</h1>
+        <h1 class="text-5xl font-extrabold italic md:text-6xl">85</h1>
         <div class="flex items-center justify-center">
-          <div class="text-center text-2xl">
+          <div class="text-center text-xl md:text-2xl">
             Vehicles in <br />
             Our Fleet
           </div>
@@ -61,9 +61,9 @@
       <div
         class="flex h-[200px] w-full flex-col items-center justify-center gap-4"
       >
-        <h1 class="text-6xl font-extrabold italic">2128</h1>
+        <h1 class="text-5xl font-extrabold italic md:text-6xl">2128</h1>
         <div class="flex items-center justify-center">
-          <div class="text-center text-2xl">
+          <div class="text-center text-xl md:text-2xl">
             Number of<br />
             Shipments
           </div>
@@ -72,9 +72,9 @@
       <div
         class="flex h-[200px] w-full flex-col items-center justify-center gap-4"
       >
-        <h1 class="text-6xl font-extrabold italic">97%</h1>
+        <h1 class="text-5xl font-extrabold italic md:text-6xl">97%</h1>
         <div class="flex items-center justify-center">
-          <div class="text-center text-2xl">
+          <div class="text-center text-xl md:text-2xl">
             On-Time <br />
             Delivery Rate
           </div>

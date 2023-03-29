@@ -1,22 +1,22 @@
 <template>
   <div
-    class="relative mb-8 flex w-full items-center justify-center md:h-[96pxpx] lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
+    class="relative mb-8 flex w-full items-center justify-center md:h-[96px] xl:h-[96px] 2xl:h-[128px]"
   >
     <h1
-      class="text-center text-[40px] font-black italic text-main-blue opacity-10 xxs:text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-8xl 2xl:text-9xl"
+      class="text-center text-6xl font-black italic text-main-blue opacity-10 xs:text-6xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl"
     >
       ABOUT US
     </h1>
     <h1
-      class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
+      class="absolute bottom-0 block text-4xl font-extrabold italic text-main-blue xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl 3xl:text-7xl"
     >
       ABOUT US
     </h1>
   </div>
   <div
-    class="mb-10 flex flex-col justify-center gap-8 px-[10%] text-xl sm:flex sm:text-xl lg:flex-row lg:text-2xl xl:px-[20%]"
+    class="mb-10 flex flex-col justify-center gap-8 px-[10%] text-xl sm:flex sm:text-xl lg:flex-row xl:px-[20%]"
   >
-    <div class="w-full lg:w-3/6">
+    <div class="w-full text-center md:text-left lg:w-3/6">
       At our company, we are dedicated to providing top-notch cargo transport
       and logistics services to our clients. With a team of experienced
       professionals and a fleet of modern trucks and equipment, we are equipped
@@ -26,7 +26,7 @@
       cost-effective solutions that meet our clients' needs. Trust us to handle
       your cargo with care.
     </div>
-    <div class="w-full lg:w-3/6">
+    <div class="w-full text-center md:text-left lg:w-3/6">
       We have built our reputation on a foundation of hard work, dedication, and
       a commitment to excellence that has allowed us to thrive in a constantly
       evolving industry. Despite our traditional roots, we are constantly

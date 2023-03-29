@@ -14,12 +14,12 @@
         </p>
       </div>
       <div
-        class="flex h-[150px] items-center justify-center bg-main-red lg:h-[180px] xl:w-3/6 2xl:w-[30%]"
+        class="flex h-[130px] items-center justify-center bg-main-red lg:h-[180px] xl:w-3/6 2xl:w-[30%]"
       >
         <a
           href="#"
           target="_blank"
-          class="flex h-[60px] w-[280px] items-center justify-center rounded-lg bg-white text-2xl font-bold text-main-red hover:border-2 hover:bg-main-red hover:text-white"
+          class="flex h-[50px] w-[280px] items-center justify-center rounded-lg bg-white text-xl font-bold text-main-red hover:border-2 hover:bg-main-red hover:text-white lg:h-[60px] lg:text-2xl"
           >WE ARE HIRING</a
         >
       </div>
@@ -34,10 +34,10 @@
         ></HomeFooterSocial>
       </div>
       <div
-        class="mb-4 flex w-full items-center justify-center md:w-3/6 2xl:w-[30%]"
+        class="mb-4 flex w-full items-center justify-center px-[3%] md:w-3/6 2xl:w-[30%]"
       >
         <div
-          class="mx-[3%] flex h-[361px] w-full flex-col items-center justify-evenly rounded-xl bg-white shadow-xl md:mx-[5%] xl:w-[430px]"
+          class="flex h-[361px] w-full flex-col items-center justify-evenly rounded-xl bg-white px-[5%] shadow-xl md:mx-[5%] xl:w-[430px]"
         >
           <div class="flex items-center justify-center">
             <h4 class="text-center text-4xl font-bold">
@@ -52,7 +52,7 @@
           </div>
           <RouterLink
             to="#"
-            class="flex h-[59px] w-[241px] items-center justify-center rounded-lg border-[3px] border-main-red bg-white text-xl font-bold text-main-red hover:bg-main-red hover:text-white"
+            class="flex h-[59px] w-full items-center justify-center rounded-lg border-[3px] border-main-red bg-white text-xl font-bold text-main-red hover:bg-main-red hover:text-white md:w-[241px]"
             >Fill The Form</RouterLink
           >
         </div>
@@ -65,7 +65,7 @@
       class="flex h-auto items-center justify-between bg-main-blue py-6 md:h-[200px] 2xl:justify-end"
     >
       <div
-        class="flex w-full items-center justify-center px-10 md:w-[50%] xl:w-[70%] 2xl:w-[30%]"
+        class="flex w-full items-center justify-center px-[3%] md:w-[50%] md:px-10 xl:w-[70%] 2xl:w-[30%]"
       >
         <p class="text-center text-xl text-white md:text-left">
           At our company, we are dedicated to providing top-notch cargo

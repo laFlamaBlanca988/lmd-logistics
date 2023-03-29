@@ -48,9 +48,12 @@
       </p>
       <RouterLink
         to="#"
-        class="mx-auto my-2 flex w-[240px] items-center justify-end gap-9 rounded-lg bg-main-red p-4 text-white hover:bg-button-hover md:ml-0"
+        class="relative mx-auto my-2 flex w-full items-center justify-center rounded-lg bg-main-red p-4 text-white hover:bg-button-hover md:ml-0 md:w-[240px]"
         >Find Out More
-        <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
+        <Icon
+          icon="material-symbols:arrow-forward-ios-rounded"
+          class="absolute right-2"
+        ></Icon>
       </RouterLink>
       <div
         class="flex flex-col items-center justify-center md:items-start md:justify-start"

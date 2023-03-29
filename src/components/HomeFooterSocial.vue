@@ -40,7 +40,9 @@
     <div
       class="mt-10 flex flex-col items-start justify-center gap-2 2xl:items-start 2xl:gap-4"
     >
-      <h4 class="text-xl font-medium xl:text-2xl 2xl:text-3xl">Folow Us On:</h4>
+      <h4 class="ml-1.5 text-xl font-medium xl:text-2xl 2xl:text-3xl">
+        Folow Us On:
+      </h4>
       <div class="flex items-center justify-center gap-3">
         <a
           target="_blank"

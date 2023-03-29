@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col pb-20">
-    <div class="mb-20 flex flex-col items-center justify-center gap-4 px-[5%]">
+    <div
+      class="flex flex-col items-center justify-center gap-4 px-[5%] sm:mb-20"
+    >
       <div
         ref="animatedElement"
         class="flex flex-col items-center justify-center md:items-start md:justify-start"
@@ -33,19 +35,18 @@
         :wrap-around="true"
         :breakpoints="breakpoints"
         snap-align="start"
-        class=""
       >
         <slide v-for="testimonial in testimonials" :key="testimonial">
           <HomeTestimonial
-            class="z-50"
+            class="z-50 h-full"
             :name="testimonial.name"
             :title="testimonial.title"
             :description="testimonial.description"
             :img-url="testimonial.imageUrl"
+            :avatar-url="testimonial.avatarUrl"
           ></HomeTestimonial>
         </slide>
         <template #addons>
-          <navigation />
           <pagination />
         </template>
       </carousel>
@@ -54,7 +55,7 @@
 </template>
 <script setup>
 import { ref, reactive } from "vue";
-import "vue3-carousel/dist/carousel.css";
+// import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import { useIntersectionObserver } from "@vueuse/core";
 
@@ -63,21 +64,28 @@ import HomeTestimonial from "./HomeTestimonial.vue";
 import image_1 from "@/assets/images/testimonials-img-1.png";
 import image_2 from "@/assets/images/testimonials-img-2.png";
 import image_3 from "@/assets/images/testimonials-img-3.png";
+import avatar_1 from "@/assets/images/testimonials-img-1-mob.webp";
+import avatar_2 from "@/assets/images/testimonials-img-2-mob.webp";
+import avatar_3 from "@/assets/images/testimonials-img-3-mob.webp";
+
 const innerWidth = window.innerWidth;
+
 const testimonials = ref([
   {
     name: "James Grant",
     title: "Freight Broker",
     description:
-      "You have to join the team to actually understand how a truly caring and friendly company treats drivers and how a hard job like mine can become a Stress Free Cruising of the roads.",
+      "It's a great company and it's growing. I believe that if you want to start somewhere and grow with a company, LMD would be a great company for you.",
     imageUrl: image_1,
+    avatarUrl: avatar_1,
   },
   {
     name: "Robert Sabatka",
     title: "Driver",
     description:
-      "It's a great company and it's growing. I believe that if you want to start somewhere and grow with a company, LMD would be a great company for you.",
+      "You have to join the team to actually understand how a truly caring and friendly company treats drivers and how a hard job like mine can become a Stress Free Cruising of the roads.",
     imageUrl: image_2,
+    avatarUrl: avatar_2,
   },
   {
     name: "Tomas Johnson",
@@ -85,6 +93,7 @@ const testimonials = ref([
     description:
       "The best things about LMD are the pay, the open door policies, the people, and you've got room for advancement.",
     imageUrl: image_3,
+    avatarUrl: avatar_3,
   },
 ]);
 let breakpoints = reactive({

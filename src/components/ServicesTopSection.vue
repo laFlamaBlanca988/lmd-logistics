@@ -5,24 +5,22 @@
   >
     <div class="flex animate-fadeIn flex-col items-center justify-start gap-8">
       <div
-        class="flex flex-col items-center justify-center md:items-start md:justify-start"
+        class="relative mb-8 flex w-full items-center justify-center md:h-[96px] xl:h-[96px] 2xl:h-[128px]"
       >
-        <div
-          class="relative flex w-full items-center justify-center md:h-[60px] lg:h-[72px] xl:h-[96px] 2xl:h-[128px]"
+        <h1
+          class="text-center text-6xl font-black italic text-white opacity-10 xs:text-6xl sm:text-7xl md:text-8xl xl:text-8xl 2xl:text-9xl"
         >
-          <h1
-            class="text-center text-6xl font-black italic opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
-          >
-            SERVICES
-          </h1>
-          <h1
-            class="absolute bottom-0 block text-2xl font-extrabold italic xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
-          >
-            OUR SERVICES
-          </h1>
-        </div>
+          SERVICES
+        </h1>
+        <h1
+          class="absolute bottom-0 block text-4xl font-extrabold italic text-white xs:text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl 3xl:text-7xl"
+        >
+          OUR SERVICES
+        </h1>
       </div>
-      <div class="mx-auto flex w-[70%] justify-center text-center text-3xl">
+      <div
+        class="mx-auto flex w-[90%] justify-center text-center text-2xl sm:text-3xl md:w-[70%]"
+      >
         We offer full transportation and logistic services for all our drivers,
         brokers and customers in more efficient, reliable, safer and profitable
         way.

@@ -51,9 +51,7 @@ px
         <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
       </RouterLink>
     </div>
-    <div
-      class="absolute bottom-0 right-0 left-0 flex h-[30%] px-[3%] xxs:h-[38%] lg:h-[50%]"
-    >
+    <div class="absolute bottom-0 right-0 left-0 flex px-[3%]">
       <img :src="videoOverlayImage" class="mx-auto h-full w-auto" />
     </div>
   </div>
