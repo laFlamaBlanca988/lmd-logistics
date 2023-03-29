@@ -1,4 +1,3 @@
-px
 <template>
   <div class="custom-height relative left-0 right-0 top-0 mb-10 flex">
     <NavbarMobile :logo="logo" icon-color="text-white"></NavbarMobile>
@@ -51,7 +50,7 @@ px
         <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
       </RouterLink>
     </div>
-    <div class="absolute bottom-0 right-0 left-0 flex px-[3%]">
+    <div class="absolute bottom-0 right-0 left-0 flex h-[33svh] px-[3%]">
       <img :src="videoOverlayImage" class="mx-auto h-full w-auto" />
     </div>
   </div>

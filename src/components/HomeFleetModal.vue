@@ -6,7 +6,7 @@
       <Icon
         @click="globalStore.fleetModalIsActive = false"
         icon="ph:x-circle-bold"
-        class="absolute -top-5 -right-6 z-50 h-[50px] w-[50px] cursor-pointer rounded-full bg-white text-[#DFE6F0]"
+        class="absolute -top-5 -right-6 z-50 h-[40px] w-[40px] cursor-pointer rounded-full bg-white text-[#DFE6F0] md:h-[50px] md:w-[50px]"
       ></Icon>
 
       <div
@@ -14,55 +14,69 @@
       >
         <img
           :src="imageUrl"
-          class="h-[250px] w-full max-w-[320px] md:pl-4 xl:-mt-6"
+          class="h-[200px] w-[300px] md:pl-4 xl:-mt-6 xl:h-[250px] xl:w-[350px]"
         />
         <div class="flex flex-col">
           <h4 class="mb-4 text-start text-2xl text-main-blue">
             {{ model }}
           </h4>
-          <p class="mb-4 text-start text-2xl font-bold md:text-4xl">
+          <p class="mb-4 text-start text-2xl font-bold md:text-3xl xl:text-4xl">
             {{ modelTitle }}
           </p>
-          <p class="text-start text-base md:text-2xl">{{ modelDescription }}</p>
+          <p class="text-start text-base md:text-xl xl:text-2xl">
+            {{ modelDescription }}
+          </p>
         </div>
       </div>
       <div class="flex flex-col gap-1">
         <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
-          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
+          <div
+            class="w-3/6 text-base font-medium text-main-blue md:text-xl xl:text-2xl"
+          >
             Year:
           </div>
-          <div class="w-3/6 text-base font-medium md:text-2xl">{{ year }}</div>
+          <div class="w-3/6 text-base font-medium md:text-xl xl:text-2xl">
+            {{ year }}
+          </div>
         </div>
 
         <div class="flex h-[60px] items-center rounded-lg bg-white px-4">
-          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
+          <div
+            class="w-3/6 text-base font-medium text-main-blue md:text-xl xl:text-2xl"
+          >
             Horsepower:
           </div>
-          <div class="w-3/6 text-base font-medium md:text-2xl">
+          <div class="w-3/6 text-base font-medium md:text-xl xl:text-2xl">
             {{ horsepower }}
           </div>
         </div>
         <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
-          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
+          <div
+            class="w-3/6 text-base font-medium text-main-blue md:text-xl xl:text-2xl"
+          >
             Engine model:
           </div>
-          <div class="w-3/6 text-base font-medium md:text-2xl">
+          <div class="w-3/6 text-base font-medium md:text-xl xl:text-2xl">
             {{ engineModel }}
           </div>
         </div>
         <div class="flex h-[60px] items-center rounded-lg bg-white px-4">
-          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
+          <div
+            class="w-3/6 text-base font-medium text-main-blue md:text-xl xl:text-2xl"
+          >
             Transmission:
           </div>
-          <div class="w-3/6 text-base font-medium md:text-2xl">
+          <div class="w-3/6 text-base font-medium md:text-xl xl:text-2xl">
             {{ transmission }}
           </div>
         </div>
         <div class="flex h-[60px] items-center rounded-lg bg-[#dfe6f080] px-4">
-          <div class="w-3/6 text-base font-medium text-main-blue md:text-2xl">
+          <div
+            class="w-3/6 text-base font-medium text-main-blue md:text-xl xl:text-2xl"
+          >
             Sleeper size:
           </div>
-          <div class="w-3/6 text-base font-medium md:text-2xl">
+          <div class="w-3/6 text-base font-medium md:text-xl xl:text-2xl">
             {{ sleeperSize }}
           </div>
         </div>

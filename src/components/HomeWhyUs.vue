@@ -72,7 +72,7 @@ const { stop } = useIntersectionObserver(
 );
 let breakpoints = reactive({
   // 700px and up
-  360: {
+  320: {
     itemsToShow: 1,
     snapAlign: "start",
   },
@@ -95,10 +95,12 @@ let breakpoints = reactive({
   color: white;
 }
 .carousel__prev {
-  transform: translateX(-100%);
+  transform: translateX(-15px);
+  margin: 0;
 }
 .carousel__next {
-  transform: translateX(100%);
+  transform: translateX(15px);
+  margin: 0;
 }
 @keyframes slide-in {
   from {

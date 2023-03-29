@@ -1,7 +1,7 @@
 <template>
   <NavbarMobile :logo="logo" icon-color="text-white"></NavbarMobile>
   <ServicesTopSection></ServicesTopSection>
-  <!-- <ServicesDetailsSection></ServicesDetailsSection> -->
+  <ServicesDetailsSection></ServicesDetailsSection>
   <SectionCertificates></SectionCertificates>
 
   <HomeFooter></HomeFooter>

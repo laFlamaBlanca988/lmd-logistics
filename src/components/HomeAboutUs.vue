@@ -19,7 +19,7 @@
             <h1
               class="text-6xl font-black italic text-main-blue opacity-10 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl"
             >
-              ABOUT US
+              ABOUT
             </h1>
             <h4
               class="absolute bottom-0 text-xl font-extrabold italic text-main-blue md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl"
@@ -41,7 +41,7 @@
         <AppButton
           url="#"
           content="Find Out More"
-          class="mx-auto w-[240px] xl:mx-0"
+          class="mx-auto w-full md:w-[240px] xl:mx-0"
         ></AppButton>
       </div>
       <div class="flex flex-col gap-4">

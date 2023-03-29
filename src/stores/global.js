@@ -86,25 +86,25 @@ export const useGlobalStore = defineStore("global", () => {
     {
       title: "HIGH EARNINGS",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "Drive towards your financial goals with a career in transportation where every mile you travel brings you closer to financial success.",
       backgroundImage: whyUsImage_1,
     },
     {
       title: "GOOD MAINTENANCE",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "Keeping your truck in top condition is not only our top priority but it also demonstrates our commitment to excellence in the industry.",
       backgroundImage: whyUsImage_2,
     },
     {
       title: "24/7 SUPPORT",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "In the fast-paced world of transportation, providing 24/7 support shows that we are always there for our customers.",
       backgroundImage: whyUsImage_3,
     },
     {
       title: "BEST PAYING LOADS",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "By seeking out and securing the best paying loads, you can drive your career and earnings to new heights with our support.",
       backgroundImage: whyUsImage_4,
     },
   ]);

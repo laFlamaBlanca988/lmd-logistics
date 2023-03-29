@@ -44,7 +44,8 @@
   >
     <div
       v-if="targetIsVisible"
-      class="flex w-full animate-slideFromLeft flex-col lg:w-3/6"
+      class="flex w-full flex-col lg:w-3/6"
+      :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
     >
       <div class="mb-2 text-4xl font-extrabold italic text-white">MISSION</div>
 
@@ -56,7 +57,8 @@
     </div>
     <div
       v-if="targetIsVisible"
-      class="flex w-full animate-slideFromRight flex-col lg:w-3/6"
+      class="flex w-full flex-col lg:w-3/6"
+      :class="innerWidth > 1280 ? 'animate-slideFromRight' : ''"
     >
       <div class="mb-2 text-4xl font-extrabold italic text-white">VISION</div>
 
@@ -82,6 +84,9 @@ import SectionTitle from "./SectionTitle.vue";
 import SectionCertificates from "./SectionCertificates.vue";
 import { useIntersectionObserver } from "@vueuse/core";
 import { ref } from "vue";
+
+const innerWidth = window.innerWidth;
+
 const animatedElement = ref(null);
 const targetIsVisible = ref(false);
 

@@ -30,11 +30,16 @@
             >
               OUR AWARD WINNING
             </h1>
+            <h1
+              class="absolute bottom-0 block translate-y-[100%] text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
+            >
+              RENTAL PROGRAM
+            </h1>
           </div>
         </Transition>
       </div>
       <p
-        class="mt-2 mb-4 text-center text-lg xxs:text-xl md:mt-4 md:text-left xl:text-2xl"
+        class="mt-14 mb-4 text-center text-lg xxs:text-xl md:mt-6 md:text-left xl:text-2xl 2xl:mt-14"
       >
         Get all the benefits owners have but spare yourself from all the hassle
         owners have!

@@ -24,7 +24,6 @@
           </div>
 
           <template #addons>
-            <navigation />
             <pagination />
           </template>
         </carousel>

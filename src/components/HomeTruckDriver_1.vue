@@ -1,6 +1,6 @@
 <template>
   <figure class="mask">
-    <video autoplay muted loop class="h-full">
+    <video autoplay muted loop class="">
       <source :src="driverVideo" type="video/mp4" />
     </video>
   </figure>
