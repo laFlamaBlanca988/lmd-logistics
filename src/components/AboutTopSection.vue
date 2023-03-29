@@ -77,14 +77,14 @@
     </div>
     <div ref="animatedElement" class="flex flex-col md:flex-row">
       <div
-        v-if="targetIsVisible"
+        v-show="targetIsVisible"
         class="flex w-full items-center justify-center md:w-3/6"
         :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
       >
         <img class="w-full" :src="technologyImage" />
       </div>
       <div
-        v-if="targetIsVisible"
+        v-show="targetIsVisible"
         class="flex w-full flex-col items-center justify-center py-6 sm:pt-10 sm:pb-10 md:w-3/6 md:pb-0 md:pl-8 md:pr-10 2xl:pr-20"
         :class="innerWidth > 1280 ? 'animate-slideFromRight' : ''"
       >

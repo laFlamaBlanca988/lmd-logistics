@@ -1,6 +1,6 @@
 <template>
   <form
-    action=""
+    action="sendmail.php"
     class="my-4 w-full rounded-2xl border bg-white shadow-xl xl:my-10 2xl:h-[120%] 2xl:w-3/6"
     @submit.prevent="sendEmail"
   >
@@ -58,8 +58,24 @@
 </template>
 <script setup>
 import { ref } from "vue";
+import axios from "axios";
 const name = ref("");
 const email = ref("");
 const phone = ref("");
 const message = ref("");
+
+const sendEmail = () => {
+  axios
+    .post("https://lmd-logistics.slobodanbajic.com/sendmail.php", {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    })
+    .then((response) => {
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
 </script>

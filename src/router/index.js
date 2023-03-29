@@ -28,17 +28,6 @@ const router = createRouter({
   routes,
 });
 
-// router.beforeEach((to, from, next) => {
-//   if (to) {
-//     console.log(3);
-//   }
-//   // window.scrollTo(0, 0);
-//   // if (to.meta.requiresAuth && !sessionStorage.getItem("AUTH-TOKEN")) {
-//   //     next("/welcome");
-//   // } else {
-//   //     next();
-//   // }
-// });
 router.afterEach((to, from) => {
   window.scrollTo(0, 0);
 });

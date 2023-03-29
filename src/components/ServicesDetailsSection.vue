@@ -1,7 +1,7 @@
 <template>
   <div class="mb-10 flex flex-col justify-between px-[8%] xl:flex-row">
     <div class="xl: relative flex flex-col xl:w-3/6">
-      <div
+      <!-- <div
         class="relative mb-6 flex w-full items-center justify-center md:h-[60px] lg:h-[72px] xl:h-[96px] xl:justify-start"
         :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
       >
@@ -15,7 +15,23 @@
         >
           FREIGHT TRANSPORTATION
         </h1>
-      </div>
+      </div> -->
+      <Transition :name="innerWidth > 1280 ? 'rental-program-title' : ''">
+        <div
+          class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px]"
+        >
+          <h1
+            class="text-center text-6xl font-black italic text-main-blue opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl"
+          >
+            TRANSPORTATION
+          </h1>
+          <h1
+            class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl"
+          >
+            FREIGHT TRANSPORTATION
+          </h1>
+        </div>
+      </Transition>
       <div class="mb-8 flex flex-col text-2xl xl:max-w-[700px]">
         <div class="mb-10">
           Freight transportation is the backbone of global commerce, responsible
@@ -42,9 +58,7 @@
       class="relative z-10 xl:w-[45%]"
       :class="innerWidth > 1280 ? 'animate-slideFromRight' : ''"
     >
-      <video autoplay muted loop class="w-full bg-transparent">
-        <source :src="serviceVideo_1" type="video/mp4" />
-      </video>
+      <img :src="firstImage" class="h-full" />
     </div>
   </div>
   <div
@@ -56,9 +70,7 @@
       class="relative z-10 xl:w-[45%]"
       :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
     >
-      <video autoplay muted loop class="w-full bg-transparent">
-        <source :src="serviceVideo_1" type="video/mp4" />
-      </video>
+      <img :src="secondImage" class="h-full" />
     </div>
     <div class="flex flex-col xl:w-3/6" c>
       <div
@@ -103,6 +115,8 @@ import { ref } from "vue";
 import serviceVideo_1 from "@/assets/videos/bg-services-video-1.mp4";
 import { Icon } from "@iconify/vue";
 import { useIntersectionObserver } from "@vueuse/core";
+import firstImage from "@/assets/images/services/freight-transport.webp";
+import secondImage from "@/assets/images/services/broker.webp";
 
 const innerWidth = window.innerWidth;
 const target_1_IsVisible = ref(null);
@@ -120,3 +134,28 @@ const { stop } = useIntersectionObserver(
   }
 );
 </script>
+<style scoped>
+@keyframes slide-in {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-from-bottom {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.rental-program-title-enter-active {
+  animation: slide-in 1.5s ease;
+}
+.truck-driver-enter-active {
+  animation: slide-from-bottom 1.5s ease;
+}
+</style>
