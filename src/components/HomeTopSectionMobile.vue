@@ -59,7 +59,7 @@
 import { Icon } from "@iconify/vue";
 import logo from "@/assets/images/navbar-logo-mobile.svg";
 import videoOverlayImage from "@/assets/images/mobile-video-overlay-img.webp";
-import driverVideo from "@/assets/videos/bg-video.mp4";
+import driverVideo from "@/assets/videos/bg-video-v2.webm";
 import NavbarMobile from "./NavbarMobile.vue";
 </script>
 

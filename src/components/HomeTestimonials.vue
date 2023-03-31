@@ -38,7 +38,6 @@
       >
         <slide v-for="testimonial in testimonials" :key="testimonial">
           <HomeTestimonial
-            class="z-50 h-full"
             :name="testimonial.name"
             :title="testimonial.title"
             :description="testimonial.description"

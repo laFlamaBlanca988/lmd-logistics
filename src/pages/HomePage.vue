@@ -1,6 +1,6 @@
 <template>
-  <!-- <HomeTopSection_v2 v-if="innerWidth > 1280"></HomeTopSection_v2> -->
-  <HomeTopSection v-if="innerWidth > 1280"></HomeTopSection>
+  <HomeTopSection_v2 v-if="innerWidth > 1280"></HomeTopSection_v2>
+  <!-- <HomeTopSection v-if="innerWidth > 1280"></HomeTopSection> -->
   <HomeTopSectionMobile v-else></HomeTopSectionMobile>
   <HomeRentalProgram></HomeRentalProgram>
   <HomeServices></HomeServices>

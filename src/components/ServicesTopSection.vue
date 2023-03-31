@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mb-40 flex min-h-[600px] flex-col items-center justify-start gap-8 pt-40 text-white"
+    class="mb-20 flex min-h-[600px] flex-col items-center justify-start gap-8 pt-40 text-white xl:mb-28"
     :style="{ 'background-image': `url(${servicesParallax})` }"
   >
     <div class="flex animate-fadeIn flex-col items-center justify-start gap-8">

@@ -1,7 +1,7 @@
 <template>
   <figure class="mask">
-    <video autoplay muted loop class="">
-      <source :src="driverVideo" type="video/mp4" />
+    <video autoplay muted loop>
+      <source :src="driverVideo" type="video/webm" />
     </video>
   </figure>
 </template>

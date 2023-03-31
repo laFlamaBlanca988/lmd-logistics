@@ -2,7 +2,7 @@
   <div
     class="z-50 hidden h-[88px] items-center justify-between overflow-hidden bg-white px-[8%] shadow-lg lg:flex"
     ref="navbarElement"
-    :class="stickyStyle"
+    :class="[stickyStyle, relativePosition]"
   >
     <div class="flex cursor-pointer items-center" @click="router.push('/')">
       <img :src="mainLogo" />
@@ -40,6 +40,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const navbarElement = ref(null);
 const stickyStyle = ref([]);
+const relativePosition = ref("relative");
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
@@ -50,8 +51,10 @@ onUnmounted(() => {
 const handleScroll = (event) => {
   if (window.scrollY >= 42) {
     stickyStyle.value = ["fixed", "top-0", "w-100vh", "right-0", "left-0"];
+    relativePosition.value = "";
   } else {
     stickyStyle.value = [];
+    relativePosition.value = "relative";
   }
 };
 </script>

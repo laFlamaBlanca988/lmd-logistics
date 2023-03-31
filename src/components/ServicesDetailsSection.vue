@@ -1,38 +1,23 @@
 <template>
   <div class="mb-10 flex flex-col justify-between px-[8%] xl:flex-row">
-    <div class="xl: relative flex flex-col xl:w-3/6">
-      <!-- <div
-        class="relative mb-6 flex w-full items-center justify-center md:h-[60px] lg:h-[72px] xl:h-[96px] xl:justify-start"
-        :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
-      >
-        <h1
-          class="text-center text-6xl font-black italic text-main-blue opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl"
-        >
-          TRANSPORTATION
-        </h1>
-        <h1
-          class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl"
-        >
-          FREIGHT TRANSPORTATION
-        </h1>
-      </div> -->
+    <div class="relative flex flex-col xl:w-3/6">
       <Transition :name="innerWidth > 1280 ? 'rental-program-title' : ''">
         <div
-          class="relative flex w-full items-center justify-center md:h-[60px] md:justify-start lg:h-[72px] xl:h-[96px]"
+          class="relative mb-6 flex w-full items-center justify-center md:h-[60px] lg:mb-10 lg:h-[72px] xl:justify-start"
         >
           <h1
-            class="text-center text-6xl font-black italic text-main-blue opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl"
+            class="text-center text-3xl font-black italic text-main-blue opacity-10 xxs:text-4xl xs:text-5xl md:text-6xl lg:text-7xl"
           >
             TRANSPORTATION
           </h1>
           <h1
-            class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl"
+            class="absolute bottom-0 block text-xl font-extrabold italic text-main-blue xxs:text-2xl xs:text-3xl sm:text-4xl lg:text-4xl"
           >
             FREIGHT TRANSPORTATION
           </h1>
         </div>
       </Transition>
-      <div class="mb-8 flex flex-col text-2xl xl:max-w-[700px]">
+      <div class="mb-8 flex flex-col text-base lg:text-2xl xl:max-w-[700px]">
         <div class="mb-10">
           Freight transportation is the backbone of global commerce, responsible
           for the movement of goods across vast distances and multiple modes of
@@ -55,43 +40,44 @@
     </div>
 
     <div
-      class="relative z-10 xl:w-[45%]"
+      class="flex w-auto items-center"
       :class="innerWidth > 1280 ? 'animate-slideFromRight' : ''"
     >
-      <img :src="firstImage" class="h-full" />
+      <img :src="firstImage" class="m-auto" />
     </div>
   </div>
   <div
     ref="animatedElement_2"
-    class="mb-10 flex flex-col justify-between gap-12 px-[8%] py-36 xl:flex-row"
+    class="my-10 flex flex-col justify-between gap-12 px-[8%] lg:my-20 xl:flex-row"
   >
     <div
       v-if="target_2_IsVisible"
-      class="relative z-10 xl:w-[45%]"
+      class="xl:order-0 order-1 flex w-full items-center xl:w-3/6"
       :class="innerWidth > 1280 ? 'animate-slideFromLeft' : ''"
     >
-      <img :src="secondImage" class="h-full" />
+      <img :src="secondImage" class="m-auto" />
     </div>
-    <div class="flex flex-col xl:w-3/6" c>
+    <div class="order-0 flex flex-col xl:order-1 xl:w-3/6" c>
       <div
         v-if="target_2_IsVisible"
-        class="relative mb-6 flex w-full items-center justify-center md:h-[60px] lg:h-[72px] xl:h-[96px] xl:justify-start"
+        class="relative mb-6 flex w-full items-center justify-center md:h-[60px] lg:mb-10 lg:h-[72px] xl:justify-start"
         :class="innerWidth > 1280 ? 'animate-slideFromRight' : ''"
       >
         <h1
-          class="text-center text-6xl font-black italic text-main-blue opacity-10 xxs:text-7xl xs:text-8xl sm:text-[110px] md:text-5xl lg:text-7xl xl:text-8xl"
+          class="text-center text-3xl font-black italic text-main-blue opacity-10 xxs:text-4xl xs:text-5xl md:text-6xl lg:text-7xl"
         >
           BROKERAGE
         </h1>
         <h1
-          class="absolute bottom-0 block text-2xl font-extrabold italic text-main-blue xxs:text-3xl xs:text-4xl sm:text-5xl md:text-[29px] lg:text-4xl 2xl:text-5xl"
+          class="absolute bottom-0 block text-xl font-extrabold italic text-main-blue xxs:text-2xl xs:text-3xl sm:text-4xl lg:text-4xl"
         >
           FREIGHT BROKERAGE
         </h1>
       </div>
-
-      <div class="mb-8 flex flex-col text-2xl xl:max-w-[700px]">
-        <div class="mb-10">
+      <div
+        class="mb-6 flex flex-col text-base lg:mb-10 lg:text-2xl xl:max-w-[700px]"
+      >
+        <div class="mb-6 lg:mb-10">
           Freight brokerage is a service that connects shippers and carriers to
           facilitate the transportation of goods. At its core, freight brokerage
           involves matching the shipping needs of businesses with available
@@ -112,8 +98,6 @@
 </template>
 <script setup>
 import { ref } from "vue";
-import serviceVideo_1 from "@/assets/videos/bg-services-video-1.mp4";
-import { Icon } from "@iconify/vue";
 import { useIntersectionObserver } from "@vueuse/core";
 import firstImage from "@/assets/images/services/freight-transport.webp";
 import secondImage from "@/assets/images/services/broker.webp";

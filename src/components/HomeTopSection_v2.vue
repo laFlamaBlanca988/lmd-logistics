@@ -48,7 +48,7 @@
       </div>
     </div>
     <div
-      class="absolute bottom-0 right-0 flex h-[30%] px-[3%] xxs:h-[38%] lg:h-[75%]"
+      class="absolute bottom-0 right-0 flex h-[30%] px-[3%] xxs:h-[38%] xl:h-[65%] 2xl:h-[75%]"
     >
       <img :src="videoOverlayImage" class="mx-auto h-full w-auto" />
     </div>
