@@ -82,21 +82,26 @@
         ref="animatedElement"
         class="mt-4 flex flex-col gap-3 md:gap-4 lg:flex-row"
       >
-        <RouterLink
-          to="#"
+        <a
+          href="https://intelliapp.driverapponline.com/c/lmdlogisticsinc?uri_b=ia_lmdlogisticsinc_467948023"
+          target="_blank"
           class="flex h-[44px] w-full items-center justify-center gap-2 rounded-lg border border-main-red bg-white text-main-red hover:bg-main-red hover:text-white xl:h-[57px] xl:w-[240px]"
           >Sign Up
           <Icon
             icon="material-symbols:arrow-forward-ios-rounded"
             class="text-main-red"
           ></Icon>
-        </RouterLink>
-        <RouterLink
-          to="#"
+        </a>
+        <button
+          @click="makePhoneCall"
           class="flex h-[44px] w-full items-center justify-center gap-2 rounded-lg bg-main-red text-white hover:bg-button-hover xl:h-[57px] xl:w-[240px]"
-          >Give Us A Call
-          <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
-        </RouterLink>
+        >
+          Give Us A Call
+          <Icon
+            icon="material-symbols:arrow-forward-ios-rounded"
+            class="absolute right-[1%] flex items-center"
+          ></Icon>
+        </button>
       </div>
     </div>
   </div>
@@ -120,6 +125,9 @@ const { stop } = useIntersectionObserver(
     }
   }
 );
+const makePhoneCall = () => {
+  window.location.href = "tel:7087018175";
+};
 </script>
 <style scoped>
 @keyframes slide-in {

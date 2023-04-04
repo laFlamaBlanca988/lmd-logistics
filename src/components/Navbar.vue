@@ -24,7 +24,7 @@
         >About Us</RouterLink
       >
       <a
-        href="#"
+        href="https://intelliapp.driverapponline.com/c/lmdlogisticsinc?uri_b=ia_lmdlogisticsinc_467948023"
         target="_blank"
         class="rounded-md bg-main-red p-3 text-sm font-medium text-white hover:bg-button-hover"
         >WE ARE HIRING</a

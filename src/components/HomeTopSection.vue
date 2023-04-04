@@ -38,8 +38,22 @@
         commitment.
       </p>
       <div class="mt-2 flex items-center gap-6 font-semibold">
-        <AppButton url="#" content="Give Us A Call"></AppButton>
-        <RouterLink to="#" class="text-black">Drive With Us</RouterLink>
+        <button
+          @click="makePhoneCall"
+          class="relative flex items-center justify-center gap-2 rounded-lg bg-main-red p-4 px-6 text-white hover:bg-button-hover"
+        >
+          Give Us A Call
+          <Icon
+            icon="material-symbols:arrow-forward-ios-rounded"
+            class="absolute right-[1%] flex items-center"
+          ></Icon>
+        </button>
+        <a
+          target="_blank"
+          href="https://intelliapp.driverapponline.com/c/lmdlogisticsinc?uri_b=ia_lmdlogisticsinc_467948023"
+          class="text-black"
+          >Drive With Us</a
+        >
       </div>
     </div>
 
@@ -48,8 +62,9 @@
 </template>
 <script setup>
 import { Icon } from "@iconify/vue";
-import { ref } from "vue";
 import HomeTruckDriver_1 from "./HomeTruckDriver_1.vue";
-import AppButton from "./AppButton.vue";
+const makePhoneCall = () => {
+  window.location.href = "tel:7087018175";
+};
 </script>
 <style scoped></style>

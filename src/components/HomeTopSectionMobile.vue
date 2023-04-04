@@ -43,12 +43,13 @@
         company, recognized for our excellence in service, innovation, and
         commitment.
       </p>
-      <RouterLink
-        to="#"
+      <button
+        @click="makePhoneCall"
         class="relative flex w-[200px] items-center justify-end gap-7 rounded-lg bg-main-red p-3 font-semibold text-white md:pl-10"
-        >Give Us A Call
+      >
+        Give Us A Call
         <Icon icon="material-symbols:arrow-forward-ios-rounded"></Icon>
-      </RouterLink>
+      </button>
     </div>
     <div class="absolute bottom-0 right-0 left-0 flex h-[33svh] px-[3%]">
       <img :src="videoOverlayImage" class="mx-auto h-full w-auto" />
@@ -61,6 +62,9 @@ import logo from "@/assets/images/navbar-logo-mobile.svg";
 import videoOverlayImage from "@/assets/images/mobile-video-overlay-img.webp";
 import driverVideo from "@/assets/videos/bg-video-v2.webm";
 import NavbarMobile from "./NavbarMobile.vue";
+const makePhoneCall = () => {
+  window.location.href = "tel:7087018175";
+};
 </script>
 
 <style scoped>

@@ -39,7 +39,7 @@
         </div>
 
         <AppButton
-          url="#"
+          url="/about-us"
           content="Find Out More"
           class="mx-auto w-full md:w-[240px] xl:mx-0"
         ></AppButton>

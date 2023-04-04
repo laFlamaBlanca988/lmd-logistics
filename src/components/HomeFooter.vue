@@ -17,7 +17,7 @@
         class="flex h-[130px] items-center justify-center bg-main-red lg:h-[180px] xl:w-3/6 2xl:w-[30%]"
       >
         <a
-          href="#"
+          href="https://intelliapp.driverapponline.com/c/lmdlogisticsinc?uri_b=ia_lmdlogisticsinc_467948023"
           target="_blank"
           class="flex h-[50px] w-[280px] items-center justify-center rounded-lg bg-white text-xl font-bold text-main-red hover:border-2 hover:bg-main-red hover:text-white lg:h-[60px] lg:text-2xl"
           >WE ARE HIRING</a
@@ -50,10 +50,11 @@
           >
             <img :src="postCar" class="h-[84px] w-[173px]" />
           </div>
-          <RouterLink
-            to="#"
+          <a
+            target="_blank"
+            href="https://intelliapp.driverapponline.com/c/lmdlogisticsinc?uri_b=ia_lmdlogisticsinc_467948023"
             class="flex h-[59px] w-full items-center justify-center rounded-lg border-[3px] border-main-red bg-white text-xl font-bold text-main-red hover:bg-main-red hover:text-white md:w-[241px]"
-            >Fill The Form</RouterLink
+            >Fill The Form</a
           >
         </div>
       </div>
@@ -82,9 +83,12 @@
     </div>
 
     <div class="flex h-[51px] items-center justify-center bg-[#13285B]">
-      <p class="text-sm text-white">
-        Copyright 2023 LMD Logistics All Rights Reserved
-      </p>
+      <p
+        class="text-sm text-white"
+        v-text="
+          `Copyright 2023 LMD Logistics All Rights Reserved ${new Date().getFullYear()}`
+        "
+      ></p>
     </div>
   </div>
 </template>

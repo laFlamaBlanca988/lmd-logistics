@@ -87,11 +87,16 @@
         <div class="text-center text-base md:text-2xl lg:text-left">
           {{ footerText }}
         </div>
-        <AppButton
-          content="Start Driving"
-          url="#"
-          class="w-full lg:w-[200px]"
-        ></AppButton>
+        <a
+          target="_blank"
+          href="https://intelliapp.driverapponline.com/c/lmdlogisticsinc?uri_b=ia_lmdlogisticsinc_467948023"
+          class="relative flex w-full items-center justify-center gap-2 rounded-lg bg-main-red p-4 px-6 text-white hover:bg-button-hover lg:w-[200px]"
+          >Start Driving
+          <Icon
+            icon="material-symbols:arrow-forward-ios-rounded"
+            class="absolute right-[1%] flex items-center"
+          ></Icon>
+        </a>
       </div>
     </div>
   </div>
